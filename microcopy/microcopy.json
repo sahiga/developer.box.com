@@ -60,11 +60,11 @@
   // Describes a specific parameter that issent in a HTTP header
   "reference.parameter_location.header": "ヘッダー内",
   // Describes a boolean parameter type
-  "reference.parameter_types.boolean": "ブール値",
+  "reference.parameter_types.boolean": "boolean",
   // Describes a string parameter type
-  "reference.parameter_types.string": "文字列",
+  "reference.parameter_types.string": "string",
   // Describes an object parameter type
-  "reference.parameter_types.object": "オブジェクト",
+  "reference.parameter_types.object": "object",
   // Describes an array parameter type
   "reference.parameter_types.array": "配列",
   // Describes an associative array (dictionary, hash,key value pairs) parameter type
@@ -78,7 +78,7 @@
   // Describes a parameter type formatted as an email
   "reference.parameter_types.email": "メール",
   // Describes an integer parameter type
-  "reference.parameter_types.integer": "整数",
+  "reference.parameter_types.integer": "integer",
   // Describes a parameter formatted as a UUID
   "reference.parameter_types.uuid": "UUID",
   // The label for an example
@@ -96,7 +96,7 @@
   // The label for the range of a parameter value
   "reference.parameter_details.range": "範囲",
   // Describes it when there is no content type as thereis no body request or response body
-  "reference.content_type.none": "なし",
+  "reference.content_type.none": "none",
   // Describes the situation where a parameter canonly be one specific value
   "reference.enum.value_is_always": "次の値に固定:",
   // Describes the situation where a parameter can be oneor many specific values
@@ -184,7 +184,7 @@
   // A label to collapse a viewing, making it smaller.
   "explorer.buttons.collapse": "縮小",
   // Provides a short intro to the API explorer
-  "explorer.messages.intro": "このドキュメント内で直接一部のAPIを試せるように\nなりました。",
+  "explorer.messages.intro": "このドキュメント内で一部のAPIを試せるようになりました。",
   // Short 1-sentence message to tell a user to fill in all params
   "explorer.messages.missing_params": "必須パラメータをすべて指定してください。",
   // Short 1-sentence message to tell a user to that a response was received
@@ -196,7 +196,7 @@
   // Describes the response body returned by the API explorer
   "explorer.titles.body": "レスポンス本文",
   // The text used to prompt a user to start searching
-  "search.prompt": "Search...",
+  "search.prompt": "検索...",
   // A short name for the resource type to be shown in search results
   "search.result_types.resource": "リソース",
   // A short name for the endpoint type to be shown in search results
