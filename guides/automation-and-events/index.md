@@ -9,5 +9,4 @@ cId: automation-and-events
 scId: null
 isIndex: true
 ---
-
-# Automation & Events
+# 自動化とイベント

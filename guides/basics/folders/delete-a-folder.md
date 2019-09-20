@@ -13,21 +13,18 @@ cId: basics
 scId: basics/folders
 isIndex: false
 ---
+# フォルダの削除
 
-# Delete a folder
+Box上でフォルダを削除するには、削除するフォルダのIDをAPIに渡す必要があります。
 
-To remove a folder in Box you will need to provide our API with the ID of the folder.
-
-<Samples id='delete_folders_id' >
+<Samples id="delete_folders_id">
 
 </Samples>
 
 <Message>
 
-# Deleting non-empty folders
+# 空でないフォルダの削除
 
-When deleting a folder, you can pass in the `recursive` parameter to
-force a folder to be deleted even if it is not empty. This will delete all
-items within this folder, including any of their descendants.
+フォルダを削除するときに`recursive`パラメータを渡すと、空でないフォルダも強制的に削除できます。その場合は、サブフォルダを含め、フォルダ内のすべての項目が削除されます。
 
 </Message>

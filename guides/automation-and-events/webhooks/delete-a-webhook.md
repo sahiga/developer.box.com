@@ -13,13 +13,11 @@ cId: automation-and-events
 scId: automation-and-events/webhooks
 isIndex: false
 ---
+# Webhookの削除
 
-# Delete a webhook
+Box上のファイルやフォルダからWebhookを削除するには、削除するWebhookのIDをAPIに渡す必要があります。
 
-To remove a webhook from a file or folder in Box you will need to provide our
-API with the ID of the webhook to remove.
-
-<Samples id='delete_webhooks_id'>
+<Samples id="delete_webhooks_id">
 
 </Samples>
 
@@ -27,7 +25,7 @@ API with the ID of the webhook to remove.
 
 # Webhook ID
 
-To find the ID of the webhook, use the [List all webhooks][1] endpoint.
+WebhookのIDを調べるには、[1][1]エンドポイントを使用します。
 
 </Message>
 

@@ -9,5 +9,4 @@ cId: null
 scId: null
 isIndex: true
 ---
-
-# Guides
+# ガイド

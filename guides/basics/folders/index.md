@@ -10,5 +10,4 @@ cId: basics
 scId: basics/folders
 isIndex: true
 ---
-
-# Folders
+# フォルダ

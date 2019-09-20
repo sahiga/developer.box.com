@@ -11,20 +11,14 @@ cId: automation-and-events
 scId: automation-and-events/webhooks
 isIndex: true
 ---
+# Webhook
 
-# Webhooks
+Webhookを使用すると、Box上のファイルやフォルダにイベントトリガーを追加できます。
 
-Webhooks enable you to attach event triggers to Box files and folders.
+イベントトリガーは、項目に対して発生したイベントを監視し、イベントが発生すると、指定されたURLにHTTPリクエストを送信してアプリケーションに通知します。
 
-Event triggers monitor when events happen on items and then notify your
-application when they occur by sending a HTTP requests to a URL of your choice.
+Webhookの動作はAPIを介してきめ細かく制御できるため、アプリケーションでは必要に応じてファイルやフォルダにWebhookを追加し、不要になった時点で削除できます。
 
-Because every aspect of webhooks can be controlled through the API your
-application can create webhooks on files and folders as they're needed and
-remove them when they are no longer needed.
+## スコープと権限
 
-## Scopes & Permissions
-
-Please ensure you have the "manage webhooks" application scope enabled in the
-configuration tab of the developer console for your application or you will
-receive a `403` error when trying to make API calls.
+アプリケーションの開発者コンソールの構成タブで、\[webhookを管理]アプリケーションスコープが有効になっていることを確認してください。これが有効になっていない場合、API呼び出しを実行しようとすると`403`エラーが返されます。

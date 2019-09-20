@@ -9,5 +9,4 @@ cId: basics
 scId: null
 isIndex: true
 ---
-
-# Basics
+# 基礎

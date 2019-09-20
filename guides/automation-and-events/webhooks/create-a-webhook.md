@@ -13,27 +13,22 @@ cId: automation-and-events
 scId: automation-and-events/webhooks
 isIndex: false
 ---
+# Webhookの作成
 
-# Create a webhook
+項目にWebhookを追加するには、[1][1]項目の種類とID、Webhook通知の送信先URL、およびWebhookをアクティブにするトリガーのリストを指定してエンドポイントを呼び出します。
 
-To attach a webhook to an item, call the [Create webhook][1] endpoint with the
-type and ID of the item, a URL to send webhook notifications to, and a list of
-triggers that will cause the webhook to activate.
-
-<Samples id='post_webhooks' >
+<Samples id="post_webhooks">
 
 </Samples>
 
-The current types supported are `file` and `folder`.
+現在サポートされている項目の種類は、`file`と`folder`です。
 
-The notification URL must be a valid HTTPS URL that you specify when you create
-a webhook. Every time one of the triggers is activated, this URL will be called.
+通知URLは、Webhookの作成時に指定した有効なHTTPS URLである必要があります。このURLは、いずれかのトリガーがアクティブになるたびに呼び出されます。
 
-The triggers are a list of strings that specify the events that will cause the
-webhook to be triggered. For example, if you want the webhook to be triggered
-when a user uploads a file you'd pass in the `FILE.UPLOADED` trigger name.
+トリガーのリストでは、Webhookをトリガーするイベントを表す文字列を指定します。たとえば、ユーザーがファイルをアップロードしたときにWebhookをトリガーするには、トリガー名として`FILE.UPLOADED`を渡します。
 
-A list of available triggers is available in the [in this guide][2].
+使用可能なトリガーのリストは、[2][2]にあります。
 
 [1]: ../../../reference/automation-and-events/#post-webhooks
+
 [2]: ../../../reference/automation-and-events/#post_webhooks-triggers
