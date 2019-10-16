@@ -144,7 +144,7 @@
   // The text for the link to the old generic guides
   "headers.primary.links.guides.text": "ガイド",
   // The URL to the old generic guides
-  "headers.primary.links.guides.url": "\/{locale}\/guides\/",
+  "headers.primary.links.guides.url": "https:\/\/ja.developer.box.com\/docs",
   // The text for the link the new API Reference docs
   "headers.primary.links.api_reference.text": "APIリファレンス",
   // The url to the root of the reference - DO NOT TRANSLATE
