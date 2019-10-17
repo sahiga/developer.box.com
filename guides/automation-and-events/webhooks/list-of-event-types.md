@@ -36,7 +36,7 @@ isIndex: false
 | `COMMENT.UPDATED`           | コメントオブジェクトが編集される                                         | はい    | はい    |
 | `COMMENT.DELETED`           | コメントオブジェクトが削除される                                         | はい    | はい    |
 | `TASK_ASSIGNMENT.CREATED`   | タスクが作成される                                                | はい    | はい    |
-| `TASK_ASSIGNMENT.UPDATED`   | タスクの割り当てが変更される                                           | はい    | はい    |
+| `TASK_ASSIGNMENT.UPDATED`   | タスク割り当てが変更される                                            | はい    | はい    |
 | `METADATA_INSTANCE.CREATED` | ファイルまたはフォルダに新しいメタデータテンプレートインスタンスが関連付けられる                 | はい    | はい    |
 | `METADATA_INSTANCE.UPDATED` | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスの属性(値)が更新/削除される | はい    | はい    |
 | `METADATA_INSTANCE.DELETED` | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスが削除される          | はい    | はい    |
