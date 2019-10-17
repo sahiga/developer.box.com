@@ -18,7 +18,7 @@
   // Text to signify that more content is available byclicking this link or button
   "messages.read_more": "もっと見る",
   // Describes the base-resource variant
-  "messages.resource_variant_descriptions.base": "このリソースにはAPIの使用時に発生する可能性があるいくつかのバリエーションがあります。\n\n**ベース**バリアントに含まれるフィールドは、`fields`クエリパラメータで指定されたフィールドのほかに、そのパラメータを使用しているときに必ず返されるデフォルトのフィールドを表します。",
+  "messages.resource_variant_descriptions.base": "このリソースにはAPIの使用時に発生する可能性があるいくつかのバリエーションがあります。\n\n**基本**バリアントに含まれるフィールドは、`fields`クエリパラメータで指定されたフィールドのほかに、そのパラメータを使用しているときに必ず返されるデフォルトのフィールドを表します。",
   // Describes the mini-resource variant
   "messages.resource_variant_descriptions.mini": "このリソースにはAPIの使用時に発生する可能性があるいくつかのバリエーションがあります。\n\n通常、**簡易**バリアントに含まれるフィールドは、このリソースが別のリソースの応答内にネストされている場合に返されます。",
   // Describes the standard-resource variant
@@ -118,7 +118,7 @@
   // Describes the cURL tool whenselecting a code sample
   "reference.environments.curl": "cURL",
   // Describes the smallest set of fields that are returnedfor a resource in an API response
-  "reference.resource_variants.base": "ベース",
+  "reference.resource_variants.base": "基本",
   // Describes the set of fields that can be returnedfor a resource when embedded in another resource
   "reference.resource_variants.mini": "簡易",
   // Describes the standard set of fields that are returned for aresource in an API response
