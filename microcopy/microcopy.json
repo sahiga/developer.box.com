@@ -154,9 +154,13 @@
   // The URL to the old page on SDKs
   "headers.primary.links.sdks_and_tools.url": "https:\/\/ja.developer.box.com\/docs\/sdks",
   // The text for the link to the developer console
-  "headers.primary.buttons.console.text": "アプリケーションの管理",
+  "headers.primary.buttons.console.text": "マイアプリ",
   // The URL to the developer console
   "headers.primary.buttons.console.url": "https:\/\/account.box.com\/developers\/services",
+  // The text for the link to the developer signup
+  "headers.primary.signup.text": "サインアップ",
+  // The URL to the developer signup - DO NOT TRANSLATE
+  "headers.primary.signup.url": "https:\/\/account.box.com\/signup\/n\/developer#ty9l3",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box開発者向けドキュメント",
   // A short label to signify that this page is new
