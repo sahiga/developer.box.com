@@ -133,10 +133,24 @@
   "guides.titles.next_reads": "次に読む",
   // A title for usage on a block of guides, marking the index/overview page
   "guides.titles.overview": "概要",
+  // A title for other guides in this category
+  "guides.titles.other_guides": "その他のガイド",
+  // A title for related guides to this category
+  "guides.titles.more_guides": "ガイドをもっと見る",
   // A title for related guides to this category
   "guides.titles.related_guides": "関連するガイド",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "関連するAPI",
+  // A title for a set of links describing related API resources
+  "guides.titles.resources": "関連するリソース",
+  // A short name for a group of guides
+  "guides.titles.category": "カテゴリ",
+  // A short name for a sub group of guides
+  "guides.titles.subcategory": "サブカテゴリ",
+  // A short name for a single guide
+  "guides.titles.guide": "ガイド",
+  // The text for a link to edit the source of the page
+  "guides.titles.edit_source": "このページを編集",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "はじめに",
   // The URL to the old Get Started guides
@@ -151,12 +165,20 @@
   "headers.primary.links.api_reference.url": "\/{locale}\/reference\/",
   // The text for the link to the old page on SDKs
   "headers.primary.links.sdks_and_tools.text": "SDKとツール",
-  // The URL to the old page on SDKs
-  "headers.primary.links.sdks_and_tools.url": "https:\/\/ja.developer.box.com\/docs\/sdks",
+  // The URL to the new page on SDKs - DO NOT TRANSLATE
+  "headers.primary.links.sdks_and_tools.url": "\/{locale}\/sdks-and-tools\/",
+  // The text for the link to the old page on SDKs
+  "headers.primary.links.support.text": "サポート",
+  // The URL to the old page on SDKs - DO NOT TRANSLATE
+  "headers.primary.links.support.url": "\/{locale}\/support\/",
   // The text for the link to the developer console
   "headers.primary.buttons.console.text": "マイアプリ",
   // The URL to the developer console
   "headers.primary.buttons.console.url": "https:\/\/account.box.com\/developers\/services",
+  // The text for the link to the developer signup
+  "headers.primary.buttons.signup.text": "サインアップ",
+  // The URL to the developer signup - DO NOT TRANSLATE
+  "headers.primary.buttons.signup.url": "https:\/\/account.box.com\/signup\/n\/developer#ty9l3",
   // The text for the link to the developer signup
   "headers.primary.signup.text": "サインアップ",
   // The URL to the developer signup - DO NOT TRANSLATE
@@ -211,6 +233,18 @@
   "explorer.titles.body": "レスポンス本文",
   // The text used to prompt a user to start searching
   "search.prompt": "検索...",
+  // Text to indicate that search results are filtered by these types
+  "search.only_show": "表示対象:",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.resources": "リソースの一覧",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.endpoints": "エンドポイント",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.guides": "ガイド",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.params": "パラメータ",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.fields": "フィールド",
   // A short name for the resource type to be shown in search results
   "search.result_types.resource": "リソース",
   // A short name for the endpoint type to be shown in search results
@@ -243,6 +277,10 @@
   "footer.categories.company.links.newsletter.text": "ニュースレター",
   // A link to the newsletter page
   "footer.categories.company.links.newsletter.url": "\/{locale}\/newsletter\/",
+  // Text for a link to the changelog page
+  "footer.categories.company.links.changelog.text": "変更ログ",
+  // A link to the changelog page
+  "footer.categories.company.links.changelog.url": "\/{locale}\/changelog\/",
   // Text for a link to the github org
   "footer.categories.company.links.github.text": "GitHub",
   // Link to the github org
@@ -289,6 +327,10 @@
   "footer.categories.code.links.skills_samples.url": "https:\/\/github.com\/box-community?utf8=%E2%9C%93&q=\\ sample-*-skills&type=&language=",
   // A title for a footer section on our support channels
   "footer.categories.support.title": "サポート",
+  // Text for link to go to our support page
+  "footer.categories.support.links.support.text": "サポートとコミュニティ",
+  // Link to go to our status page
+  "footer.categories.support.links.support.url": "\/{locale}\/support",
   // Text for link to create a support ticket
   "footer.categories.support.links.ticket.text": "チケットの作成",
   // Link to create a support ticket
@@ -326,5 +368,7 @@
   // Text for link to our cookie notification settings
   "footer.bottom.links.cookies.text": "Cookie通知",
   // Link to our cookie notification settings
-  "footer.bottom.links.cookies.url": "https:\/\/www.box.com\/legal\/cookie-notification"
+  "footer.bottom.links.cookies.url": "https:\/\/www.box.com\/legal\/cookie-notification",
+  // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
+  "pages.blog.minute_read": "読了までの所要時間: %s分"
 }
