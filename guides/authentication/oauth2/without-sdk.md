@@ -40,7 +40,7 @@ To complete an OAuth 2.0 flow the following steps need to be completed.
 At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
 
-<Message>
+<Message notice>
 
 The action token acquired through OAuth 2.0 is inherently tied to the user who
 authorized the application. Any API call made with this token will seem to
@@ -193,7 +193,7 @@ documentation](endpoint://get-authorize) for more information.
 Once the user is redirected to the Box web app they will have to log in. After
 they logged in they are presented with a screen to approve your application.
 
-<ImageFrame width="400">
+<ImageFrame border center shadow width="400">
 
 ![Example OAuth 2.0 approval screen](./oauth2-grant.png)
 
@@ -211,7 +211,7 @@ containing a short-lived authorization code.
 https://your.domain.com/path?code=1234567
 ```
 
-This code is not an [tokens][tokens] and is only valid for a few seconds.
+This code is not an [Access Token][tokens] and is only valid for a few seconds.
 The SDKs can be used to exchange the code for an actual Access Token.
 
 <Tabs>

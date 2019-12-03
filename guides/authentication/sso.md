@@ -18,13 +18,13 @@ isIndex: false
 # Box API & SSO
 
 Many Box Enterprises use **Single Sign On** (SSO) to authenticate
-[user-types][user-types] logging in to Box. The way applications built on
+[Managed Users][user-types] logging in to Box. The way applications built on
 Box Platform interact with the SSO provider depends on the type of application
 being built.
 
 ## Custom Apps with Client-side Authentication
 
-When users authenticate with a [custom_app][custom_app] configured to use
+When users authenticate with a [Custom App][custom_app] configured to use
 client-side [OAuth 2.0] Box will detect if a user's
 enterprise is configured to use SSO. If so, Box will redirect the user's browser
 to their own enterprise's configured SSO log-in screen.
@@ -45,7 +45,7 @@ with their SSO provider. Without either of these the log in will fail as either
 Box won't know what SSO provider to send a user to, or the SSO provider won't
 recognize the user's login.
 
-<Message>
+<Message warning>
 
 It is not possible to exempt a user from SSO in an enterprise with SSO
 set to be required, even if it is only used for platform use cases.
@@ -54,7 +54,7 @@ set to be required, even if it is only used for platform use cases.
 
 ## Custom Apps with Server-side Authentication
 
-For [custom_app][custom_app] that use [jwt][jwt] or [app_token][app_token]
+For [Custom Apps][custom_app] that use [JWT][jwt] or [App Token][app_token]
 authentication, SSO is not used to authenticate with Box.
 
 Custom apps using server-side authentication only use server-to-server API
@@ -68,11 +68,11 @@ matter completely.
 In these use cases the application authenticates not as a regular Managed User
 but as a Service Account or App User. These user types do not have access to any
 Managed User's data by default. For these applications to have access to other Managed
-User's data they will need explicit [admin-approval][admin-approval].
+User's data they will need explicit [admin approval][admin-approval].
 
 ## Custom Skills
 
-[custom_skills][custom_skills] are authenticated in a unique way where the
+[Custom Skills][custom_skills] are authenticated in a unique way where the
 application is provided with a unique set of access tokens for every skill
 event.
 

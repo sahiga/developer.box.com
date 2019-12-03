@@ -19,7 +19,7 @@ which provide direct, read-only access to the resource.
 Shared links which are set to an open access level allow anyone with the URL to
 access the item, while shared links with company or collaborators access levels
 may only be accessed by appropriate authenticated Box users. See
-[community_create_shared_link][community_create_shared_link] for all of the options and admin settings
+[here][community_create_shared_link] for all of the options and admin settings
 related to shared links.
 
 Users can access shared items by entering the shared link URL in a browser.

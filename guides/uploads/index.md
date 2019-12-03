@@ -8,17 +8,18 @@ isIndex: true
 ---
 # Uploads
 
-The Box API supports two distinct methods of file upload. The [direct][direct] supports files up to 50MB in size and sends all the binary
+The Box API supports two distinct methods of file upload. The [direct file
+upload API][direct] supports files up to 50MB in size and sends all the binary
 data to the Box API in 1 API request.
 
-The [chunked][chunked] support files from 20MB in size and allow an
+The [chunked upload APIs][chunked] support files from 20MB in size and allow an
 application to upload the file in parts, allowing for more control to catch any
 errors and retry parts individually.
 
 ## Upload limits
 
 Upload limits are dictated by the type of account of the authenticated user.
-More information can be found [fsizes][fsizes].
+More information can be found [in our community article on this topic][fsizes].
 
 ## Preflight check
 

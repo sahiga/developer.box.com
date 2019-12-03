@@ -28,7 +28,7 @@ viewing. It is a zero-footprint HTML5 viewer and can be embedded into an
 application in an `<iframe>` or with a Javascript SDK.
 
 If you are a developer and want to embed the Box DICOM Viewer into your
-application, please [email][email].
+application, please [email us at for more information][email].
 
 ## Current Version
 
@@ -36,11 +36,10 @@ The current version for Box DICOM is
 
 * Version: `1.3.5`
 * Locale: `en-US`
-* Javascript: [js][js]`boxdicom.com/dist/1.3.5/dicom-en-US.min.js`
+* Javascript: [js][js]
+* CSS: [css][css]
 
-* CSS: [css][css]`boxdicom.com/dist/1.3.5/dicom.min.css`
-
-<Message>
+<Message warning>
 
 # Update to `v1.3.0` or higher
 
@@ -106,7 +105,7 @@ The following is an example of an `iframe` embed.
 </iframe>
 ```
 
-<Message>
+<Message warning>
 
 # `allowfullscreen` is required The `allowfullscreen` attribute is required
 
@@ -120,7 +119,7 @@ for the Box DICOM viewer's full-screen function to work properly.
 
 <!-- markdownlint-disable line-length -->
 
-<iframe width="100%" height="550" scrolling="no" title="Box DICOM JS SDK Viewer Demo" src="//codepen.io/box-platform/embed/VbPvNb/?height=550&theme-id=27216&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe width="100%" height="550" scrolling="no" title="Box DICOM JS SDK Viewer Demo" src="//codepen.io/box-platform/embed/VbPvNb/?height=550&theme-id=27216&default-tab=result&embed-version=2" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 

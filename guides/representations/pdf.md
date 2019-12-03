@@ -41,7 +41,7 @@ To get a PDF representation follow the following steps
 
 To retrieve a watermarked PDF the underlying file itself needs to be
 watermarked in Box. You can watermark a file either via the Box web application
-or using the [put_files_id_watermark][put_files_id_watermark]`PUT /files/:id/watermark/`[put_files_id_watermark][put_files_id_watermark] API.
+or using the [put_files_id_watermark][put_files_id_watermark] API.
 
 Once watermarked, a watermarked PDF representation of the file is generated.
 

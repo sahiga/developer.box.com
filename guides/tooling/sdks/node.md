@@ -27,7 +27,7 @@ Learn more about the Node SDK on GitHub
 ## NPM installation
 
 To install the Node SDK run the following command from your terminal
-window or command prompt using the [npm][npm].
+window or command prompt using the [Node Package Manager][npm].
 
 ```shell
 npm install box-node-sdk --save
@@ -35,7 +35,7 @@ npm install box-node-sdk --save
 
 ## Yarn installation
 
-Similarly, the SDK can be installed using the [yarn][yarn] manager.
+Similarly, the SDK can be installed using the [Yarn package][yarn] manager.
 
 ```shell
 yarn add box-node-sdk

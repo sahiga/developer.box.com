@@ -21,7 +21,7 @@ logo.
 
 ## Approved logos
 
-Approved Box logos can be found in [logos][logos].
+Approved Box logos can be found in [this Box folder][logos].
 
 ## Things to do
 
@@ -35,7 +35,8 @@ this case, you should feel free to use our name and logo to help people find us.
 ### Contact us
 
 We’re here to help. Many situations can be ambiguous, and we’ll absolutely work
-with you to make sure that your app works within our guidelines. [contact][contact].
+with you to make sure that your app works within our guidelines. [Just contact
+us with any questions][contact].
 
 ## Things not to do
 
@@ -50,7 +51,7 @@ official. For example, "Unofficial Box Client" is certainly clear enough, while
 
 If you include your own brand name (for example,
 "My Company Box Client"), you’re probably fine. Nonetheless, this is probably the
-most ambiguous guideline, so please [contact][contact] if you have any
+most ambiguous guideline, so please [contact us][contact] if you have any
 questions, and we’ll get you sorted out right away!
 
 In short though, this means:

@@ -27,7 +27,7 @@ methods.
 
 To create a Developer Token for an application:
 
-* Go to the Box [devconsole][devconsole] and select the application to
+* Go to the Box [developer console][devconsole] and select the application to
   create a Developer Token for.
 * From the sidebar select "Configuration".
 * In the "Developer Token" section select "Generate Developer Token".
@@ -42,7 +42,7 @@ curl https://api.box.com/2.0/users/me \
   -H "Authorization: Bearer [DEVELOPER_TOKEN]"
 ```
 
-<Message>
+<Message warning>
 
 Please be aware that the developer token is associated to the user (developer)
 that was logged in to the developer console when the token was created.

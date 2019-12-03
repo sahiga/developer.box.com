@@ -16,14 +16,14 @@ isIndex: false
 # Update Metadata Instances
 
 Updating metadata on a file can be achieved by passing a set of JSON operations
-to the [files_endpoint][files_endpoint]`PUT /files/:id/metadata_templates/:id/:id`[files_endpoint][files_endpoint] API.
+to the [files_endpoint][files_endpoint] API.
 
 <Samples id="put_files_id_metadata_id_id">
 
 </Samples>
 
 Similarly, metadata assigned to a folder can be updated by passing a set of JSON
-operations to the [folders_endpoint][folders_endpoint]`PUT /files/:id/metadata_templates/:id/:id`[folders_endpoint][folders_endpoint]
+operations to the [folders_endpoint][folders_endpoint]
 API.
 
 <Samples id="put_folders_id_metadata_id_id">
@@ -32,7 +32,7 @@ API.
 
 ## JSON Operations
 
-The request body must follow the [jsonpatch][jsonpatch], which is
+The request body must follow the [JSON-Patch specification][jsonpatch], which is
 represented as a list of operation objects.
 
 Updates can be either `add`, `replace`, `remove` , `test`, `move`, or `copy`.
@@ -53,7 +53,7 @@ assigned to the file or folder.
 ]
 ```
 
-Every operation exists out of an `op` name, the [pointer][pointer] `path`
+Every operation exists out of an `op` name, the [JSON Pointer][pointer] `path`
 that points to the field to changes, and an optional `value` or `from` value
 depending on the operation being made.
 

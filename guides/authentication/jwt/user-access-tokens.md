@@ -33,9 +33,10 @@ admins, or by calling the `GET /users/me` endpoint with an authenticated user se
 ## Preconditions
 
 Creating a user access token has a few requirements. Firstly, the application
-needs to be configured to  be allowed to create user access tokens in the [devconsole][devconsole].
+needs to be configured to  be allowed to create user access tokens in the [developer
+console][devconsole].
 
-<ImageFrame>
+<ImageFrame border center>
 
 ![Advanced Features](./enable-user-access-tokens.png)
 

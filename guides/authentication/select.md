@@ -29,14 +29,14 @@ The following authorization methods are available to each Box Application type.
 
 | Box Application Type         | Supports OAuth 2.0? | JWT? | App Token? | Developer Token? |
 | ---------------------------- | ------------------- | ---- | ---------- | ---------------- |
-| [custom-app][custom-app]     | はい                  | はい   | はい         | はい               |
-| [custom-skill][custom-skill] | いいえ                 | いいえ  | いいえ        | いいえ              |
-| Enterprise Integration       | はい                  | はい   | いいえ        | はい               |
-| Partner Integration          | いいえ                 | いいえ  | はい         | いいえ              |
+| [Custom App][custom-app]     | Yes                 | Yes  | Yes        | Yes              |
+| [Custom Skill][custom-skill] | No                  | No   | No         | No               |
+| Enterprise Integration       | Yes                 | Yes  | No         | Yes              |
+| Partner Integration          | No                  | No   | Yes        | No               |
 
 <!-- markdownlint-enable line-length -->
 
-<Message>
+<Message warning>
 
 Enterprise and Partner Integrations exist for legacy purposes. Please use
 Custom Apps instead and use the relevant authentication method where needed.
@@ -45,7 +45,7 @@ Custom Apps instead and use the relevant authentication method where needed.
 
 <Message>
 
-When you are creating a [custom-skill][custom-skill] or Partner Integration
+When you are creating a [Custom Skill][custom-skill] or Partner Integration
 application there is no need to select a authentication method as there is no
 choice to be made.
 
@@ -57,11 +57,11 @@ make the API calls.
 
 ### Client-side OAuth 2.0
 
-Client-side OAuth 2.0 is only available to [custom-app][custom-app] and
+Client-side OAuth 2.0 is only available to [Custom Apps][custom-app] and
 Enterprise Integrations. It requires the application to redirect a user to the
 Box website to grant the application's access to their data.
 
-<ImageFrame width="400">
+<ImageFrame center width="400" shadow border>
 
 ![Box OAuth 2.0 approval](./oauth2-grant.png)
 
@@ -88,12 +88,12 @@ Learn about client-side authentication with OAuth 2.0
 ### Server-side JWT
 
 Server-side authentication using JSON Web Tokens (JWT) is only available to
-[custom-app][custom-app] and Enterprise Integrations. It does not involve a
+[Custom Apps][custom-app] and Enterprise Integrations. It does not involve a
 user into the authorization flow and as such can be used to act on behalf of any
 user in an enterprise. JWT uses a public/private key pair verify the
 application's permissions.
 
-<ImageFrame>
+<ImageFrame center shadow border>
 
 ![Box JWT flow](./jwt-flow.png)
 
@@ -176,12 +176,12 @@ server-side authentication.
 
 |                                   | OAuth 2.0 | JWT | App Tokens | Developer Token |
 | --------------------------------- | --------- | --- | ---------- | --------------- |
-| Requires user involvement?        | はい        | いいえ | いいえ        | はい              |
-| Requires admin approval?          | いいえ       | はい  | はい         | いいえ             |
-| Can act on behalf of other users? | はい        | はい  | いいえ        | はい              |
-| Do users see Box?                 | はい        | いいえ | いいえ        | はい              |
-| Can create App Users?             | いいえ       | はい  | いいえ        | はい              |
-| Can be used in production?        | はい        | はい  | はい         | いいえ             |
+| Requires user involvement?        | Yes       | No  | No         | Yes             |
+| Requires admin approval?          | No        | Yes | Yes        | No              |
+| Can act on behalf of other users? | Yes       | Yes | No         | Yes             |
+| Do users see Box?                 | Yes       | No  | No         | Yes             |
+| Can create App Users?             | No        | Yes | No         | Yes             |
+| Can be used in production?        | Yes       | Yes | Yes        | No              |
 
 <!-- markdownlint-enable line-length -->
 

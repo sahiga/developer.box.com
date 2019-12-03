@@ -16,7 +16,7 @@ isIndex: false
 # Download File Representation
 
 Use the`url_template` that was received when
-[select_representation][select_representation] to download
+[selecting the representation][select_representation] to download
 the representation. Replace the `{+asset_path}` depending on
 the type of representation.
 

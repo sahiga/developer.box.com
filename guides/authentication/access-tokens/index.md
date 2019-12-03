@@ -28,15 +28,15 @@ Token.
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type               | How to get Access Token              |
-| ---------------------------------- | ------------------------------------ |
-| Custom App + OAuth 2.0             | [oauth2-with-sdk][oauth2-with-sdk]   |
-| Custom App + JWT                   | [jwt-with-sdk][jwt-with-sdk]         |
-| Custom App + App Token             | [devtoken][devtoken]                 |
-| Enterprise Integration + OAuth 2.0 | [oauth2-with-sdk][oauth2-with-sdk]   |
-| Enterprise Integration + JWT       | [jwt-with-sdk][jwt-with-sdk]         |
-| Partner Integration + App Token    | Configure token in developer console |
-| Custom Skill                       | Access Token in event payload        |
+| Box Application Type               | How to get Access Token                          |
+| ---------------------------------- | ------------------------------------------------ |
+| Custom App + OAuth 2.0             | [Explicit user grant][oauth2-with-sdk]           |
+| Custom App + JWT                   | [Exchange a JWT assertion][jwt-with-sdk]         |
+| Custom App + App Token             | [Configure token in developer console][devtoken] |
+| Enterprise Integration + OAuth 2.0 | [Explicit user grant][oauth2-with-sdk]           |
+| Enterprise Integration + JWT       | [Exchange a JWT assertion][jwt-with-sdk]         |
+| Partner Integration + App Token    | Configure token in developer console             |
+| Custom Skill                       | Access Token in event payload                    |
 
 <!-- markdownlint-enable line-length -->
 

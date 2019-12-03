@@ -482,7 +482,7 @@ folder.
 After the new directory is created, it uploads all files within the directory
 making sure to use all available Box features to make the uploads successful.
 
-Using the [preflight][preflight] API the files are checked for conflicts and
+Using the [Preflight][preflight] API the files are checked for conflicts and
 size restrictions before they are uploaded. If a naming conflict is found, the
 script instead uploads a new version of that file.
 
@@ -490,7 +490,8 @@ Using the the `SHA` hash of the file the scripts add a `Content-MD5` header on
 upload to make sure the file is successfully uploaded to Box without any bytes
 lost or tampered with.
 
-Finally, if a file size exceeds 20MB\`, the script uses the [chunked][chunked] feature to make sure uploads are more reliable for larger
+Finally, if a file size exceeds 20MB\`, the script uses the [Chunked
+Upload][chunked] feature to make sure uploads are more reliable for larger
 files.
 
 [preflight]: g://uploads/check

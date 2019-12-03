@@ -56,8 +56,8 @@ parameters (except for the binary content) as if uploading an actual file.
 
 ## Checks & Chunk Uploads
 
-When performing a [chunked][chunked], performing a preflight check is not
-required as [chunkedsession][chunkedsession] also performs a
+When performing a [chunked upload][chunked], performing a preflight check is not
+required as [creating an Upload Session][chunkedsession] also performs a
 preflight check.
 
 ## Response codes

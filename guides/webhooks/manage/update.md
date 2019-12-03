@@ -29,7 +29,7 @@ as well as an optional new `address` to send webhooks to.
 
 # Webhook ID
 
-WebhookのIDを調べるには、[1][1]エンドポイントを使用します。
+To find the ID of the webhook, use the [List all webhooks][1] endpoint.
 
 </Message>
 

@@ -249,7 +249,7 @@ function autoPage(iterator) {
 
 <!-- markdownlint-enable line-length -->
 
-<Message>
+<Message warning>
 
 It is important to remember that an application needs to have the
 permissions to access and download the files and folders in question. When the

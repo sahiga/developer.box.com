@@ -14,7 +14,7 @@ isIndex: false
 ---
 # Download File
 
-To download a file, pass the [api][api]`GET /files/:id/content`[api][api] the ID of the file
+To download a file, pass the [api][api] the ID of the file
 to get the content for.
 
 <Samples id="get_files_id_content">
@@ -39,7 +39,7 @@ redirect.
 In our SDKs this will result in the binary data to be downloaded. In the API
 this will result in a download URL being returned via the `Location` header.
 
-It is possible to [downloadurl][downloadurl] via the SDKs as well.
+It is possible to [get the download URL][downloadurl] via the SDKs as well.
 
 </Message>
 

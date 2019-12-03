@@ -35,7 +35,7 @@ To complete a JWT authorization the following steps need to be completed.
 At the end of this flow, the application has a Box SDK client that can be used to
 make API calls on behalf of the application.
 
-<Message>
+<Message notice>
 
 The default method of authentication through JWT is inherently tied to the Service
 Account for the application. Any API call made with this token will seem to
@@ -182,12 +182,13 @@ var client = sdk.getAppAuthClient('enterprise');
 
 </Tabs>
 
-<Message>
+<Message warning>
 
 # Service Accounts
 
 At this point the application is authenticated as an application user, not as
-a managed or app user. Head over to our guide on [g://authentication/user-types][g://authentication/user-types] to learn more about the different types
+a managed or app user. Head over to our guide on [User
+Types][g://authentication/user-types] to learn more about the different types
 of users.
 
 </Message>

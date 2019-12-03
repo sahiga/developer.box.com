@@ -19,7 +19,7 @@ isIndex: false
 # Create Upload Session
 
 To create an upload session, call the
-[createsession][createsession]`POST /files/upload_sessions`[createsession][createsession] API with the desired `file_name`
+[createsession][createsession] API with the desired `file_name`
 and `folder_id` to put the file in, as well as the `file_size` of the file to be
 uploaded.
 
@@ -28,7 +28,7 @@ uploaded.
 </Samples>
 
 To create a session for a new version of an existing file, call the
-[createsessionversion][createsessionversion]`POST /files/:id/upload_sessions`[createsessionversion][createsessionversion] API instead. In this
+[createsessionversion][createsessionversion] API instead. In this
 case, the `file_name` and `folder_id` are only required when renaming or moving
 the file in the process.
 
@@ -38,12 +38,13 @@ the file in the process.
 
 ## Pre-flight Check
 
-Creating an upload session also performs a [check][check], making it
+Creating an upload session also performs a [preflight check][check], making it
 unnecessary to do so separately when working with chunked uploads.
 
 ## Response
 
-When a session is created successfully the response includes an [uploadsession][uploadsession] that includes a session ID, the number of parts, the
+When a session is created successfully the response includes an [Upload
+Session][uploadsession] that includes a session ID, the number of parts, the
 part sizes, as well as links to the relevant next API endpoints to use.
 
 <!-- markdownlint-disable line-length -->

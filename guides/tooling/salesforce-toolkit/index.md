@@ -23,7 +23,7 @@ record to Box folder mapping and handle permission management.
 <Message type="notice">
 
 This functionality is part of the latest Box for
-[sf-package][sf-package].
+[Salesforce package][sf-package].
 
 </Message>
 
@@ -33,7 +33,7 @@ This functionality is part of the latest Box for
 
 The Toolkit is not a full-featured APEX wrapper for the BOX Content API. If
 this is what you are looking for, have a look at the
-[sf-sdk][sf-sdk].
+[Box SDK for Salesforce][sf-sdk].
 
 </Message>
 

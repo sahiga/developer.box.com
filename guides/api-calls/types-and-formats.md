@@ -20,11 +20,11 @@ that can be encountered within the Box APIs.
 The Box APIs use JSON in the requests bodies. There are a few notable exceptions
 to this rule:
 
-* The [post-oauth2-token][post-oauth2-token]`POST /oauth2/token`[post-oauth2-token][post-oauth2-token] is used to request access tokens
+* The [post-oauth2-token][post-oauth2-token] is used to request access tokens
   and as per the OAuth 2.0 specification it accepts the body to be sent
   with a content type of `application/x-www-form-urlencoded`.
 * Most of the APIs that are used to upload binary data, like the
-  [post-files-content][post-files-content]`POST /files/content`[post-files-content][post-files-content] endpoint, expect data to be sent
+  [post-files-content][post-files-content] endpoint, expect data to be sent
   as form data with a content type of `multipart/form-data`.
 
 <Message type="notice">
@@ -43,7 +43,7 @@ a `Accept-Encoding: gzip, deflate` request header.
 
 ### Date and times
 
-The Box APIs support [rfc3339][rfc3339] timestamps. The preferred way to format
+The Box APIs support [RFC 3339][rfc3339] timestamps. The preferred way to format
 a date in a request is to convert the time to UTC, for example `2013-04-17T09:12:36-00:00`.
 
 In those cases where timestamps are rounded to a given day, the time component
@@ -127,13 +127,13 @@ generally are formatted as follows.
 
 | Field         | Always present? |                                                                                                                          |
 | ------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `entries`     | はい              | A list of entries in the collection                                                                                      |
-| `total_count` | いいえ             | The total numbers in the collection that can be requested. This can be larger than this page of results                  |
-| `limit`       | いいえ             | For endpoints that support offset-based pagination, this specifies the limit to the number of results returned           |
-| `offset`      | いいえ             | For endpoints that support offset-based pagination, this specifies the offset of results returned                        |
-| `order`       | いいえ             | For endpoints that support sorting, this specifies the order the results are returned in                                 |
-| `next_marker` | いいえ             | For endpoints that support marker-based pagination, this specifies the marker for the next page that can be returned     |
-| `prev_marker` | いいえ             | For endpoints that support marker-based pagination, this specifies the marker for the previous page that can be returned |
+| `entries`     | Yes             | A list of entries in the collection                                                                                      |
+| `total_count` | No              | The total numbers in the collection that can be requested. This can be larger than this page of results                  |
+| `limit`       | No              | For endpoints that support offset-based pagination, this specifies the limit to the number of results returned           |
+| `offset`      | No              | For endpoints that support offset-based pagination, this specifies the offset of results returned                        |
+| `order`       | No              | For endpoints that support sorting, this specifies the order the results are returned in                                 |
+| `next_marker` | No              | For endpoints that support marker-based pagination, this specifies the marker for the next page that can be returned     |
+| `prev_marker` | No              | For endpoints that support marker-based pagination, this specifies the marker for the previous page that can be returned |
 
 <!-- markdownlint-enable line-length -->
 
@@ -172,7 +172,7 @@ example, a folder's size might have grown to many terabytes of data and
 as a result the `size` field of the folder might have grown to a very large
 number.
 
-In these cases these numbers are returned in [numbers][numbers] format for
+In these cases these numbers are returned in [IEEE754][numbers] format for
 example `1.2318237429383e+31`.
 
 [post-oauth2-token]: endpoint://post-oauth2-token

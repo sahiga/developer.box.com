@@ -1,6 +1,6 @@
 ---
+hide_search: false
 hide_title: true
-hide_search: true
 alias_paths:
   - /reference
   - /docs/faqs
@@ -19,7 +19,7 @@ isIndex: true
 ---
 # Box Platform
 
-<Hero>
+<Hero search>
 
 # Build with the Box Platform
 
@@ -27,9 +27,9 @@ Integrate, extend and build apps with the power of Box
 
 </Hero>
 
-<Centered>
+<Centered wide>
 
-<Header to="/guides">
+<Header stroke to="/guides">
 Developer News
 
 </Header>
@@ -38,7 +38,7 @@ Developer News
 
 </BlogCards>
 
-<More to="https://medium.com/box-developer-blog">
+<More to="https://medium.com/box-developer-blog" right>
 Developer Blog
 
 </More>
@@ -47,9 +47,9 @@ Developer Blog
 
 <Dark>
 
-<Centered>
+<Centered wide>
 
-<HorizontalList>
+<HorizontalList centered>
 
 ## Stay up to date
 
@@ -65,9 +65,9 @@ Developer Blog
 
 </Dark>
 
-<Centered>
+<Centered wide>
 
-<Header to="/guides">
+<Header stroke to="/guides">
 Guides
 
 </Header>
@@ -76,7 +76,7 @@ Guides
 
 </GuideCategories>
 
-<More to="/{locale}/guides">
+<More to="/{locale}/guides" right>
 All guides
 
 </More>
@@ -85,9 +85,9 @@ All guides
 
 <Dark>
 
-<Centered>
+<Centered wide>
 
-<HorizontalList>
+<HorizontalList centered>
 
 ## Elsewhere
 
@@ -103,9 +103,9 @@ All guides
 
 </Dark>
 
-<Centered>
+<Centered wide>
 
-<Header to="/guides">
+<Header stroke to="/guides">
 API Reference
 
 </Header>
@@ -114,7 +114,7 @@ API Reference
 
 </ReferenceCategories>
 
-<More to="/{locale}/reference/list">
+<More to="/{locale}/reference/list" right>
 Full API Reference
 
 </More>

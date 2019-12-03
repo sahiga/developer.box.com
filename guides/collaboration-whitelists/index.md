@@ -14,7 +14,7 @@ isIndex: true
 # Collaboration Whitelists
 
 Within the content and sharing settings for an enterprise, an admin can specify
-[collab-restrictions][collab-restrictions] for the enterprise. These
+[collaboration restrictions][collab-restrictions] for the enterprise. These
 settings include the ability to limit collaborations to only a series of
 whitelisted domains.
 

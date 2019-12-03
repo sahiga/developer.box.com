@@ -22,10 +22,10 @@ The following is a high level overview of the different types.
 
 <!-- markdownlint-disable line-length -->
 
-|                            |                                                                         |
-| -------------------------- | ----------------------------------------------------------------------- |
-| **Authentication methods** | [oauth2][oauth2], [jwt][jwt], and [app-token][app-token] Authentication |
-| **Features**               | Webhooks, App Gallery, and Web App Integrations                         |
+|                            |                                                                            |
+| -------------------------- | -------------------------------------------------------------------------- |
+| **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], and [App Token][app-token] Authentication |
+| **Features**               | Webhooks, App Gallery, and Web App Integrations                            |
 
 <!-- markdownlint-enable line-length -->
 
@@ -44,7 +44,7 @@ customized, or you can build your own.
 
 A Custom App is best used when the application:
 
-* Wants to use [oauth2][oauth2], [jwt][jwt], or [app-token][app-token] authentication
+* Wants to use [OAuth 2.0][oauth2], [JWT][jwt], or [App Token][app-token] authentication
 * Wants to upload and download files
 * Wants the freedom to access both their own files, as well as files owned by
   other users, even external users.
@@ -134,13 +134,13 @@ Example use cases for Custom Skills include:
 
 |                            |                                                 |
 | -------------------------- | ----------------------------------------------- |
-| **Authentication methods** | [oauth2][oauth2] and [jwt][jwt]                 |
+| **Authentication methods** | [OAuth 2.0][oauth2] and [JWT][jwt]              |
 | **Features**               | Webhooks, App Gallery, and Web App Integrations |
 
 <!-- markdownlint-enable line-length -->
 
-Enterprise Integrations are similar to [custom-apps][custom-apps] but restricted
-to [oauth2][oauth2] and [jwt][jwt] authentication. We recommend using a
+Enterprise Integrations are similar to [Custom Apps][custom-apps] but restricted
+to [OAuth 2.0][oauth2] and [JWT][jwt] authentication. We recommend using a
 Custom Application and configuring the application accordingly.
 
 ## Partner Integrations
@@ -149,14 +149,14 @@ Custom Application and configuring the application accordingly.
 
 |                            |                             |
 | -------------------------- | --------------------------- |
-| **Authentication methods** | [app-token][app-token] auth |
+| **Authentication methods** | [App Token][app-token] auth |
 | **Features**               | Limited API access          |
 
 <!-- markdownlint-enable line-length -->
 
-Partner Integrations are similar to [custom-apps][custom-apps] but restricted to
-[app-token][app-token] authentication. We recommend using a Custom Application
-with [app-token][app-token] authentication and configuring the application
+Partner Integrations are similar to [Custom Apps][custom-apps] but restricted to
+[App Token][app-token] authentication. We recommend using a Custom Application
+with [App Token][app-token] authentication and configuring the application
 accordingly.
 
 [oauth2]: g://authentication/oauth2

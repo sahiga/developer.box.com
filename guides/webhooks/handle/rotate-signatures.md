@@ -34,7 +34,7 @@ key before and are ready to replace either of them.
 By following these steps you can configure your application with two new keys
 without any conflicts.
 
-1. Change the primary key in the [console][console] of your
+1. Change the primary key in the [developer console][console] of your
    application. Head to the webhooks section of your application configuration
    screen and click the "Reset" button for the primary key.
 2. Update your application with the new primary key. Your application might

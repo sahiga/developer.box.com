@@ -26,7 +26,7 @@ folders stored in Box using a third-party application. The application can
 interact with any Box content and perform any action supported by Box. It can
 offer new features to Box users through the Integrations popup menu.
 
-<ImageFrame width="400">
+<ImageFrame border shadow width="400" center>
 
 ![Integration example](../images/integration-popup.png)
 
@@ -38,10 +38,12 @@ restricted to certain content types and file extensions.
 
 ## Adding Web App Integration to an App
 
-To make an application's features available to Box users, create [custom-app][custom-app] application in the [devconsole][devconsole] using [oauth2][oauth2] authentication.
+To make an application's features available to Box users, create [Custom
+App][custom-app] application in the [developer console][devconsole] using [OAuth
+2.0][oauth2] authentication.
 
 It must then be configured to support the features of the Box API that it needs
-and be release through the [app-gallery][app-gallery].
+and be release through the [Box App Gallery][app-gallery].
 
 Once an application is released through the App Gallery, users can add it to
 their Box accounts by visiting the App Gallery and use its features from the

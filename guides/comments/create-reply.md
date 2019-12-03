@@ -15,8 +15,7 @@ isIndex: false
 ---
 # Create Reply
 
-To create a reply to a previous comment, call the [post_comments][post_comments]`POST
-/comments`[post_comments][post_comments] API with the message of the new comment, as well as
+To create a reply to a previous comment, call the [post_comments][post_comments] API with the message of the new comment, as well as
 the ID of the previous comment to leave the reply on.
 
 <Samples id="post_comments" variant="as_reply">

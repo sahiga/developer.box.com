@@ -15,8 +15,8 @@ isIndex: false
 # List All Representations for File
 
 To see what representations are available for a file you can call the
-[get_files_id][get_files_id]`GET /files/:id`[get_files_id][get_files_id] endpoint while requesting the
-[file_representations][file_representations]`representations`[file_representations][file_representations] field.
+[get_files_id][get_files_id] endpoint while requesting the
+[file_representations][file_representations] field.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \

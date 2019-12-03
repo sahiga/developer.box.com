@@ -22,12 +22,11 @@ an application as a representation of the file, for example as a placeholder for
 a link that downloads or previews the file.
 
 An alternative way to get a thumbnail for a file is using the
-[thumb_representations][thumb_representations].
+[representations API][thumb_representations].
 
 ## Requesting
 
-To request a file thumbnail use the [get_files_id_thumbnail_id][get_files_id_thumbnail_id]`GET
-/files/:id/thumbnail.:extension`[get_files_id_thumbnail_id][get_files_id_thumbnail_id]
+To request a file thumbnail use the [get_files_id_thumbnail_id][get_files_id_thumbnail_id]
 endpoint.
 
 <Samples id="get_files_id_thumbnail_id">

@@ -9,7 +9,7 @@ isIndex: true
 # Metadata Cascade Policies
 
 A Metadata Cascade Policy describes automatic cascading behavior for a
-[instance][instance] on a folder, allowing the metadata to
+[Metadata Instance][instance] on a folder, allowing the metadata to
 automatically be applied to all the items within that folder.
 
 For example, an application might assign the `projectData` metadata template to

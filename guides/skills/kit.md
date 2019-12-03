@@ -30,6 +30,6 @@ These complex operation abstractions include:
   Box.
 
 For a complete overview of the Node Box Skills kit, see the
-[github-skills-kit][github-skills-kit].
+[GitHub documentation][github-skills-kit].
 
 [github-skills-kit]: https://github.com/box/box-skills-kit-nodejs/tree/master/skills-kit-library

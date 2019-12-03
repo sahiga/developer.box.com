@@ -21,7 +21,7 @@ To list all collections for a user, call the [`GET
 
 </Samples>
 
-<Message>
+<Message warning>
 
 The only collection that is available via the API is the "Favorites"
 collection. The ID of this collection is different for every

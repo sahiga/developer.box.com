@@ -36,7 +36,7 @@ A downscoped token is a token that has fewer permissions (scopes) than the
 original token, as well as the optional additional restriction to only allow
 access to a specific file.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Downscoping overview](./downscope.png)
 
@@ -56,13 +56,13 @@ Token, a list of scopes, as well as an optional file URL to restrict the token t
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter            | Description                                                                                                                                                                            |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `subject_token`      | The original token to downscope. This can be a token that was acquired through OAuth 2.0, JWT token exchange, or as an App Token.                                                      |
-| `scope`              | A space-delimited list of [scopes][scopes] to limit the new token to. Any valid scope for the application can be used, though a special set of [scopes_down][scopes_down] is available |
-| `resource`           | An optional full URL path to the file the token should be restricted to.                                                                                                               |
-| `subject_token_type` | Always set to `urn:ietf:params:oauth:token-type:access_token`                                                                                                                          |
-| `grant_type`         | Always set to `urn:ietf:params:oauth:grant-type:token-exchange`                                                                                                                        |
+| Parameter            | Description                                                                                                                                                                                           |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `subject_token`      | The original token to downscope. This can be a token that was acquired through OAuth 2.0, JWT token exchange, or as an App Token.                                                                     |
+| `scope`              | A space-delimited list of [scopes][scopes] to limit the new token to. Any valid scope for the application can be used, though a special set of [scopes for Box UI elements][scopes_down] is available |
+| `resource`           | An optional full URL path to the file the token should be restricted to.                                                                                                                              |
+| `subject_token_type` | Always set to `urn:ietf:params:oauth:token-type:access_token`                                                                                                                                         |
+| `grant_type`         | Always set to `urn:ietf:params:oauth:grant-type:token-exchange`                                                                                                                                       |
 
 <!-- markdownlint-enable line-length -->
 

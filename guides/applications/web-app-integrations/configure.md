@@ -22,10 +22,10 @@ App.
 
 Before we can get started, we the following requirements need to be met.
 
-* You need to be a be able to access the [devconsole][devconsole] for
-  your enterprise, or sign up for a [devaccount][devaccount].
+* You need to be a be able to access the [Developer Console][devconsole] for
+  your enterprise, or sign up for a [developer account][devaccount].
 * You need to have created a Custom App with
-  [custom-oauth2][custom-oauth2] on the developer console.
+  [OAuth 2.0 authentication][custom-oauth2] on the developer console.
 
 ## 1. Create a New Integration
 
@@ -152,7 +152,7 @@ note that the URL has to be publicly accessible on the internet.
 ## Making Integration Public Available
 
 To make a Box integration publicly available it needs to be listed in the App
-Gallery. Follow the [app-gallery][app-gallery] guide for more details.
+Gallery. Follow the [App Gallery][app-gallery] guide for more details.
 
 [custom-oauth2]: g://applications/custom-apps/oauth2-setup
 

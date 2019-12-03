@@ -34,7 +34,7 @@ header or an actual access token for that user.
 ## Long Polling
 
 The user event stream supports long-polling
-[longpoll][longpoll].
+[through the `OPTIONS /events` API][longpoll].
 
 ## Stream Types
 

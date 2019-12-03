@@ -21,7 +21,7 @@ service you are trying to create determine the type of Box App you will want to 
 
 The following is quick overview of the different Box Application types.
 
-<ImageFrame>
+<ImageFrame border center>
 
 ![Application Types](./images/app-types.png)
 
@@ -29,12 +29,12 @@ The following is quick overview of the different Box Application types.
 
 <!-- markdownlint-disable line-length -->
 
-| App Type                       | Auth Method             | Features & Limitations                             |
-| ------------------------------ | ----------------------- | -------------------------------------------------- |
-| [custom-apps][custom-apps]     | [oauth2][oauth2]        | Web App Integrations, App Gallery, Webhooks        |
-| [custom-apps][custom-apps]     | [jwt][jwt]              | Webhook                                            |
-| [custom-apps][custom-apps]     | [apptoken][apptoken]    | Web App Integrations, Webhooks, Limited API access |
-| [custom-skills][custom-skills] | No authorization needed | Limited API access                                 |
+| App Type                      | Auth Method             | Features & Limitations                             |
+| ----------------------------- | ----------------------- | -------------------------------------------------- |
+| [Custom App][custom-apps]     | [OAuth 2.0][oauth2]     | Web App Integrations, App Gallery, Webhooks        |
+| [Custom App][custom-apps]     | [JWT][jwt]              | Webhooks                                           |
+| [Custom App][custom-apps]     | [App token][apptoken]   | Web App Integrations, Webhooks, Limited API access |
+| [Custom Skill][custom-skills] | No authorization needed | Limited API access                                 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -50,11 +50,11 @@ as specified below.
 
 <!-- markdownlint-disable line-length -->
 
-| App Type               | Auth Method          | Description                                                    |
-| ---------------------- | -------------------- | -------------------------------------------------------------- |
-| Enterprise Integration | [oauth2][oauth2]     | Equal to a Custom App configured with OAuth 2.0 authentication |
-| Enterprise Integration | [jwt][jwt]           | Equal to a Custom App configured with JWT authentication       |
-| Partner Integration    | [apptoken][apptoken] | Equal to a Custom App configured with App Token authentication |
+| App Type               | Auth Method           | Description                                                    |
+| ---------------------- | --------------------- | -------------------------------------------------------------- |
+| Enterprise Integration | [OAuth 2.0][oauth2]   | Equal to a Custom App configured with OAuth 2.0 authentication |
+| Enterprise Integration | [JWT][jwt]            | Equal to a Custom App configured with JWT authentication       |
+| Partner Integration    | [App token][apptoken] | Equal to a Custom App configured with App Token authentication |
 
 <!-- markdownlint-enable line-length -->
 

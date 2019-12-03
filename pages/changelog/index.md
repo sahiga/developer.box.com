@@ -11,6 +11,45 @@ isIndex: true
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-11-25 / Elements `v11.0` Released
+
+Box UI Elements version 11.0 has been released. This update includes three
+major new feature enhancements:
+
+* Content Explorer Grid View.
+* New Tasks Experience within the Preview Sidebar.
+* Visual Versions for the Preview Sidebar.
+
+Updated JavaScript and CSS files links for this release are available within
+the [UI Elements manual installation instructions][ui-elements-manual-install].
+
+For full information on changes in this release please see the following
+resources:
+
+* [Release notes][elements-11-release-notes]
+* [Announcement blog post][elements-11-blog]
+
+## 2019-11-20 / Preview SDK `v2.26.0` Released
+
+Version `2.26.0` of the Preview SDK has been released. New JavaScript and CSS
+Preview files have been made available. To adopt new changes, please see the
+[UI Elements manual installation][ui-elements-manual-install] links for Content
+Preview.
+
+Please see the `v2.26.0` [release notes][preview-2.26-release-notes] for a list
+of all feature changes.
+
+## 2019-11-18 / New iOS SDK Now Available
+
+A new major release of the iOS SDK has been released and is now generally
+available. The new SDK includes a number of major revisions:
+
+* Fully rebuilt using Swift.
+* Support for Cocoapods, Carthage, and the Swift Package Manager.
+* SDK now maintains full API feature parity.
+
+See the [release blog post][ios-sdk-release-blog] for more information.
+
 ## 2019-10-25 / New fields for File Versions
 
 New optional fields have been made available within the File Version object,
@@ -32,7 +71,7 @@ The purpose of these parameters is to allow applications to sort items by their
 
 ## 2019-10-23 / New Shield Error Code
 
-A new error code for [box-shield][box-shield] has been released. The new
+A new error code for [Box Shield][box-shield] has been released. The new
 `403 - forbidden_by_policy` error code will be raised when the enterprise has
 applied Shield access policies that prevent the action, such as downloading
 items.
@@ -70,7 +109,7 @@ scoped access tokens could be revoked through the /revoke endpoint. With this
 new enhancement downscoped tokens may now be revoked in addition to the fully
 scoped access tokens.
 
-More information is available [blog_token_revocation][blog_token_revocation].
+More information is available [here][blog_token_revocation].
 
 ## 2019-09-11 / New `completion_rule` field for Tasks
 
@@ -163,7 +202,7 @@ Please see our [TLS 1.0 deprecation guide](page://changelog/tls-1.1) to
 upgrade your systems to TLS 1.2.
 
 For any questions or for addition support, please
-[support_ticket][support_ticket].
+[file a support ticket][support_ticket].
 
 ## 2019-04-15 / Changes to Task (Assignment) API responses
 
@@ -184,11 +223,11 @@ With this new change, the response returned will be the task object with a
 A new version of the Box CLI has been released, taking the version from 2.0.0
 to 2.1.0. This release includes a number of feature enhancements and bug fixes:
 
-* Fixed paging for events commands ([github_cli_p126][github_cli_p126])
-* Updated `lodash` version ([github_cli_p129][github_cli_p129])
-* Send fields parameter to API when `--fields` flag is used ([github_cli_p113][github_cli_p113])
-* Fix event-types flag ([github_cli_p120][github_cli_p120])
-* Added build NPM script ([github_cli_commit][github_cli_commit])
+* Fixed paging for events commands ([link][github_cli_p126])
+* Updated `lodash` version ([link][github_cli_p129])
+* Send fields parameter to API when `--fields` flag is used ([link][github_cli_p113])
+* Fix event-types flag ([link][github_cli_p120])
+* Added build NPM script ([link][github_cli_commit])
 
 ## 2019-01-18 / New Sidebar UI Element & Open With Element GA
 
@@ -204,7 +243,17 @@ Two major releases have been made to the Box UI Elements:
    Sign, G Suite, or Box Edit. Documentation is available
    [here](guides://embed/ui-elements).
 
-Full release announcement is available [blog_new_element][blog_new_element].
+Full release announcement is available [here][blog_new_element].
+
+[elements-11-release-notes]: https://github.com/box/box-ui-elements/releases/tag/v11.0.0
+
+[elements-11-blog]: https://medium.com/box-developer-blog/announcing-elements-11-88ee900125fd
+
+[ui-elements-manual-install]: https://developer.box.com/en/guides/embed/ui-elements/installation/#manual-installation
+
+[preview-2.26-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.26.0
+
+[ios-sdk-release-blog]: https://medium.com/box-developer-blog/the-new-box-ios-sdk-now-available-baf624b289b4
 
 [box-shield]: https://www.box.com/shield
 

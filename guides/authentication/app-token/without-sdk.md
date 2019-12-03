@@ -24,7 +24,7 @@ App Token authentication is designed for working directly with the
 Box API without requiring a user to redirect through Box to authorize your
 application, yet is restricted to the application's own data.
 
-<Message>
+<Message notice>
 
 The method of authentication through JWT is inherently tied to the Service
 Account for the application. Any API call made with this token will seem to

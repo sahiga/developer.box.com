@@ -13,7 +13,7 @@ isIndex: false
 # Scopes
 
 It is important to select the correct permissions for a Box application
-when setting it up in the [console][console] by selecting the correct
+when setting it up in the [developer console][console] by selecting the correct
 scopes.
 
 ## About scopes
@@ -271,7 +271,8 @@ For this reason, this scope will not be provisioned unless absolutely necessary.
 
 In some cases an Access Token needs to be downscoped to a more strict permission
 level, especially when a token needs to be exposed to a client-side, public
-environment like a browser. The primary example for this is when using [ui-elements][ui-elements] which requires an Access Token in the user's browser.
+environment like a browser. The primary example for this is when using [Box UI
+Elements][ui-elements] which requires an Access Token in the user's browser.
 
 The following is a list of **additional** scopes that can be used with the
 [`POST /oauth2/token`](endpoint://post-oauth2-token) endpoint to downscope an

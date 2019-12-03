@@ -24,7 +24,7 @@ Box View supports three annotation types: highlight only, highlight
 annotation, and point annotation. Annotations are only supported on document
 and image previews.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![How annotator tokens work](./annotator-tokens.png)
 
@@ -42,7 +42,7 @@ The Annotator Token is used instead of a regular Access Token, App Token, or Fil
 Token to generate a preview session (an expiring embed link) that is linked to a
 unique user ID and display name.
 
-<Message>
+<Message warning>
 
 Since a preview session generated using an annotator token is tied to a
 specific external user, it is strongly recommended that an application

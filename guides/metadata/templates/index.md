@@ -8,13 +8,13 @@ isIndex: true
 ---
 # Metadata Templates
 
-A [template][template] describes a set of key/value
+A [Metadata Template][template] describes a set of key/value
 pairs that can be assigned to a file or folder.
 
 For example, an `invoiceData` template might hold data about an invoice, having
 a field for the invoice ID as well as the purchase order ID.
 
-A file or folder can have multiple distinct template [instance][instance]
+A file or folder can have multiple distinct template [instances][instance]
 associated with it, such as a `marketingCollateral` template instance and a
 `retentionPolicy` template instances.
 
@@ -58,7 +58,7 @@ or the API to manage templates.
 There is a limit of 500 templates per enterprise.
 
 For more information on how to structure a metadata template, please refer to
-[community][community].
+[this Box Community page][community].
 
 [instance]: g://metadata/instances
 

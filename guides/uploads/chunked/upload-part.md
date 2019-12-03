@@ -17,7 +17,7 @@ isIndex: false
 ---
 # Upload Part
 
-To upload a part, first [createsession][createsession]. The resulting
+To upload a part, first [create an upload session][createsession]. The resulting
 object defines the size of each part and the number of parts to upload.
 
 Then, upload the bytes for the part you want to upload, specifying the byte
@@ -57,10 +57,10 @@ uploaded.
 }
 ```
 
-<Message>
+<Message warning>
 
 The client is recommended to log keep all the JSON responses from all part
-uploads as they are needed to [commit][commit].
+uploads as they are needed to [commit the session][commit].
 
 </Message>
 

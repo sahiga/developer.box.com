@@ -15,7 +15,7 @@ isIndex: false
 ---
 # Create Comment
 
-To create a comment, call the [post_comments][post_comments]`POST /comments`[post_comments][post_comments] API with the
+To create a comment, call the [post_comments][post_comments] API with the
 message of the comment, as well as the ID of the file to leave the comment on.
 
 <Samples id="post_comments">

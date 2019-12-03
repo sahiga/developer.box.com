@@ -16,7 +16,7 @@ permanently when the data can no longer be legally held.
 
 <Message>
 
-Retention Policies are a feature of the [governance][governance] package,
+Retention Policies are a feature of the [Box Governance][governance] package,
 which   can be added on to any Business Plus or Enterprise account.
 
 </Message>
@@ -26,15 +26,15 @@ which   can be added on to any Business Plus or Enterprise account.
 Working with Retention Policies requires a developer to work with three
 distinct resources.
 
-* **Policies:**  A [policy][policy] describes the general behavior
+* **Policies:**  A [Retention Policy][policy] describes the general behavior
   of the retention policy. It determines how long a retention should stay in
   place, if it can be extended, and what happens when the retention policy ends.
-* **Assignments:** A [assignment][assignment] is a relation
+* **Assignments:** A [Retention Policy Assignment][assignment] is a relation
   between a policy and folder or enterprise. Creating an assignment puts a
   retention on all the file versions that belong to that folder or enterprise.
   For example, if an assignment is created on a folder the policy is applied to
   all file versions within that folder.
-* **Retentions**: A [retention][retention] represents all the
+* **Retentions**: A [File Version Retention][retention] represents all the
   policies that are assigned to a specific file version. Note that every file
   version can have a maximum of one file version retention and that this
   resource contains a list of every assigned policy.
@@ -48,7 +48,8 @@ removed.
 
 ## Required Scopes
 
-Before using any of the Retention Policy APIs, an application must have the [scopes][scopes] enabled. These are not available
+Before using any of the Retention Policy APIs, an application must have the [GCM
+and Manage Retention Policies scopes][scopes] enabled. These are not available
 in the Developer Console and need to instead be enabled by contacting customer
 support.
 

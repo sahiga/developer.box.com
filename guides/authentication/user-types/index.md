@@ -34,8 +34,8 @@ The following is a quick overview of the types of users available in the Box API
 
 |                  | Admin privileges                   | No admin privileges          |
 | ---------------- | ---------------------------------- | ---------------------------- |
-| Traditional user | [admin-user][admin-user]           | [managed-user][managed-user] |
-| Platform only    | [service-account][service-account] | [app-user][app-user]         |
+| Traditional user | [Admin User][admin-user]           | [Managed User][managed-user] |
+| Platform only    | [Service Account][service-account] | [App User][app-user]         |
 
 <!-- markdownlint-enable line-length -->
 

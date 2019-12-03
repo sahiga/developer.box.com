@@ -22,7 +22,7 @@ isIndex: false
 To add an item to a collection, call the `PUT` endpoint for that specific type of
 item and pass along a list of collection IDs.
 
-<Message>
+<Message warning>
 
 The only collection that is available via the API is the "Favorites"
 collection. The ID of this collection is [different for every

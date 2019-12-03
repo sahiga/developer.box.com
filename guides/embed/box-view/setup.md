@@ -45,7 +45,7 @@ With your application loaded, click on the **Configuration** option in the left
 navigation menu. The configuration page for your application should look like
 the following.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Image](./images/app_token_config.png)
 
@@ -54,7 +54,7 @@ the following.
 Click on the **Generate Key** button within the **Primary Access Token**
 section.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Image](./images/app_token_generate_key.png)
 
@@ -71,7 +71,7 @@ prompt to set up 2FA.
 Choose the expiration period for your token, either 30 days, 60 days, or set the
 token to never expire.
 
-<ImageFrame width="600">
+<ImageFrame border width="600" shadow center>
 
 ![Image](./images/app_token_expiry.png)
 

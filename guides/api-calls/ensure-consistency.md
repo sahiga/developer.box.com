@@ -81,7 +81,7 @@ The following endpoints support this header.
 | [`PUT /files/:id`](endpoint://put_files_id)                   | Update a file's information     |
 | [`DELETE /files/:id`](endpoint://delete_files_id)             | Delete a file                   |
 | [`PUT /folders/:id`](endpoint://put_folders_id)               | Update a folder's information   |
-| [`DELETE /folders/:id`](endpoint://delete_folders_id)         | フォルダの削除                         |
+| [`DELETE /folders/:id`](endpoint://delete_folders_id)         | Delete a folder                 |
 | [`PUT /web_links/:id`](endpoint://put_web_links_id)           | Update a web link's information |
 | [`DELETE /web_links/:id`](endpoint://delete_web_links_id)     | Delete a web link               |
 
@@ -92,10 +92,10 @@ and whether the `etag` value matches the most recent version.
 
 | Item found? | Etag match? | HTTP Status |
 | ----------- | ----------- | ----------- |
-| はい          | はい          | 200         |
-| はい          | いいえ         | 412         |
-| いいえ         | はい          | 412         |
-| いいえ         | いいえ         | 404         |
+| Yes         | Yes         | 200         |
+| Yes         | No          | 412         |
+| No          | Yes         | 412         |
+| No          | No          | 404         |
 
 <Message type="warning">
 
@@ -130,7 +130,7 @@ and whether the `etag` value matches the most recent version.
 
 | Item found? | Etag match? | HTTP Status |
 | ----------- | ----------- | ----------- |
-| はい          | はい          | 304         |
-| はい          | いいえ         | 200         |
-| いいえ         | はい          | 404         |
-| いいえ         | いいえ         | 404         |
+| Yes         | Yes         | 304         |
+| Yes         | No          | 200         |
+| No          | Yes         | 404         |
+| No          | No          | 404         |

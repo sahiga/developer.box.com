@@ -17,7 +17,7 @@ isIndex: false
 # Upload New File
 
 To upload a file to Box via direct upload, make an API call to the
-[upload][upload]`POST /files/content`[upload][upload] API with the content of the file, the desired
+[upload][upload] API with the content of the file, the desired
 file name, and the folder ID.
 
 <Samples id="post_files_content">
@@ -29,7 +29,7 @@ file name, and the folder ID.
 # Preflight check
 
 To prevent wasting time and bandwidth uploading a file that is going to be
-rejected it is recommended to perform a [preflight][preflight] before
+rejected it is recommended to perform a [pre-flight check][preflight] before
 uploading the file.
 
 </Message>
@@ -65,7 +65,7 @@ Test file text.
 --------------------------9fd09388d840fef1--
 ```
 
-<Message>
+<Message warning>
 
 The `attributes` JSON part of the multi-part body must come before the `file`
 part of the multipart form data. When out of order, the API will return a HTTP
@@ -76,7 +76,7 @@ part of the multipart form data. When out of order, the API will return a HTTP
 ## Options
 
 To learn more about all the parameters available when uploading files, head over
-to the [upload][upload]. These parameters
+to the [reference documentation for this API call][upload]. These parameters
 include a `Content-MD5` that can be set to ensure a file is not corrupted in
 transit, and the ability to explicitly specify the file creation time at a
 different time than the upload time.
@@ -84,10 +84,10 @@ different time than the upload time.
 ## Restrictions
 
 Direct uploads are limited to a maximum file size of 50MB. For larger files,
-please use the [chunked][chunked].
+please use the [chunked upload APIs][chunked].
 
 Upload limits are dictated by the type of account of the authenticated user.
-More information can be found [fsizes][fsizes].
+More information can be found [in our community article on this topic][fsizes].
 
 [preflight]: g://uploads/check
 

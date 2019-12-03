@@ -22,7 +22,7 @@ poll feature of the [`OPTIONS /events`](e://options_events) API.
 
 </Samples>
 
-<Message>
+<Message warning>
 
 Long polling is only available for user events. Enterprise events do not
 support long polling.

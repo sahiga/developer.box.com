@@ -37,9 +37,10 @@ admins, or by calling the `GET /users/me` endpoint with an authenticated user se
 ## Preconditions
 
 Using the `As-User` header has a few requirements. Firstly, the application
-needs to be configured to perform actions as users in the [devconsole][devconsole].
+needs to be configured to perform actions as users in the [developer
+console][devconsole].
 
-<ImageFrame>
+<ImageFrame border center>
 
 ![Advanced Features](./enable-perform-actions-as-users.png)
 
@@ -91,7 +92,7 @@ client.asUser('[USER_ID]');
 
 </Tabs>
 
-<Message>
+<Message warning>
 
 Please note that some of our SDKs create new clients for the other user, while
 others modify the existing client and provide a way to return to a state where

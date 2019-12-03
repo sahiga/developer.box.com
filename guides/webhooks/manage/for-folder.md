@@ -17,7 +17,7 @@ isIndex: false
 ---
 # Create Webhook for Folder
 
-To attach a webhook to an folder, call the [1][1] endpoint with the
+To attach a webhook to an folder, call the [Create webhook][1] endpoint with the
 type of `folder`, the ID of the folder, a URL to send webhook notifications to, and
 a list of triggers that will cause the webhook to activate.
 
@@ -46,9 +46,11 @@ of receiving the webhook payload.
 
 ## Webhook triggers
 
-トリガーのリストでは、Webhookをトリガーするイベントを表す文字列を指定します。たとえば、ユーザーがファイルをアップロードしたときにWebhookをトリガーするには、トリガー名として`FILE.UPLOADED`を渡します。
+The triggers are a list of strings that specify the events that will cause the
+webhook to be triggered. For example, if you want the webhook to be triggered
+when a user uploads a file you'd pass in the `FILE.UPLOADED` trigger name.
 
-使用可能なトリガーのリストは、[2][2]にあります。
+A list of available triggers is available in the [in this guide][2].
 
 [1]: endpoint://post_webhooks
 

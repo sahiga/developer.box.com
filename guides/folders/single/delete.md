@@ -16,15 +16,18 @@ isIndex: false
 ---
 # Delete Folder
 
-Box上でフォルダを削除するには、削除するフォルダのIDをAPIに渡す必要があります。
+To remove a folder in Box you will need to provide our API with the ID of the
+folder.
 
 <Samples id="delete_folders_id">
 
 </Samples>
 
-## 空でないフォルダの削除
+## Deleting non-empty folders
 
-フォルダを削除するときに`recursive`パラメータを渡すと、空でないフォルダも強制的に削除できます。その場合は、サブフォルダを含め、フォルダ内のすべての項目が削除されます。
+When deleting a folder, you can pass in the `recursive` parameter to
+force a folder to be deleted even if it is not empty. This will delete all
+items within this folder, including any of their descendants.
 
 ## Recursive deletion
 
@@ -33,7 +36,7 @@ can use the `recursive` query parameter to force this
 operation to recursively delete the folder and all of its
 contents.
 
-## フォルダのロック
+## Folder locking
 
 The enterprise settings determine whether the folder will
 be permanently deleted from Box or moved to the trash.

@@ -23,7 +23,7 @@ with a `status` of `pending`.
 
 </Samples>
 
-<Message>
+<Message warning>
 
 This only returns the current list of pending collaborations for a user. This
 API does not allow for returning all collaborations for a user.

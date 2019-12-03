@@ -17,20 +17,23 @@ before it can be used.
 
 ## As developer
 
-As the developer, head over to the application in the [devconsole][devconsole] and copy the app's Client ID and provide this to your admin.
+As the developer, head over to the application in the [developer
+console][devconsole] and copy the app's Client ID and provide this to your admin.
 
 <Message>
 
 # Finding a Box Admin
 
-If you don't know your enterprise admin, go to the Box [settings][settings] page  and scroll to the bottom. If an admin contact is set
+If you don't know your enterprise admin, go to the Box [account
+settings][settings] page  and scroll to the bottom. If an admin contact is set
 you should see contact  information under "Admin Contact".
 
 </Message>
 
 ## As an Admin
 
-To enable your Custom Skill application, head over to the [adminconsole][adminconsole] and click the "Add Skill" link to add a new
+To enable your Custom Skill application, head over to the [Skills section of the
+Box Admin Console][adminconsole] and click the "Add Skill" link to add a new
 skill.
 
 Enter the Client ID (API key) for the Custom Skill application. This is the
@@ -39,7 +42,7 @@ Client ID that was provided by the developer.
 Click "Next" and select the folder(s) where the Box Skill application should
 operate.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Select a skill to add](./images/skills-select.png)
 
@@ -53,7 +56,7 @@ There are two options here:
 * **Select a whitelist of folders** enables the application to a specific folder
   or set of folders on which the Skill application operates.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Select a skill to add](./images/skills-confirm.png)
 

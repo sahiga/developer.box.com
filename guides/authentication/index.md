@@ -18,16 +18,16 @@ console.
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type         | Authorization methods                                 |
-| ---------------------------- | ----------------------------------------------------- |
-| [custom-app][custom-app]     | [oauth2][oauth2], [jwt][jwt], or [apptoken][apptoken] |
-| [custom-skill][custom-skill] | No authorization needed                               |
-| Enterprise Integration       | [oauth2][oauth2], [jwtjwt][jwt]                       |
-| Partner Integration          | [apptoken][apptoken]                                  |
+| Box Application Type         | Authorization methods                                     |
+| ---------------------------- | --------------------------------------------------------- |
+| [Custom App][custom-app]     | [OAuth 2.0][oauth2], [JWT][jwt], or [App token][apptoken] |
+| [Custom Skill][custom-skill] | No authorization needed                                   |
+| Enterprise Integration       | [OAuth 2.0][oauth2], [JWT][jwt]                           |
+| Partner Integration          | [App token][apptoken]                                     |
 
 <!-- markdownlint-enable line-length -->
 
-<Message>
+<Message warning>
 
 Enterprise and Partner Integrations exist for legacy purposes. Please use
 Custom Apps instead and use the relevant authentication method where needed.
@@ -53,9 +53,9 @@ curl https://api.box.com/2.0/users/me \
 ## User Authorization
 
 There are a few ways to get an an Access Token for a user. There is
-client-side authorization through [oauth2][oauth2], server-side authorization
-using [jwt][jwt], as well as a long lived [apptoken][apptoken] and a
-short-lived [devtoken][devtoken].
+client-side authorization through [OAuth 2.0][oauth2], server-side authorization
+using [JWT][jwt], as well as a long lived [App Token][apptoken] and a
+short-lived [Developer Token][devtoken].
 
 [oauth2]: guide://authentication/oauth2
 

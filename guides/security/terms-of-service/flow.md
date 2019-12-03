@@ -36,9 +36,7 @@ requires the user to have accepted the relevant Terms of Service it receives a
 ```
 
 The application requests the Terms of Service's information by calling
-[get_tos_id][get_tos_id]`GET /terms_of_services/:id`
-
-.
+[get_tos_id][get_tos_id].
 
 ```json
 {
@@ -60,8 +58,8 @@ The application requests the Terms of Service's information by calling
 The application can then show the text from the Terms of Service to the user.
 
 When the user accepts or rejects the terms, it makes a call to either
-[put_tosus][put_tosus]`PUT /terms_of_service_user_statuses/:id`[put_tosus][put_tosus] or
-[post_tosus][post_tosus]`POST /terms_of_service_user_statuses`[post_tosus][post_tosus] depending on if the initial
+[put_tosus][put_tosus] or
+[post_tosus][post_tosus] depending on if the initial
 error returned a `tos_user_status_id` in the response.
 
 [put_tosus]: e://put_terms_of_service_user_statuses_id

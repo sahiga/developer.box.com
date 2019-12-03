@@ -23,7 +23,7 @@ When you configure a webhook to use a signature, Box generates
 a cryptographic digest of the notification's body and attaches it the header of
 the webhook payload.
 
-When your application receives the payload it is advised to [sigver][sigver] the
+When your application receives the payload it is advised to [verify][sigver] the
 signatures by calculating the same digest and comparing it to the one received.
 If the digests are not identical then the payload should not be trusted.
 
@@ -38,7 +38,7 @@ successful man-in-the-middle or replay attack.
 An extra level of protection can be achieved by frequently changing the
 signature keys. To enable a smooth switch between the old and new keys we
 supports two simultaneous signature keys to be configured for
-[sigrot][sigrot].
+[signature rotation][sigrot].
 
 </Message>
 
@@ -46,16 +46,17 @@ supports two simultaneous signature keys to be configured for
 
 In order to attach signatures to an application's notifications you must first
 generate signature keys for your application. Each application can have two
-signature keys configured in order to support [sigrot][sigrot].
+signature keys configured in order to support [signature rotation][sigrot].
 
-To configure your application's keys, head over to the [console][console] and select the application you want to configure.
+To configure your application's keys, head over to the [developer
+console][console] and select the application you want to configure.
 
 In the "Webhooks" section of your application, find the buttons labeled
 "Generate primary key" and "Generate secondary key" to generate the keys.
 
 Once either of these keys has been configured, copy the key values as you will
-need these to [sigver][sigver]. Every webhook will now
-include a [`BOX-SIGNATURE-PRIMARY` and a `BOX-SIGNATURE-SECONDARY` header]`BOX-SIGNATURE-PRIMARY` and a `BOX-SIGNATURE-SECONDARY` header and a  header[`BOX-SIGNATURE-PRIMARY` and a `BOX-SIGNATURE-SECONDARY` header]
+need these to [verify the webhook payloads][sigver]. Every webhook will now
+include a [`BOX-SIGNATURE-PRIMARY` and a `BOX-SIGNATURE-SECONDARY` header]
 [payload].
 
 [payload]: guide://webhooks/handle/payload

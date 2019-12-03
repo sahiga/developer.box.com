@@ -30,7 +30,7 @@ Learn more about the .NET SDK on GitHub
 ## .NET Framework
 
 To install the .NET SDK in the .NET framework, run the following command using
-the [nuget][nuget] package manager.
+the [Nuget][nuget] package manager.
 
 ```shell
 PM> Install-Package Box.V2
@@ -39,7 +39,7 @@ PM> Install-Package Box.V2
 ## .NET Core
 
 To install the .NET SDK in the .NET Core framework, run the following command
-using the [nuget][nuget] package manager.
+using the [Nuget][nuget] package manager.
 
 ```shell
 PM> Install-Package Box.V2.Core

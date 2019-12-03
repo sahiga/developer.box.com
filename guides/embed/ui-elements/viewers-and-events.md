@@ -834,9 +834,7 @@ The `<iframe>` viewer fires the following events.
 
 ## DASH viewer
 
-The DASH viewer renders previews for video files using [shaka][shaka]`Shaka Player`
-
-.
+The DASH viewer renders previews for video files using [shaka][shaka].
 
 ### Behavior
 
@@ -897,7 +895,7 @@ The DASH viewer fires the following events.
 ## CSV viewer
 
 The CSV viewer uses [`PapaParse`](https://github.com/mholt/PapaParse) to parse
-CSV and TSV files and [reactv][reactv]`React Virtualized`[reactv][reactv] to display the parsed data
+CSV and TSV files and [reactv][reactv] to display the parsed data
 in a table.
 
 ### Behavior

@@ -13,7 +13,7 @@ isIndex: false
 
 A few limitations exists when working with files.
 
-## 名前に関する制約事項
+## Name restrictions
 
 There are some restrictions to a file's name. Names containing non-printable
 ASCII characters, forward and backward slashes (`/`, `\`), and protected names like

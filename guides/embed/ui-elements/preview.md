@@ -60,9 +60,9 @@ Learn about selecting an authentication method
 
 Box Content Preview supports 120+ file types, including most document and image
 formats, HD video, 3D models, 360-degree images, and 360-degree videos. You can
-find the full list of supported file types [filetypes][filetypes].
+find the full list of supported file types [here][filetypes].
 
-<Message>
+<Message warning>
 
 Please note that where supported file types contain references to other
 objects, for example `DWG` files, those references are not supported in the
@@ -78,7 +78,7 @@ Use the navigation arrows to preview different file types.
 
 <!-- markdownlint-disable line-length -->
 
-<iframe width="100%" height="560" scrolling="no" frameborder="no" title="Box Content Preview Demo" src="//codepen.io/box-platform/embed/rmZdjm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe width="100%" height="560" scrolling="no" frameborder="no" title="Box Content Preview Demo" src="//codepen.io/box-platform/embed/rmZdjm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
@@ -319,7 +319,7 @@ preview.addListener("rotate", data => {
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
-the Content Explorer functionality, you can use [downscope][downscope] to
+the Content Explorer functionality, you can use [Downscoping][downscope] to
 appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
 client initializing the Content Explorer.
@@ -327,7 +327,7 @@ client initializing the Content Explorer.
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Explorer by
 configuring the appropriate scopes on the downscoped token. To learn
-more, see [scopes][scopes].
+more, see [Special Scopes for Box UI Elements][scopes].
 
 ### Base Scope
 

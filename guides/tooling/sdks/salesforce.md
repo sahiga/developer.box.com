@@ -18,7 +18,7 @@ isIndex: false
 # Install Salesforce SDK
 
 The Salesforce SDK can be deployed directly to Sandbox or Developer
-Organizations by clicking using the [deploy_salesforce][deploy_salesforce]
+Organizations by clicking using the [Deploy to Salesforce][deploy_salesforce]
 functionality.
 
 <Message type="notice">
@@ -29,8 +29,8 @@ functionality.
 
 The SDK is also distributed as an unmanaged package:
 
-* [salesforce_pkg_prod][salesforce_pkg_prod]
-* [salesforce_pkg_sandbox][salesforce_pkg_sandbox]
+* [Production/Developer Package][salesforce_pkg_prod]
+* [Sandbox Package][salesforce_pkg_sandbox]
 
 <Message type="warning">
 

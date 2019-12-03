@@ -42,7 +42,7 @@ the best method for your use case.
 
 ### What file types are supported in the new Box View
 
-Click [file_types][file_types] to see all supported file types.
+Click [here][file_types] to see all supported file types.
 
 ### Which file types are not supported on mobile in the new Box View
 

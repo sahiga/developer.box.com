@@ -18,7 +18,8 @@ the user whenever a new device is used to access that Box account – Box has
 additional device management functionality to increase security when accessing
 Box on mobile or desktop devices: device pinning.
 
-To learn more about device pinning, please see our [community][community].
+To learn more about device pinning, please see our [community
+documentation][community].
 
 ## APIs
 

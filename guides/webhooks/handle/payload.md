@@ -30,8 +30,8 @@ The payload sent by a webhook has the following Box-specific headers.
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `BOX-DELIVERY-ID`         | A unique ID assigned by Box that identifies the delivered webhook payload. When Box retries a webhook this ID will change, while the ID in the body of the payload remains the same. |
 | `BOX-DELIVERY-TIMESTAMP`  | An RFC-3339 timestamp that identifies the time that the payload was sent at.                                                                                                         |
-| `BOX-SIGNATURE-PRIMARY`   | A [verify_sigs][verify_sigs] created using the primary signature key configured for this webhook.                                                                                    |
-| `BOX-SIGNATURE-SECONDARY` | A [verify_sigs][verify_sigs] created using the secondary signature key configured for this webhook.                                                                                  |
+| `BOX-SIGNATURE-PRIMARY`   | A [signature][verify_sigs] created using the primary signature key configured for this webhook.                                                                                      |
+| `BOX-SIGNATURE-SECONDARY` | A [signature][verify_sigs] created using the secondary signature key configured for this webhook.                                                                                    |
 | `BOX-SIGNATURE-VERSION`   | Value is always `1`.                                                                                                                                                                 |
 | `BOX-SIGNATURE-ALGORITHM` | Value is always `HmacSHA256` .                                                                                                                                                       |
 
@@ -51,7 +51,7 @@ USER-AGENT:               Box-WH-Client/0.1
 
 <Message type="notice">
 
-We recommend [setup_sigs][setup_sigs] and [verify_sigs][verify_sigs]
+We recommend [setting up][setup_sigs] and [verifying signatures][verify_sigs]
 of the webhook payloads.
 
 </Message>

@@ -18,7 +18,7 @@ processing for files uploaded to Box. Skills are designed to make it easy to use
 third-party Machine Learning services to automatically extract information from
 files uploaded to Box.
 
-<ImageFrame>
+<ImageFrame shadow>
 
 ![Skills example](./images/skills-example.png)
 

@@ -108,7 +108,7 @@ object.
 
 #### Keyword Card Entries
 
-<ImageFrame width="200">
+<ImageFrame border center shadow width="200">
 
 ![Image](./skills-card-keyword.png)
 
@@ -129,7 +129,7 @@ The keyword card entries contain two values per object:
 
 #### Transcript Card Entries
 
-<ImageFrame width="200">
+<ImageFrame border center shadow width="200">
 
 ![Image](./skills-card-transcript.png)
 
@@ -153,7 +153,7 @@ The transcript card entries contain several values:
 
 #### Faces Card Entries
 
-<ImageFrame width="200">
+<ImageFrame border center shadow width="200">
 
 ![Image](./skills-card-faces.png)
 

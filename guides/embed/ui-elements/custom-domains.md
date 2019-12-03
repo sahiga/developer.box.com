@@ -36,7 +36,7 @@ required scripts from the provided `.rar`
 
 Open `Add_OpenWith_WhiteListed_Domain.reg` in a text editor.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Tools](./images/box-tools-1.png)
 
@@ -55,7 +55,7 @@ navigate to the .reg file and type the following command.
 reg import "Add_OpenWith_WhiteListed_Domain.reg"
 ```
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Tools](./images/box-tools-3.png)
 
@@ -70,7 +70,7 @@ Open the following file in a text editor:
 
 Replace the placeholder domain with the domain you would like whitelisted.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Tools](./images/box-tools-4.png)
 
@@ -89,7 +89,7 @@ navigate the .reg file and type the following command:
 reg import "Add_OpenWith_WhiteListed_Domain.reg"
 ```
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Tools](./images/box-tools-6.png)
 
@@ -105,7 +105,7 @@ In a command prompt, enter:
 * `net stop "Box Local Com Service"`
 * `net start "Box Local Com Service"`
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Tools](./images/box-tools-7.png)
 
@@ -115,7 +115,7 @@ In a command prompt, enter:
 
 Press `Windows + R` and type `services.msc`.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Tools](./images/box-tools-8.png)
 
@@ -123,7 +123,7 @@ Press `Windows + R` and type `services.msc`.
 
 Restart `Box Edit.exe` by finding `Box Edit` in the system tray.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Tools](./images/box-tools-9.png)
 
@@ -133,7 +133,7 @@ Right click and select **Quit**.
 
 Open `%programfiles%\Box\Box Edit` and run `Box Edit.exe`.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Tools](./images/box-tools-10.png)
 

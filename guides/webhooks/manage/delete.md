@@ -15,7 +15,8 @@ isIndex: false
 ---
 # Delete Webhook
 
-Box上のファイルやフォルダからWebhookを削除するには、削除するWebhookのIDをAPIに渡す必要があります。
+To remove a webhook from a file or folder in Box you will need to provide our
+API with the ID of the webhook to remove.
 
 <Samples id="delete_webhooks_id">
 
@@ -25,7 +26,7 @@ Box上のファイルやフォルダからWebhookを削除するには、削除�
 
 # Webhook ID
 
-WebhookのIDを調べるには、[1][1]エンドポイントを使用します。
+To find the ID of the webhook, use the [List all webhooks][1] endpoint.
 
 </Message>
 

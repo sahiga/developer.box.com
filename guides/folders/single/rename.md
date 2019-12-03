@@ -24,10 +24,13 @@ the folder.
 
 <Message type="notice">
 
-# 名前に関する制約事項
+# Name restrictions
 
-ファイル名にはいくつかの制約事項があります。印字不可能なASCII文字を含む名前、スラッシュおよびバックスラッシュ(`/`、`\`)を含む名前、末尾にスペースを含む名前は禁止されています。
+There are some restrictions to the file name. Names containing non-printable
+ASCII characters, forward and backward slashes (`/`, `\`), as well as names
+with trailing spaces are prohibited.
 
-また、`.`および`..`は予約済みの名前であるため、使用できません。
+Additionally, the special names `.` and `..` are reserved names and therefore
+also prohibited.
 
 </Message>

@@ -38,7 +38,7 @@ present in the UI.
 This blueprint covers how to use Token Exchange with UI Elements in your
 application and example use cases.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Downscope overview](./images/downscope-1.png)
 
@@ -91,7 +91,7 @@ functionality.
 
 </Message>
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Downscope overview](./images/downscope-2.png)
 
@@ -135,7 +135,7 @@ curl https://api.box.com/2.0/collaborations \
 
 # Access Levels in Box
 
-There are [accesslevels][accesslevels] that a Box user can be
+There are [7 different access levels][accesslevels] that a Box user can be
 collaborated as on a file/folder in Box. If the file/folder was created under
 this user's account, then the user has "Owner" access to the folder by
 default so you can skip the collaboration step.
@@ -210,7 +210,7 @@ you can use our [Content Explorer UI Element CodePen
 Sample](https://codepen.io/box-platform/pen/wdWWdN) and replace the access token
 and folder id values in the JS Tab.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Downscope overview](./images/downscope-3.png)
 
@@ -220,13 +220,13 @@ Click "Run". You should see the Content Explorer initialized at the folder you
 specified. Also, notice that your Content Explorer no longer shows the "Share"
 button as it would have with the parent (user) token.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Downscope overview](./images/downscope-4.png)
 
 </ImageFrame>
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Downscope overview](./images/downscope-5.png)
 

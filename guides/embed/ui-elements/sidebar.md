@@ -103,19 +103,19 @@ Learn about selecting an authentication method
 
 ### Stand-alone Sidebar
 
-<iframe height="800" scrolling="no" title="Box Content Sidebar" src="//codepen.io/box-platform/embed/xjbBvv/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe height="800" scrolling="no" title="Box Content Sidebar" src="//codepen.io/box-platform/embed/xjbBvv/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
 ### Sidebar with Content Preview
 
-<iframe height="800" scrolling="no" title="Box Content Preview with Sidebar" src="//codepen.io/box-platform/embed/pqBMgM/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe height="800" scrolling="no" title="Box Content Preview with Sidebar" src="//codepen.io/box-platform/embed/pqBMgM/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
 ### Sidebar with Content Explorer
 
-<iframe height="800" scrolling="no" title="Box Content Explorer with Sidebar" src="//codepen.io/box-platform/embed/ERVXMa/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe height="800" scrolling="no" title="Box Content Explorer with Sidebar" src="//codepen.io/box-platform/embed/ERVXMa/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
@@ -223,7 +223,7 @@ sidebar.removeAllListeners();
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
-the Content Sidebar's functionality, you can use [downscope][downscope] to
+the Content Sidebar's functionality, you can use [Downscoping][downscope] to
 appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
 client initializing the Content Sidebar.
@@ -231,7 +231,7 @@ client initializing the Content Sidebar.
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Sidebar by
 configuring the appropriate scopes on the downscoped token. To learn
-more, see [scopes][scopes].
+more, see [Special Scopes for Box UI Elements][scopes].
 
 ### Base Scope
 

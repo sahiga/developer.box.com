@@ -16,9 +16,10 @@ isIndex: false
 # Special Scopes
 
 When working with Box UI Elements many developers have shown interest in being
-able to implement their own permission model, different from [acl][acl] defined by Box.
+able to implement their own permission model, different from [Access
+Levels][acl] defined by Box.
 
-[downscoping][downscoping], also known as Token Exchange, is our mechanism by
+[Downscoping][downscoping], also known as Token Exchange, is our mechanism by
 which developers can restrict the permissions on the Access Token to a more
 granular level, allowing them to build out their own permissions model on Box
 Platform.

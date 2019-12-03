@@ -15,14 +15,15 @@ isIndex: false
 ---
 # App Gallery
 
-The [app-gallery][app-gallery] is the first place for Box users to find out
+The [Box App Gallery][app-gallery] is the first place for Box users to find out
 about applications that they can use in combination with Box. If your
 application is suited to be used by other enterprises, listing your service in
 the App Gallery can be a great way to find new users.
 
 ## Publishing an app
 
-Use the following steps to publish an application in the [app-gallery][app-gallery].
+Use the following steps to publish an application in the [App
+Gallery][app-gallery].
 
 ### Prerequisites
 
@@ -32,18 +33,18 @@ To publish an application you will need to pass the following requirements.
 * The application should use OAuth 2.0 authentication as the App Gallery does
   not support JWT or App Token authentication.
 * You need to be a developer with access to the application in the
-  [devconsole][devconsole].
+  [Developer Console][devconsole].
 
 ### 1. Log in to the Developer Console
 
-Head over to the [devconsole][devconsole] and select your application to
+Head over to the [Developer Console][devconsole] and select your application to
 submit to the gallery.
 
 ### 2. Fill in the form
 
 Select the "App Gallery" panel from the left-hand sidebar.
 
-<ImageFrame width="200">
+<ImageFrame center shadow border width="200">
 
 ![App Gallery panel](./images/app-sidebar.png)
 
@@ -51,7 +52,7 @@ Select the "App Gallery" panel from the left-hand sidebar.
 
 Click the button to "Submit My App".
 
-<ImageFrame width="400">
+<ImageFrame center border shadow width="400">
 
 ![Submit My App button](./images/submit-app.png)
 
@@ -64,7 +65,7 @@ description, some screenshots and an app icon.
 
 Select the "Preview" button to see a preview of your application listing.
 
-<ImageFrame>
+<ImageFrame center border shadow>
 
 ![Preview and Submit](./images/submit-and-approve.png)
 
@@ -84,7 +85,7 @@ about your request. They will follow up with the request to arrange for any
 testing instructions if needed. Similarly, the partner team will also reach
 out when the application has been published in the App Gallery.
 
-For any questions, please feel free to email [email][email]`integrate@box.com`[email][email] or the
+For any questions, please feel free to email [email][email] or the
 [forum][forum].
 
 </Message>

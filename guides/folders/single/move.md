@@ -22,7 +22,7 @@ To move a folder, update the ID of its parent folder.
 
 </Samples>
 
-<Message>
+<Message warning>
 
 This call will return synchronously. This holds true even for folder moves when
 the folder contains a large number of items in all of its descendants. For very

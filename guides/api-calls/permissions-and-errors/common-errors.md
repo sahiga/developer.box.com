@@ -17,7 +17,7 @@ isIndex: false
 ---
 # Common Errors
 
-The Box APIs uses [status-codes][status-codes] to communicate if a request
+The Box APIs uses [HTTP status codes][status-codes] to communicate if a request
 has been successfully processed or not.
 
 ## Client error
@@ -40,7 +40,7 @@ Please see the [Client Error resource](resource://client_error) for more details
 
 ## Common error codes
 
-Please check our [articles][articles]
+Please check our [Developer Troubleshooting Articles][articles]
 for solution to common errors encountered when working with the Box APIs.
 
 ### 400 Bad Request

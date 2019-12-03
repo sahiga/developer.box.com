@@ -39,7 +39,7 @@ compile 'com.box:box-java-sdk:2.32.0'
 <Message>
 
 For the most up-to-date version number of the Java SDK, please refer to the
-[java-os][java-os].
+[Java SDK Open Source page][java-os].
 
 </Message>
 
@@ -58,31 +58,32 @@ Add the following to Maven dependency.
 <Message>
 
 For the most up-to-date version number of the Java SDK, please refer to the
-[java-os][java-os].
+[Java SDK Open Source page][java-os].
 
 </Message>
 
 ## Installation from source
 
-Download the SDK source from the [java-sdk-src][java-sdk-src] and
+Download the SDK source from the [Java SDK GitHub repository][java-sdk-src] and
 add it to a project.
 
 ## Precompiled JAR
 
-Download one of the precompiled JARs for the Java SDK from the GitHub [java-sdk-releases][java-sdk-releases].
+Download one of the precompiled JARs for the Java SDK from the GitHub [releases
+page][java-sdk-releases].
 
 When using one of the precompiled JARs, it is important to also add the
 following additional dependencies to the project.
 
 <!-- markdownlint-disable line-length -->
 
-| Dependency                                                                |
-| ------------------------------------------------------------------------- |
-| [`minimal-json v0.9.1`dependency-min-json][dependency-min-json]           |
-| [`jose4j v0.4.4`dependency-jose][dependency-jose]                         |
-| [`bouncycastle bcprov-jdk15on v1.52`dependency-bcprov][dependency-bcprov] |
-| [`bouncycastle bcpkix-jdk15on v1.52`dependency-bcpkix][dependency-bcpkix] |
-| [`Java Cryptography Extension (JCE)`dependency-crypto][dependency-crypto] |
+| Dependency                                 |
+| ------------------------------------------ |
+| [dependency-min-json][dependency-min-json] |
+| [dependency-jose][dependency-jose]         |
+| [dependency-bcprov][dependency-bcprov]     |
+| [dependency-bcpkix][dependency-bcpkix]     |
+| [dependency-crypto][dependency-crypto]     |
 
 <!-- markdownlint-enable line-length -->
 

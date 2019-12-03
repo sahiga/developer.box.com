@@ -28,7 +28,7 @@ Internet Explorer 11 or Safari 9, please include a polyfill library or a service
 like [`polyfill.io`](https://polyfill.io) to smartly load only the polyfills
 your users need. Box also hosts the `core-js` standard library at:
 
-[`https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js`polyfill][polyfill]
+[polyfill][polyfill]
 
 ## Promises Polyfill
 
@@ -37,7 +37,7 @@ Internet Explorer 11, please include your favorite polyfill library or a service
 like [`polyfill.io`](https://polyfill.io) to smartly load only the polyfills
 your users need. Box also hosts a copy of the Bluebird promise library at:
 
-[`https://cdn01.boxcdn.net/polyfills/bluebird/3.5.1/bluebird.min.js`bluebird][bluebird]
+[bluebird][bluebird]
 
 [polyfill]: https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js
 

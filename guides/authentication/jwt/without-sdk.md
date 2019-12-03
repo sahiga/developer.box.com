@@ -40,7 +40,7 @@ To complete a JWT authorization the following steps need to be completed.
 At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of the application.
 
-<Message>
+<Message notice>
 
 The access token acquired through JWT is inherently tied to the Service
 Account for the application. Any API call made with this token will seem to
@@ -845,6 +845,6 @@ calls](g://api-calls).
 
 ## Code Samples
 
-All of the code in this guide is available on [samples][samples].
+All of the code in this guide is available on [GitHub][samples].
 
 [samples]: https://github.com/box-community/samples-docs-authenticate-with-jwt-api

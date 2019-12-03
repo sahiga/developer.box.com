@@ -14,7 +14,7 @@ isIndex: false
 ---
 # App Approval
 
-Custom App that are configured with [jwt][jwt] or [app-token][app-token]
+Custom App that are configured with [JWT][jwt] or [App Token][app-token]
 authentication will need to be authorized within the Box enterprise by the
 enterprise Admin User before it can be used.
 
@@ -22,11 +22,11 @@ enterprise Admin User before it can be used.
 
 A semi-automated process for app approval is available in the developer console.
 
-Head over to your application in the [devconsole][devconsole] and
+Head over to your application in the [developer console][devconsole] and
 select the "General" link from the left sidebar in your application
 and scroll down to the "App Authorization" section.
 
-<ImageFrame width="400">
+<ImageFrame border width="400" center>
 
 ![Add and Manage keys](../images/app-authorization.png)
 
@@ -34,7 +34,7 @@ and scroll down to the "App Authorization" section.
 
 By submitting the application for approval it will send an email to your
 enterprise admin to have them enable the application. More information on this
-process is available in our [app-auth][app-auth].
+process is available in our [community article on app authorization][app-auth].
 
 ## Manual Approval
 
@@ -43,23 +43,25 @@ manually approve the application.
 
 ### As developer
 
-As the developer, head over to the application in the [devconsole][devconsole] and copy the app's client ID and provide this to your admin.
+As the developer, head over to the application in the [developer
+console][devconsole] and copy the app's client ID and provide this to your admin.
 
 <Message>
 
 # Finding a Box Admin
 
-If you don't know your enterprise admin, go to the Box [settings][settings] page  and scroll to the bottom. If an admin contact is set
+If you don't know your enterprise admin, go to the Box [account
+settings][settings] page  and scroll to the bottom. If an admin contact is set
 you should see contact  information under "Admin Contact".
 
 </Message>
 
 ### As admin
 
-As the admin, head over to the [adminconsole][adminconsole] select the "Apps"
+As the admin, head over to the [admin console][adminconsole] select the "Apps"
 tab.
 
-<ImageFrame>
+<ImageFrame border center>
 
 ![Apps tab](../images/apps.png)
 
@@ -68,7 +70,7 @@ tab.
 Scroll down to the "Custom Applications" section and click on the "Authorize New
 App" button.
 
-<ImageFrame>
+<ImageFrame border center>
 
 ![Custom Apps section](../images/custom-apps.png)
 
@@ -86,7 +88,7 @@ new changes to take effect.
 In the same section where the application was initially authorized, the admin can
 re-authorize the same application.
 
-<ImageFrame>
+<ImageFrame border center>
 
 ![Re-authorize app](../images/app-reauthorize.png)
 

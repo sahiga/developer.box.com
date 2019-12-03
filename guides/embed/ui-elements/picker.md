@@ -93,25 +93,25 @@ Learn about selecting an authentication method
 
 ### File Selection Demo
 
-<iframe height="560" scrolling="no" title="Box File Picker" src="//codepen.io/box-platform/embed/PWPxBm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe height="560" scrolling="no" title="Box File Picker" src="//codepen.io/box-platform/embed/PWPxBm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
 ### Folder Selection Demo
 
-<iframe height="560" scrolling="no" title="Box Folder Picker" src="//codepen.io/box-platform/embed/WRQLey/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe height="560" scrolling="no" title="Box Folder Picker" src="//codepen.io/box-platform/embed/WRQLey/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
 ### File Selection + Preview Demo
 
-<iframe height="560" scrolling="no" title="Box File Picker + Box Preview" src="//codepen.io/box-platform/embed/oBjJgL/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe height="560" scrolling="no" title="Box File Picker + Box Preview" src="//codepen.io/box-platform/embed/oBjJgL/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
 ### File Selection as a popup
 
-<iframe height="560" scrolling="no" title="Box File Picker and Uploader as popups" src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe height="560" scrolling="no" title="Box File Picker and Uploader as popups" src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
@@ -271,7 +271,7 @@ applicable and allowed.
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
-the Content Picker functionality, you can use [downscope][downscope] to
+the Content Picker functionality, you can use [Downscoping][downscope] to
 appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
 client initializing the Content Picker.
@@ -279,7 +279,7 @@ client initializing the Content Picker.
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Picker by
 configuring the appropriate scopes on the downscoped token. To learn
-more, see [scopes][scopes].
+more, see [Special Scopes for Box UI Elements][scopes].
 
 <!-- markdownlint-disable line-length -->
 

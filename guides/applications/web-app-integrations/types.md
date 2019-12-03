@@ -26,7 +26,7 @@ The integration receives a short-lived authorization code with this request,
 which can be used to connect to the Box APIs, exchange the code for an Access
 Token, and then use that to make API calls to Box.
 
-<Message>
+<Message warning>
 
 Popup panels use HTML `<iframe>` tags to display the embedded content. To
 protect the security of Box's content, callback URLs should use SSL, and the

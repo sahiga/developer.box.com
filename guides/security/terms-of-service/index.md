@@ -58,11 +58,11 @@ their enterprise via the API.
 Additionally, application can view and accept Terms of Services for a regular
 user via the API.
 
-* [`GET /terms_of_service_user_statuses`euserstatuses][euserstatuses]:
+* [euserstatuses][euserstatuses]:
   To get a list of all the accepted and rejected Terms of Services for a user
-* [`POST /terms_of_service_user_statuses`euserstatuses_post][euserstatuses_post]:
+* [euserstatuses_post][euserstatuses_post]:
   To accept or reject a specific Terms of Service for the first time
-* [`PUT /terms_of_service_user_statuses/:id`euserstatuses_put][euserstatuses_put]:
+* [euserstatuses_put][euserstatuses_put]:
   To accept or reject a specific Terms of Service that had been previously
   accepted or rejected.
 

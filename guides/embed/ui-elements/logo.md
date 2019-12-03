@@ -18,7 +18,7 @@ isIndex: false
 Each of the Box UI Elements allow for specifying a custom logo to place in the
 top-left corner of the embedded container.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Custom logo](./images/elements-logo.png)
 

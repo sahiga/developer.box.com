@@ -15,8 +15,8 @@ isIndex: false
 ---
 # Request Desired Representation
 
-To select a specific representation call the [get_files_id][get_files_id]`GET /files/:id`[get_files_id][get_files_id]
-endpoint with a [x-rep-hints][x-rep-hints]`X-Rep-Hints`[x-rep-hints][x-rep-hints]-header defining the
+To select a specific representation call the [get_files_id][get_files_id]
+endpoint with a [x-rep-hints][x-rep-hints]-header defining the
 required representation format.
 
 ```curl

@@ -25,17 +25,17 @@ All thumbnail representations except `1024x1024` and `2048x2048` PNGs are
 generated upon uploading the source file to Box.
 
 An alternative way to get a thumbnail for a file is using the
-[thumbnail_api][thumbnail_api].
+[thumbnail API][thumbnail_api].
 
 ## The process
 
 To get a thumbnail representation follow the following steps
 
-* [list-all-representations][list-all-representations]
-* [request-a-representation][request-a-representation]
+* [List all representations][list-all-representations]
+* [Request a thumbnail][request-a-representation]
   by passing the `X-Ref-Hints`-header for the desired thumbnail format
   and size, for example `[jpg?dimensions=32x32]`.
-* [download-a-representation][download-a-representation]
+* [Download the thumbnail][download-a-representation]
   by calling the `url_template`, replacing the `{+asset_path}` with an empty
   string.
 

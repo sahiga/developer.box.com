@@ -15,7 +15,7 @@ isIndex: false
 ---
 # List All Webhooks
 
-To fetch all for the authenticated user, use the [1][1] API.
+To fetch all for the authenticated user, use the [List Webhooks][1] API.
 
 <Samples id="get_webhooks">
 

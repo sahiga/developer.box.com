@@ -23,7 +23,7 @@ categories, and are designed for the processing of files within their
 associated categories: **Document Skills**, **Image Skills**, **Video Skills**,
 and **Audio Skills**.
 
-<Message>
+<Message warning>
 
 Community sample skills are created and maintained by the community, and are
 not owned or maintained by Box.
@@ -31,7 +31,7 @@ not owned or maintained by Box.
 </Message>
 
 Want to submit your project? Please review the
-[contributing_guidelines][contributing_guidelines].
+[Contribution Guidelines][contributing_guidelines].
 
 <CTA to="https://github.com/box-community">
 See a full directory of Skills samples on GitHub
@@ -44,10 +44,10 @@ Box Skills samples for processing document files on Box.
 
 <!-- markdownlint-disable line-length -->
 
-| Name                        | Description                                                                                                                                                                                                         |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [leverton][leverton] (Node) | Uses the [leverton_ml][leverton_ml] to automatically extract fields address, landlord, tenant, rent, etc, from rental leases and attach them to the respective files as Skills Metadata Cards                       |
-| [rossum][rossum] (Node)     | Uses the [rossum_ml][rossum_ml] to automatically extract fields like amount, tax details, invoice ID, sender name and receiver name from invoices and attach them to the respective files as Skills Metadata Cards. |
+| Name                                                | Description                                                                                                                                                                                                          |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Leverton Rental Lease Extraction][leverton] (Node) | Uses the [Leverton API][leverton_ml] to automatically extract fields address, landlord, tenant, rent, etc, from rental leases and attach them to the respective files as Skills Metadata Cards                       |
+| [Rossum Invoice Intelligence][rossum] (Node)        | Uses the [Rossum API][rossum_ml] to automatically extract fields like amount, tax details, invoice ID, sender name and receiver name from invoices and attach them to the respective files as Skills Metadata Cards. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -57,15 +57,15 @@ Box Skills samples for processing image files on Box.
 
 <!-- markdownlint-disable line-length -->
 
-| Name                                            | Description                                                                                                                                                                                                                               |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [image_acuant][image_acuant] (Node)             | Uses [image_acuant_ml][image_acuant_ml] to classify and automatically extract metadata from a government-issued ID, such as name, numbers, address, etc, and add them as Skills Metadata Cards to the respective image files on Box.      |
-| [image_rekognition][image_rekognition] (Node)   | Uses the [image_rekognition_ml][image_rekognition_ml] to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards. |
-| [image_exif][image_exif] (Node)                 | Uses the Javascript rewrite of the decade long open-source developed [image_exif_ml][image_exif_ml] to read dozens of `MetaInfo` from files. Works for all Image, Audio, Video files.                                                     |
-| [image_google_prod][image_google_prod] (Node)   | Uses the [image_google_prod_ml][image_google_prod_ml] to compare images in Box with the images in a pre-trained product catalog.                                                                                                          |
-| [image_google_image][image_google_image] (Node) | Uses the [image_google_image_ml][image_google_image_ml] to extract image texts and topics, using generic Google Image Search ML model for identification.                                                                                 |
-| [image_hive][image_hive] (Node)                 | Uses the [image_hive_ml][image_hive_ml] to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.                                                                       |
-| [image_ms_image][image_ms_image] (Node)         | Uses the [image_ms_image_ml][image_ms_image_ml] to extract image texts and topics, using generic Bing Image Search ML model for identification.                                                                                           |
+| Name                                                                 | Description                                                                                                                                                                                                                                 |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Acuant AssureID Government ID Data Extraction][image_acuant] (Node) | Uses [Acuant AssureID][image_acuant_ml] to classify and automatically extract metadata from a government-issued ID, such as name, numbers, address, etc, and add them as Skills Metadata Cards to the respective image files on Box.        |
+| [Amazon Rekognition Labels Detection][image_rekognition] (Node)      | Uses the [Amazon Rekognition API][image_rekognition_ml] to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards. |
+| [EXIF/XMP `MetaInfo` Extraction][image_exif] (Node)                  | Uses the Javascript rewrite of the decade long open-source developed [Exiftool][image_exif_ml] to read dozens of `MetaInfo` from files. Works for all Image, Audio, Video files.                                                            |
+| [Google Product Search recognition][image_google_prod] (Node)        | Uses the [Google Cloud Vision Product Search][image_google_prod_ml] to compare images in Box with the images in a pre-trained product catalog.                                                                                              |
+| [Google Image Text and Topics][image_google_image] (Node)            | Uses the [Google Cloud Vision API][image_google_image_ml] to extract image texts and topics, using generic Google Image Search ML model for identification.                                                                                 |
+| [Hive Predict face recognition][image_hive] (Node)                   | Uses the [Hive Predict API][image_hive_ml] to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.                                                                      |
+| [Microsoft Image Text and Topics][image_ms_image] (Node)             | Uses the [Microsoft Vision API][image_ms_image_ml] to extract image texts and topics, using generic Bing Image Search ML model for identification.                                                                                          |
 
 <!-- markdownlint-enable line-length -->
 
@@ -75,9 +75,9 @@ Box Skills samples for processing video files on Box.
 
 <!-- markdownlint-disable line-length -->
 
-| Name                                          | Description                                                                                                                                                                                                           |
-| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [video_azure_video][video_azure_video] (Node) | Uses the [video_azure_video_ml][video_azure_video_ml] to extract Faces, Topics, and Transcripts from video files and write it back to Box as metadata on the file, as well show as close caption on the video itself. |
+| Name                                                                                      | Description                                                                                                                                                                                                                     |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Microsoft Azure Video Faces, Transcript and Topics Extraction][video_azure_video] (Node) | Uses the [Microsoft Azure Media Services][video_azure_video_ml] to extract Faces, Topics, and Transcripts from video files and write it back to Box as metadata on the file, as well show as close caption on the video itself. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -87,11 +87,11 @@ Box Skills samples for processing audio files on Box.
 
 <!-- markdownlint-disable line-length -->
 
-| Name                                                          | Description                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [audio_ibm_speech][audio_ibm_speech] (Node)                   | Uses the [audio_ibm_speech_ml][audio_ibm_speech_ml] to extract transcripts from from audio files and write it back to Box as metadata on the file.                                                                                                                                                                                  |
-| [audio_ms_azure_transcript][audio_ms_azure_transcript] (Node) | Uses the [audio_ms_azure_transcript_ml][audio_ms_azure_transcript_ml] to extract Topics, and Transcripts from from audio files and write it back to Box as metadata on the file.                                                                                                                                                    |
-| [audio_voicebase][audio_voicebase] (Node)                     | Uses the [audio_voicebase_ml][audio_voicebase_ml] to automatically extract data insights like transcript, topics, call metrics and sensitive information from audio files and attach them to the respective files as Skills Metadata Cards in Box Preview. This Skill is especially geared towards call center audio file analysis. |
+| Name                                                                            | Description                                                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [IBM Speech to Text Audio Transcription][audio_ibm_speech] (Node)               | Uses the [IBM Watson Speech to Text][audio_ibm_speech_ml] to extract transcripts from from audio files and write it back to Box as metadata on the file.                                                                                                                                                                       |
+| [Microsoft Azure Transcript Topics Detection][audio_ms_azure_transcript] (Node) | Uses the [Microsoft Azure Media Services][audio_ms_azure_transcript_ml] to extract Topics, and Transcripts from from audio files and write it back to Box as metadata on the file.                                                                                                                                             |
+| [VoiceBase Dual-Channel Audio Analysis][audio_voicebase] (Node)                 | Uses the [VoiceBase API][audio_voicebase_ml] to automatically extract data insights like transcript, topics, call metrics and sensitive information from audio files and attach them to the respective files as Skills Metadata Cards in Box Preview. This Skill is especially geared towards call center audio file analysis. |
 
 <!-- markdownlint-enable line-length -->
 

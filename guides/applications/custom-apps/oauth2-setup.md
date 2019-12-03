@@ -18,7 +18,7 @@ isIndex: false
 ---
 # Setup with OAuth 2.0
 
-A Custom App can be set up to use client-side [oauth2][oauth2] authentication.
+A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
 
 <CTA to="g://authentication/oauth2">
 Learn how OAuth 2.0 authentication works
@@ -30,21 +30,21 @@ Learn how OAuth 2.0 authentication works
 To set up a Custom App using OAuth 2.0 authentication you will need to pass the
 following requirements.
 
-* You need to be a be able to access the [devconsole][devconsole] for
-  your enterprise, or sign up for a [devaccount][devaccount].
+* You need to be a be able to access the [Developer Console][devconsole] for
+  your enterprise, or sign up for a [developer account][devaccount].
 
 ## Create the app
 
 ### 1. Log in to the Developer Console
 
-Head over to the [devconsole][devconsole] and select "Create New App".
+Head over to the [Developer Console][devconsole] and select "Create New App".
 
 ### 2. Create a Custom App
 
 Select the "Custom App" option from the list of application types and select
 "Next".
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Application selection screen](../images/app-types.png)
 
@@ -55,7 +55,7 @@ Select the "Custom App" option from the list of application types and select
 On the next screen, select "Standard OAuth 2.0 (User Authentication)" and select
 "Next".
 
-<ImageFrame width="400">
+<ImageFrame border width="400" center>
 
 ![Auth selection screen](../images/auth-types.png)
 
@@ -66,7 +66,7 @@ On the next screen, select "Standard OAuth 2.0 (User Authentication)" and select
 Finally, provide a unique name for your application. This name needs to be
 unique across all applications on Box.
 
-<ImageFrame width="600">
+<ImageFrame border width="600" center>
 
 ![App name form](../images/app-name.png)
 
@@ -75,7 +75,7 @@ unique across all applications on Box.
 <Message>
 
 Your application is now configured and ready to be used. You can use the
-[devtoken][devtoken] to immediately make API calls to your own account.
+[Developer Token][devtoken] to immediately make API calls to your own account.
 
 </Message>
 
@@ -94,7 +94,7 @@ After this, the user is redirected back to the redirect URI of your application.
 This URI can be any secure HTTPS URL, or a less secure HTTP URL for a server
 running on `localhost`.
 
-<ImageFrame width="600">
+<ImageFrame border width="600" center>
 
 ![App name form](../images/app-redirect-uri.png)
 
@@ -103,9 +103,9 @@ running on `localhost`.
 ### Application Scopes
 
 These options define what permissions your application has to access data. See
-the [scopes][scopes] for detailed information on each option.
+the [scopes guide][scopes] for detailed information on each option.
 
-<ImageFrame width="600">
+<ImageFrame border width="600" center>
 
 ![App name form](../images/app-scopes.png)
 
@@ -115,13 +115,13 @@ the [scopes][scopes] for detailed information on each option.
 
 If your application is making API calls from front-end browser code in
 Javascript then the domain that these calls will be made from will need to be
-whitelisted for [cors][cors], also known as CORS.
+whitelisted for [Cross Origin Resource Sharing][cors], also known as CORS.
 
 Fill in the full URI(s) of the domains that should be enabled in your
 application to make these kind of requests. If all requests will be made from
 server-side code, this section may be left blank.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![App name form](../images/app-cors.png)
 

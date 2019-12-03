@@ -42,7 +42,7 @@ applications.
 
 </Message>
 
-<Message>
+<Message danger>
 
 # Refresh token expiration
 

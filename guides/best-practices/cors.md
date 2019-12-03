@@ -24,7 +24,7 @@ the Box APIs from a browser environment. The Box API enforces CORS on an
 app-by-app basis and by default does not send the right HTTP headers to allow
 your browser to complete the request.
 
-<Message>
+<Message warning>
 
 Cross-Origin Resource Sharing, or CORS is only applicable to Box API requests
 made by a web page using a browser, and it relies on the `HTTP Origin` header

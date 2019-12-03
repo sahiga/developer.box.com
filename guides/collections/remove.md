@@ -23,7 +23,7 @@ To remove an item from a collection, call the `PUT` endpoint for that specific
 type of item and pass along a list of collection IDs that does not include the
 ID of the collection that needs to be removed.
 
-<Message>
+<Message warning>
 
 The only collection that is available via the API is the "Favorites"
 collection and therefore to remove an item from this collection can be

@@ -24,20 +24,20 @@ files and folders within a user's account. When creating one of these webhooks
 it is not possible specify a specific object to bind the webhook to.
 
 To create a webhook for a single file or folder please use the
-[create_webhook][create_webhook].
+[webhook APIs][create_webhook].
 
 <Message type="warning">
 
 Webhooks created through this process will not show when listing
-[list_webhooks][list_webhooks] for a user.
+[all webhooks][list_webhooks] for a user.
 
 </Message>
 
 ## Create a V1 webhook
 
-The following steps create a new webhook through the [devconsole][devconsole].
+The following steps create a new webhook through the [developer console][devconsole].
 
-1. Visit the [devconsole][devconsole] and select the app to add webhooks to.
+1. Visit the [developer console][devconsole] and select the app to add webhooks to.
 2. From the sidebar select "Webhooks".
 3. Click the "Create a new Webhook" button.
 4. Fill in the form to create the webhook and save the form. Make sure to fill

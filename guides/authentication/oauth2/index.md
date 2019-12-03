@@ -23,7 +23,7 @@ to provide applications access to their data in other applications.
 If you've ever logged in to a website with Twitter, Facebook, or Google you've
 most likely used OAuth 2.0.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![the OAuth 2.0 flow](./oauth2-flow.png)
 

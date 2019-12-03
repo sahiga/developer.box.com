@@ -28,9 +28,9 @@ with embedded React in Markdown.
 
 A message is an easy way to show a user that something is important.
 
-### Notice messages
+### Default message
 
-The lowest level of message is a notice. Either explicitly set the type, or
+The lowest level of message is default message. Either explicitly set the type, or
 omit the type.
 
 ```html
@@ -38,7 +38,7 @@ omit the type.
   A simple note
 </Message>
 
-<Message type='notice'>
+<Message type='default'>
   A simple note
 </Message>
 ```
@@ -48,6 +48,30 @@ omit the type.
 <Message>
 
 A simple note
+
+</Message>
+
+</H>
+
+### Notice message
+
+The next level is a notice.
+
+```html
+<Message type='notice'>
+  A notice message
+</Message>
+
+<Message notice>
+  A notice message
+</Message>
+```
+
+<H>
+
+<Message Notice>
+
+A notice message
 
 </Message>
 
@@ -69,7 +93,7 @@ The next level of message is a warning.
 
 <H>
 
-<Message>
+<Message warning>
 
 A warning note
 
@@ -93,7 +117,7 @@ The final level of message is a danger warning.
 
 <H>
 
-<Message>
+<Message danger>
 
 Danger zone!
 
@@ -354,7 +378,7 @@ An image can be easily wrapped into a frame.
 
 <H>
 
-<ImageFrame width="200">
+<ImageFrame border center shadow width="200">
 
 ![Image](./box.jpg)
 

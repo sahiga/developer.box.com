@@ -17,21 +17,21 @@ isIndex: true
 
 To make working with the Box API easier we provide the following SDKs and CLI.
 
-| Platform                 | Maintained? | Parity? |
-| ------------------------ | ----------- | ------- |
-| [javasdk][javasdk]       | はい          | Full    |
-| [dotnetsdk][dotnetsdk]   | はい          | Full    |
-| [pythonsdk][pythonsdk]   | はい          | Full    |
-| [nodesdk][nodesdk]       | はい          | Full    |
-| [cli][cli]               | はい          | Full    |
-| [iossdk][iossdk]         | はい          | Partial |
-| [androidsdk][androidsdk] | はい          | Partial |
+| Platform                          | Maintained? | Parity? |
+| --------------------------------- | ----------- | ------- |
+| [Java SDK][javasdk]               | Yes         | Full    |
+| [.NET SDK][dotnetsdk]             | Yes         | Full    |
+| [Python SDK][pythonsdk]           | Yes         | Full    |
+| [Node SDK][nodesdk]               | Yes         | Full    |
+| [CLI][cli]                        | Yes         | Full    |
+| [iOS Content SDK][iossdk]         | Yes         | Partial |
+| [Android Content SDK][androidsdk] | Yes         | Partial |
 
 <Message type="notice">
 
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features. For support with these
-projects please visit GitHub or [forum][forum].
+projects please visit GitHub or [our Platform support forum][forum].
 
 **API Parity**: Projects with full API parity are actively updated with all
 platform functionality as this becomes available on the Box Platform. Projects

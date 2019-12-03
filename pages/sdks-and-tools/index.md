@@ -18,21 +18,21 @@ receive regular product updates, as well as security updates.
 
 ## Official SDKs & CLIs
 
-| Platform                 | Maintained? | Parity? |
-| ------------------------ | ----------- | ------- |
-| [javasdk][javasdk]       | はい          | Full    |
-| [dotnetsdk][dotnetsdk]   | はい          | Full    |
-| [pythonsdk][pythonsdk]   | はい          | Full    |
-| [nodesdk][nodesdk]       | はい          | Full    |
-| [cli][cli]               | はい          | Full    |
-| [iossdk][iossdk]         | はい          | Partial |
-| [androidsdk][androidsdk] | はい          | Partial |
+| Platform                          | Maintained? | Parity? |
+| --------------------------------- | ----------- | ------- |
+| [Java SDK][javasdk]               | Yes         | Full    |
+| [.NET SDK][dotnetsdk]             | Yes         | Full    |
+| [Python SDK][pythonsdk]           | Yes         | Full    |
+| [Node SDK][nodesdk]               | Yes         | Full    |
+| [CLI][cli]                        | Yes         | Full    |
+| [iOS Content SDK][iossdk]         | Yes         | Full    |
+| [Android Content SDK][androidsdk] | Yes         | Partial |
 
 <Message type="notice">
 
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features. For support with these
-projects please visit GitHub or [forum][forum].
+projects please visit GitHub or [our Platform support forum][forum].
 
 **API Parity**: Projects with full API parity are actively updated with all
 platform functionality as this becomes available on the Box Platform. Projects
@@ -56,7 +56,7 @@ preview files on Box.
 
 | Platform   |                                                                                                                                                                                       |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| iOS        | [iosbrowsesdk][iosbrowsesdk], [iossharesdkiossharesdk][iossharesdk], [iospreviewsdkiospreviewsdk][iospreviewsdk]                                                                      |
+| iOS        | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
 | Javascript | [Box UI Elements](guide://embed/ui-elements/)                                                                                                                                         |
 
@@ -66,7 +66,8 @@ preview files on Box.
 
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features.  For support with these
-projects please visit GitHub or [forum][forum]."
+projects please visit GitHub or [our Platform support
+forum][forum]."
 
 </Message>
 
@@ -77,12 +78,12 @@ members. These tools do not receive regular product updates or security updates.
 
 <!-- markdownlint-disable line-length -->
 
-| Platform                       | Maintained?                           | Parity  |
-| ------------------------------ | ------------------------------------- | ------- |
-| [salesforcesdk][salesforcesdk] | Limited, by Box and community members | Partial |
-| [rubysdk][rubysdk]             | Limited, by Box and community members | Partial |
-| [jssdk][jssdk]                 | Limited, by Box and community members | Partial |
-| [chromesdk][chromesdk]         | Limited, by Box and community members | Partial |
+| Platform                        | Maintained?                           | Parity  |
+| ------------------------------- | ------------------------------------- | ------- |
+| [Salesforce SDK][salesforcesdk] | Limited, by Box and community members | Partial |
+| [Ruby SDK][rubysdk]             | Limited, by Box and community members | Partial |
+| [Client-side JS SDK][jssdk]     | Limited, by Box and community members | Partial |
+| [Chrome App SDK][chromesdk]     | Limited, by Box and community members | Partial |
 
 <!-- markdownlint-enable line-length -->
 
@@ -92,7 +93,8 @@ members. These tools do not receive regular product updates or security updates.
 collaboration with the community. They receive irregular security updates. If
 you are a Box customer on a premium support plan, please contact customer
 services for any urgent feature requests for these tools. For other support
-queries with these projects please visit GitHub or [forum][forum].
+queries with these projects please visit GitHub or [our Platform support
+forum][forum].
 
 **API Parity:**  Projects with limited API parity can lack some functionality
 as new features are not automatically rolled out to these projects as they

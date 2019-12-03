@@ -75,7 +75,7 @@ expired = date >= expiry_date
 ### 2. Calculate HMAC signature
 
 Then, calculate the HMAC of the payload using either of the two signatures
-found in the application's configuration on the [console][console].
+found in the application's configuration on the [developer console][console].
 
 Make sure to append the bytes of the body of the payload first, and then the
 bytes of the timestamp found in the `BOX-DELIVERY-TIMESTAMP` header.

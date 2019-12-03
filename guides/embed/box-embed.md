@@ -25,7 +25,7 @@ To grab your Box Embed code from the Box web app, navigate to the folder of
 choice, click on the ellipsis beside the folder, go to More Actions, and click
 Embed Widget.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Embed](./box-embed.png)
 
@@ -33,7 +33,7 @@ Embed Widget.
 
 You are presented with options to adjust the size, view, and sorting.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Embed Configuration](./box-embed-2.png)
 
@@ -69,7 +69,7 @@ The first step to building an embed `iframe` programmatically is to generate or
 find the value for the shared link. One way to find this value is by using the Box
 web app.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Box Share](./box-share.png)
 
@@ -205,7 +205,7 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 Paid Box customers have the option to change the Box logo in the file Preview to
 their own custom logo. The logo is inherited from your Enterprise Settings and
-can be set by following [logo][logo].
+can be set by following [these admin instructions][logo].
 
 ## Limitations
 

@@ -30,7 +30,7 @@ indicate the operation was successful.
 
 ### `Enum CollaborationType`
 
-Enum to indicate the [collab-type][collab-type].
+Enum to indicate the [type of collaboration][collab-type].
 
 Possible values: `EDITOR`, `VIEWER`, `PREVIEWER`, `UPLOADER`, `COOWNER`,
 `OWNER`, `PREVIEWERUPLOADER`, or `VIEWERUPLOADER`
@@ -106,8 +106,8 @@ Returns:
 ## Generic Methods
 
 The Box for Salesforce Developer Toolkit provides a global method that accepts
-an [sf-httprequest][sf-httprequest] object as a parameter and returns an
-[sf-httpresponse][sf-httpresponse] object. This method will utilize the
+an [HttpRequest][sf-httprequest] object as a parameter and returns an
+[HttpResponse][sf-httpresponse] object. This method will utilize the
 authentication details of the Service Account to make callouts to Box's APIs,
 allowing you to focus on the business logic of your integration.
 
@@ -115,15 +115,15 @@ allowing you to focus on the business logic of your integration.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type                             | Description                                           |
-| --------- | -------------------------------- | ----------------------------------------------------- |
-| `request` | [sf-httprequest][sf-httprequest] | An HttpRequest object with a set endpoint and method. |
+| Parameter | Type                          | Description                                           |
+| --------- | ----------------------------- | ----------------------------------------------------- |
+| `request` | [HttpRequest][sf-httprequest] | An HttpRequest object with a set endpoint and method. |
 
 <!-- markdownlint-enable line-length -->
 
 Returns:
 
-* An [sf-httpresponse][sf-httpresponse] object with the response details from
+* An [HttpResponse][sf-httpresponse] object with the response details from
   calling Box's APIs.
 * `Toolkit.BoxApiException` if there is any missing information from the
   HttpRequest input.

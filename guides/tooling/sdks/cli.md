@@ -32,20 +32,20 @@ available for building the CLI in other environments.
 To install the latest CLI on your machine, download the latest
 `.exe` for Windows or `.pkg` for macOS for the latest release.
 
-<CTA to="https://github.com/box/boxcli/releases">
+<CTA to="https://github.com/box/boxcli/releases" narrow>
 Download the latest CLI installer
 
 </CTA>
 
 ## Source Code
 
-The source code for the CLI is also available via [cli][cli].
+The source code for the CLI is also available via [the GitHub page][cli].
 
 ## Quick Start
 
-To get started, first [jwt-guide][jwt-guide] using Server-side
+To get started, first [set up a Box Custom App][jwt-guide] using Server-side
 Authentication with JWT and download the JSON configuration file from the
-Configuration page of your app in the [devconsole][devconsole]. Then, set
+Configuration page of your app in the [developer Console][devconsole]. Then, set
 up the CLI by pointing it to your configuration file:.
 
 ```cli
@@ -70,15 +70,15 @@ Service Account. See [User Types](g://authentication/user-types) for more detail
 ## Setup & Commands
 
 For a complete list of steps to set up your CLI environment and start working
-with the CLI post-install are available on our [cli][cli].
+with the CLI post-install are available on our [Box CLI GitHub page][cli].
 
 The GitHub page also has some additional guides that might be of interest to an
 advanced CLI user.
 
-* [cli-autocomplete][cli-autocomplete]
-* [cli-add-config][cli-add-config]
-* [cli-switch][cli-switch]
-* [cli-commands][cli-commands]
+* [Setup autocomplete][cli-autocomplete]
+* [Configure another app][cli-add-config]
+* [Switch accounts][cli-switch]
+* [A full list of commands][cli-commands]
 
 [cli]: https://github.com/box/boxcli
 

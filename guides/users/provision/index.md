@@ -23,7 +23,7 @@ account to determine when standard setup may be needed for the account:
 * Should the user be assigned any tasks to complete?
 * Would any instructional comments on any files be helpful?
 
-<Message>
+<Message danger>
 
 # New User Password Resets and Email Confirmation
 

@@ -22,7 +22,7 @@ Server-side authentication using JWT one of the most powerful ways to
 authenticate to the Box API. JWT is an [open standard](https://jwt.io/)
 designed to allow simple and powerful server-to-server authentication.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![The JWT flow](./jwt-flow.png)
 

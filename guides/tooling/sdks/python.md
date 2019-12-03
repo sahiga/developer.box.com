@@ -35,7 +35,7 @@ pip install boxsdk
 
 ## JWT application
 
-When working with a Box App that uses server-side [jwt][jwt], the
+When working with a Box App that uses server-side [JWT authentication][jwt], the
 following additional module needs to be installed.
 
 ```shell

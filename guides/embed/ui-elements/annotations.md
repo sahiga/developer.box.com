@@ -29,7 +29,7 @@ Learn more about Content Preview
 Box Content Preview currently supports four annotation types - highlight
 comment, highlight only, draw, and point annotation. Box Annotations are today
 supported on documents and image previews only. You can find the full list of
-supported file types for Box Content Preview [filetypes][filetypes].
+supported file types for Box Content Preview [here][filetypes].
 
 ## Browser support
 

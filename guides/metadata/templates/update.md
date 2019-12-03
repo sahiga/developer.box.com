@@ -15,7 +15,7 @@ isIndex: false
 # Update Metadata Template
 
 Updating a metadata template can be achieved by passing a set of operations to
-the [endpoint][endpoint]`PUT /metadata_templates/:id/:id/schema`[endpoint][endpoint] API.
+the [endpoint][endpoint] API.
 
 <Samples id="put_metadata_templates_id_id_schema">
 
@@ -235,7 +235,7 @@ This will update the field `category` to have a new display name of
 field are migrated to the new key. The search index will be updated yet it can
 take time depending on how many files are affected by the change.
 
-<Message>
+<Message warning>
 
 This may affect existing instances of this template.
 
@@ -264,7 +264,7 @@ This will remove the field `brand` from the template as well as all instances of
 the template. The search index will be updated yet it can take time depending on
 how many files are affected by the change.
 
-<Message>
+<Message warning>
 
 This will affect existing instances of this template.
 
@@ -300,7 +300,7 @@ the template with the value set will be migrated to the new option. The search
 index will be updated yet it can take time depending on how many files are
 affected by the change.
 
-<Message>
+<Message warning>
 
 This will affect existing instances of this template.
 
@@ -334,7 +334,7 @@ instance of the template was set to this option then the value will be unset.
 The search index will be updated yet it can take time depending on how many
 files are affected by the change.
 
-<Message>
+<Message warning>
 
 This will affect existing instances of this template.
 
@@ -370,7 +370,7 @@ the template with the value set will be migrated to the new option. The search
 index will be updated yet it can take time depending on how many files are
 affected by the change.
 
-<Message>
+<Message warning>
 
 This will affect existing instances of this template.
 
@@ -405,7 +405,7 @@ be unset.
 The search index will be updated yet it can take time depending on how many
 files are affected by the change.
 
-<Message>
+<Message warning>
 
 This will affect existing instances of this template.
 

@@ -25,7 +25,7 @@ services, and the edited content will be automatically saved back to Box.
 
 The integrations included in the Open With Element are Adobe Sign, Google Suite,
 and Box Edit. Additional information on the Google Suite integration can be
-found on the [community][community].
+found on the [Box Community site][community].
 
 Currently, the element only supports [App Users](g://authentication/user-types)
 for authentication.
@@ -47,15 +47,15 @@ older browsers. Make sure to add the right polyfills for your targeted browsers.
 ## Box Edit
 
 Box Edit requires additional setup in order to be integrated into a custom
-application. Box Edit uses the desktop application [tools][tools] in order
+application. Box Edit uses the desktop application [Box Tools][tools] in order
 to open content locally.
 
 * Requests must use a secure connection (from an `https` domain)
 * The application's domain must be whitelisted by Box Tools. Instructions can be
-  found [custom-domains][custom-domains]. The ideal workflow is to bundle these steps
+  found [here][custom-domains]. The ideal workflow is to bundle these steps
   within an installer that also installs Box Tools.
 * Safari requires a browser extension to connect to box tools. More details can
-  be found [safari][safari].
+  be found [here][safari].
 
 ## G Suite
 
@@ -78,7 +78,7 @@ The 'Open With' UI Element is available to any developer building with the Box
 Platform. To activate it for your instance, add the "Enable integrations" scope
 to your application in the developer console.
 
-<ImageFrame>
+<ImageFrame border>
 
 ![Enable Integrations](./images/enable-integrations.png)
 
@@ -150,7 +150,7 @@ required:
 * The ID of the app user to be assigned the integration
 * The ID of the app integration to assign to the user
 
-<Message>
+<Message warning>
 
 While the two previous requests to get app integration information can be done
 with any valid token including a valid developer token, adding and removing
@@ -258,13 +258,13 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 
 ### Open With Example
 
-<iframe height="560" scrolling="no" title="Box Open With Example" src="//codepen.io/box-platform/embed/984598a6fe6bf01785d02be770c5c96a/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe height="560" scrolling="no" title="Box Open With Example" src="//codepen.io/box-platform/embed/984598a6fe6bf01785d02be770c5c96a/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
 ### Content Explorer + Open With Example
 
-<iframe height="560" scrolling="no" title="Box Content Explorer Example + Open With" src="//codepen.io/box-platform/embed/519f67ba709fb581a93c3f73b64cf223/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
+<iframe height="560" scrolling="no" title="Box Content Explorer Example + Open With" src="//codepen.io/box-platform/embed/519f67ba709fb581a93c3f73b64cf223/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
@@ -305,7 +305,7 @@ integration you would like to use.
 * **Box Edit**: `item_readwrite` on the parent folder.
 * **Box Edit SFC**: `item_readwrite` on the file.
 
-More information on scopes can be found [scopes][scopes].
+More information on scopes can be found [here][scopes].
 
 ## API
 
