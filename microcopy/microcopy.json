@@ -91,6 +91,8 @@
   "reference.parameter_details.optional": "省略可能",
   // The label for a required parameter
   "reference.parameter_details.required": "必須",
+  // The label for a conditionally required param
+  "reference.parameter_details.conditionally_required": "条件付きで必須",
   // The label for a default parameter value
   "reference.parameter_details.default": "デフォルト",
   // The label for the max length of a parameter value
@@ -262,7 +264,7 @@
   // The URL for the company's about page
   "footer.categories.company.links.about_us.url": "https:\/\/www.box.com\/about-us",
   // Text for a link to the Platform twitter account
-  "footer.categories.company.links.twitter.text": "プラットフォームのTwitter",
+  "footer.categories.company.links.twitter.text": "Platform Twitter",
   // A link to the Platform twitter account
   "footer.categories.company.links.twitter.url": "https:\/\/twitter.com\/boxplatform",
   // Text for a link to the Platform blog
@@ -318,7 +320,7 @@
   // A title for a footer section on our available code samples
   "footer.categories.code.title": "サンプル",
   // Text for link to our code samples
-  "footer.categories.code.links.samples.text": "プラットフォームサンプル",
+  "footer.categories.code.links.samples.text": "Platformサンプル",
   // Link to our code samples
   "footer.categories.code.links.samples.url": "https:\/\/github.com\/box\/samples",
   // Text for link to our Box skills code samples
@@ -336,7 +338,7 @@
   // Link to create a support ticket
   "footer.categories.support.links.ticket.url": "https:\/\/community.box.com\/t5\/custom\/page\/page-id\\ \/BoxSearchLithiumTKB",
   // Text for link to go to our support forum
-  "footer.categories.support.links.forum.text": "プラットフォームフォーラム",
+  "footer.categories.support.links.forum.text": "Platformフォーラム",
   // Link to go to our support forum
   "footer.categories.support.links.forum.url": "https:\/\/community.box.com\/t5\/Platform-and-Development\\ -Forum\/bd-p\/DeveloperForum",
   // Text for link to go to our feedback site
