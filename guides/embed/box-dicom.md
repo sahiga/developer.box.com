@@ -13,9 +13,7 @@ isIndex: false
 ---
 # Box DICOM
 
-The Box DICOM Viewer allows developers to store, view and share DICOM files like
-X-rays, CT scans, Ultrasounds and MRIs securely with Box while still embedding
-the viewer into their own application.
+The Box DICOM Viewer allows developers to store, view and share DICOM files like X-rays, CT scans, Ultrasounds and MRIs securely with Box while still embedding the viewer into their own application.
 
 <ImageFrame>
 
@@ -23,12 +21,9 @@ the viewer into their own application.
 
 </ImageFrame>
 
-The Box DICOM Viewer is an FDA cleared Class II Medical Device for diagnostic
-viewing. It is a zero-footprint HTML5 viewer and can be embedded into an
-application in an `<iframe>` or with a Javascript SDK.
+The Box DICOM Viewer is an FDA cleared Class II Medical Device for diagnostic viewing. It is a zero-footprint HTML5 viewer and can be embedded into an application in an `<iframe>` or with a Javascript SDK.
 
-If you are a developer and want to embed the Box DICOM Viewer into your
-application, please [email us at for more information][email].
+If you are a developer and want to embed the Box DICOM Viewer into your application, please [email us at for more information][email].
 
 ## Current Version
 
@@ -36,22 +31,20 @@ The current version for Box DICOM is
 
 * Version: `1.3.5`
 * Locale: `en-US`
-* Javascript: [js][js]
-* CSS: [css][css]
+* Javascript: [`boxdicom.com/dist/1.3.5/dicom-en-US.min.js`][js]
+* CSS: [`boxdicom.com/dist/1.3.5/dicom.min.css`][css]
 
 <Message warning>
 
 # Update to `v1.3.0` or higher
 
-If you are using a version of the DICOM Viewer prior to `v1.3.0`, please
-upgrade to `v1.3.0` or higher.
+If you are using a version of the DICOM Viewer prior to `v1.3.0`, please upgrade to `v1.3.0` or higher.
 
 </Message>
 
 ## Supported Locales
 
-To use a different locale, replace `en-US` in the Javascript download URL above
-with any of the following supported locales:
+To use a different locale, replace `en-US` in the Javascript download URL above with any of the following supported locales:
 
 |         |         |         |         |
 | ------- | ------- | ------- | ------- |
@@ -64,15 +57,13 @@ with any of the following supported locales:
 
 ## `<iframe>` Embed
 
-The Box DICOM viewer can be embedded in a HTML `iframe` or linked to directly.
-The URL pattern for the Box DICOM Viewer is as follows.
+The Box DICOM viewer can be embedded in a HTML `iframe` or linked to directly. The URL pattern for the Box DICOM Viewer is as follows.
 
 ```sh
 https://cloud.app.box.com/dicom_viewer/{FILE_ID}
 ```
 
-The File ID can be obtained from the API or from the Box web application user
-interface.
+The File ID can be obtained from the API or from the Box web application user interface.
 
 ### `<iframe>` Parameters
 
@@ -90,8 +81,7 @@ The following options can be provided as query string parameters:
 
 <!-- markdownlint-enable line-length -->
 
-After the URL has been constructed, it can be embedded in an `iframe` or be
-linked to directly.
+After the URL has been constructed, it can be embedded in an `iframe` or be linked to directly.
 
 The following is an example of an `iframe` embed.
 
@@ -158,8 +148,7 @@ for the Box DICOM viewer's full-screen function to work properly.
 
 ### JS SDK Parameters
 
-The primary function to create a viewer is `box.dicom.createViewer()`. The proper
-definition is:
+The primary function to create a viewer is `box.dicom.createViewer()`. The proper definition is:
 
 ```js
 box.dicom.createViewer(element, config);
@@ -274,13 +263,9 @@ You can show / hide the worklist using the visible property.
 
 ## DICOM Import Javascript SDK
 
-The Box DICOM Import tool intelligently crawls through folders and subfolders to
-find your DICOM data. It can recognize non-DICOM to avoid uploading unwanted
-content such as executables. The resulting files are organized by patient and
-study details.
+The Box DICOM Import tool intelligently crawls through folders and subfolders to find your DICOM data. It can recognize non-DICOM to avoid uploading unwanted content such as executables. The resulting files are organized by patient and study details.
 
-The Box DICOM Import widget can be embedded in your applications using the
-JavaScript SDK.
+The Box DICOM Import widget can be embedded in your applications using the JavaScript SDK.
 
 ```js
 box.dicom.createImportWidget("my-container", {

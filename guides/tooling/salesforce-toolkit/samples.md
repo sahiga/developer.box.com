@@ -15,8 +15,7 @@ isIndex: false
 
 ## Generic Method
 
-The following code will create metadata on a Box folder in Salesforce using the
-generic Toolkit method:
+The following code will create metadata on a Box folder in Salesforce using the generic Toolkit method:
 
 <!-- markdownlint-disable line-length -->
 
@@ -94,8 +93,7 @@ boxToolkit.commitChanges();
 
 ## Folder Templates
 
-The following code will create a folder for a record, create subfolders (folder
-template), and collaborate the current user:
+The following code will create a folder for a record, create subfolders (folder template), and collaborate the current user:
 
 <!-- markdownlint-disable line-length -->
 

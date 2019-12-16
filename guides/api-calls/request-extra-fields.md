@@ -15,8 +15,7 @@ isIndex: false
 ---
 # Request Extra Fields
 
-The number of fields returned for a resource can depend on the API endpoint used
-to request the resource.
+The number of fields returned for a resource can depend on the API endpoint used to request the resource.
 
 <!-- markdownlint-disable line-length -->
 
@@ -28,15 +27,11 @@ to request the resource.
 
 <!-- markdownlint-enable line-length -->
 
-The API reference documentation has each of these variations labeled in more
-detail. Most notably, the file, folder, web link, and user items have full and
-mini variations.
+The API reference documentation has each of these variations labeled in more detail. Most notably, the file, folder, web link, and user items have full and mini variations.
 
 ## Using the field query parameter
 
-To request a specific field for a resource that is not returned by default in
-the standard response, append the `field` query parameter to your request. The
-value of this parameter is a comma separated list of field names.
+To request a specific field for a resource that is not returned by default in the standard response, append the `field` query parameter to your request. The value of this parameter is a comma separated list of field names.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
@@ -55,9 +50,7 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
 
 <Message type="notice">
 
-It is important to note that when a specific field is requested no other
-fields are returned except for those requested and the "base" set of fields.
-For a file, this base set is comprised of the `etag`, `id`, and `type` values.
+It is important to note that when a specific field is requested no other fields are returned except for those requested and the "base" set of fields. For a file, this base set is comprised of the `etag`, `id`, and `type` values.
 
 </Message>
 
@@ -67,11 +60,7 @@ The following resource variants are available via our API.
 
 ### Standard
 
-The default set of fields returned in an API response is commonly known as the
-standard resource variant. It is generally returned when requesting a resource
-through the main APIs available for that resource. For example, when requesting
-the [`GET /files/:id`](endpoint://get_files_id) endpoint the API will return
-the standard variation of a file.
+The default set of fields returned in an API response is commonly known as the standard resource variant. It is generally returned when requesting a resource through the main APIs available for that resource. For example, when requesting the [`GET /files/:id`](endpoint://get_files_id) endpoint the API will return the standard variation of a file.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
@@ -106,13 +95,9 @@ curl https://api.box.com/2.0/files/12345 \
 
 ### Mini
 
-Where a resource is returned as a nested part of another response it is often
-reduced in size, only returning some of the more essential fields. This variant
-is commonly known as the mini resource variant.
+Where a resource is returned as a nested part of another response it is often reduced in size, only returning some of the more essential fields. This variant is commonly known as the mini resource variant.
 
-For example, when requesting the
-[`GET /folders/:id/items`](endpoint://get_folders_id_items) endpoint the API
-will return a mini variation of files and folders nested within the `item_collection`.
+For example, when requesting the [`GET /folders/:id/items`](endpoint://get_folders_id_items) endpoint the API will return a mini variation of files and folders nested within the `item_collection`.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
@@ -148,25 +133,17 @@ curl https://api.box.com/2.0/files/12345 \
 
 <Message type="notice">
 
-To request more information for a nested resource we recommend calling the
-API for that resource to request it by ID, and optionally pass along the
-`field` query parameter.
+To request more information for a nested resource we recommend calling the API for that resource to request it by ID, and optionally pass along the `field` query parameter.
 
-For example, to get the owner of a file returned when listing the items in a
-folder, request that file by ID with the query parameter `field=owned_by`.
+For example, to get the owner of a file returned when listing the items in a folder, request that file by ID with the query parameter `field=owned_by`.
 
 </Message>
 
 ### Full
 
-The total set of fields that can be returned in an API response is commonly known
-as the full resource variant. It can generally be returned when requesting a resource
-through the main APIs available for that resource and by appending the `fields`
-query parameter.
+The total set of fields that can be returned in an API response is commonly known as the full resource variant. It can generally be returned when requesting a resource through the main APIs available for that resource and by appending the `fields` query parameter.
 
-For example, when requesting the [`GET /files/:id`](endpoint://get_files_id)
-endpoint with the `fields=is_package,lock` parameter the API will return the fields
-specified plus the basic fields for the file.
+For example, when requesting the [`GET /files/:id`](endpoint://get_files_id) endpoint with the `fields=is_package,lock` parameter the API will return the fields specified plus the basic fields for the file.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \

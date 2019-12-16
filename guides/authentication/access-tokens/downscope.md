@@ -17,24 +17,17 @@ isIndex: false
 ---
 # Downscope a Token
 
-Downscoping is a way to exchange an existing Access Token for a new one that is
-more restricted.
+Downscoping is a way to exchange an existing Access Token for a new one that is more restricted.
 
 ## Reasons to downscope
 
-An application might need to share the Access Token with an
-environment that it does not fully control. A common example of this would be
-when using Box UI Elements in a web browser.
+An application might need to share the Access Token with an environment that it does not fully control. A common example of this would be when using Box UI Elements in a web browser.
 
-When an application needs to pass an Access Token to the browser there is a
-potential security risk that needs to be resolved. In order to limit this risk the
-Access Token can be exchanged for a new token with much stricter permissions.
+When an application needs to pass an Access Token to the browser there is a potential security risk that needs to be resolved. In order to limit this risk the Access Token can be exchanged for a new token with much stricter permissions.
 
 ## High-level overview
 
-A downscoped token is a token that has fewer permissions (scopes) than the
-original token, as well as the optional additional restriction to only allow
-access to a specific file.
+A downscoped token is a token that has fewer permissions (scopes) than the original token, as well as the optional additional restriction to only allow access to a specific file.
 
 <ImageFrame border>
 
@@ -42,13 +35,11 @@ access to a specific file.
 
 </ImageFrame>
 
-The new token takes the permissions of the original token and restricts them
-to the tokens passed in, as well as the resource provided.
+The new token takes the permissions of the original token and restricts them to the tokens passed in, as well as the resource provided.
 
 ## Downscoping in practice
 
-To downscope a token, pass the `POST /oauth2/token` endpoint an existing Access
-Token, a list of scopes, as well as an optional file URL to restrict the token to.
+To downscope a token, pass the `POST /oauth2/token` endpoint an existing Access Token, a list of scopes, as well as an optional file URL to restrict the token to.
 
 <Samples id="post_oauth2_token" variant="downscope_token">
 
@@ -68,8 +59,7 @@ Token, a list of scopes, as well as an optional file URL to restrict the token t
 
 ## Downscoped Access Token Object
 
-A downscoped Access Token returned by the \*\*\* endpoint contains extra
-information on the specific restrictions.
+A downscoped Access Token returned by the \*\*\* endpoint contains extra information on the specific restrictions.
 
 ```json
 {
@@ -93,8 +83,7 @@ information on the specific restrictions.
 }
 ```
 
-Most importantly here is the list of `restricted_to` entries that will contain
-each combination of `object` and `scope` that the new token has the permissions for.
+Most importantly here is the list of `restricted_to` entries that will contain each combination of `object` and `scope` that the new token has the permissions for.
 
 [scopes]: guide://api-calls/permissions-and-errors/scopes
 

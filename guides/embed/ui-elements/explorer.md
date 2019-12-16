@@ -16,35 +16,23 @@ isIndex: false
 ---
 # Content Explorer
 
-The Box Content Explorer UI Element allows developers to embed a folder view of
-content stored on Box in their desktop or mobile web application. The library
-fetches information about a specified folder through the Box API and then
-renders the content in a folder view, similar to the main Box web application.
-Users can then navigate through the folder hierarchy and perform file operations
-like rename, delete, and share.
+The Box Content Explorer UI Element allows developers to embed a folder view of content stored on Box in their desktop or mobile web application. The library fetches information about a specified folder through the Box API and then renders the content in a folder view, similar to the main Box web application. Users can then navigate through the folder hierarchy and perform file operations like rename, delete, and share.
 
 ## Installation
 
-[Learn how to install](g://embed/ui-elements/installation) Box UI elements
-either through NPM or the Box CDN.
+[Learn how to install](g://embed/ui-elements/installation) Box UI elements either through NPM or the Box CDN.
 
 <Message>
 
 # Browser support
 
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
+UI elements have [limited support](g://embed/ui-elements/browser) for older browsers. Make sure to add the right polyfills for your targeted browsers.
 
 </Message>
 
 ## Authentication
 
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
+The UI Elements are designed in an authentication agnostic way so whether you are using UI Elements for users who have Box accounts (Managed Users) or non-Box accounts (App Users), UI Elements should work out of the box. The reason for this is that UI Elements only expect a "token" to be passed in for authentication, and Box provides two different ways to generate tokens - OAuth and JWT.
 
 <CTA to="g://authentication/select">
 Learn about selecting an authentication method
@@ -212,10 +200,7 @@ contentExplorer.removeAllListeners();
 
 ## Keyboard Shortcuts
 
-When the item grid has focus, either manually by clicking on it or
-programmatically via javascript or via the above mentioned `autoFocus` prop, the
-following keyboard shortcuts will work if their corresponding operations are
-applicable and allowed.
+When the item grid has focus, either manually by clicking on it or programmatically via javascript or via the above mentioned `autoFocus` prop, the following keyboard shortcuts will work if their corresponding operations are applicable and allowed.
 
 | Key                     | Action                             |
 | ----------------------- | ---------------------------------- |
@@ -237,16 +222,9 @@ applicable and allowed.
 
 ## Scopes
 
-If your application requires the end user to only be able to access a subset of
-the Content Explorer functionality, you can use [Downscoping][downscope] to
-appropriately downscope the Access Token to a resulting token that has the
-desired set of permissions, and can thus, be securely passed to the end user
-client initializing the Content Explorer.
+If your application requires the end user to only be able to access a subset of the Content Explorer functionality, you can use [Downscoping][downscope] to appropriately downscope the Access Token to a resulting token that has the desired set of permissions, and can thus, be securely passed to the end user client initializing the Content Explorer.
 
-Below are a set of UI Element-specific scopes to go alongside Downscoping. These
-allow developers to enable/disable UI controls on the Content Explorer by
-configuring the appropriate scopes on the downscoped token. To learn
-more, see [Special Scopes for Box UI Elements][scopes].
+Below are a set of UI Element-specific scopes to go alongside Downscoping. These allow developers to enable/disable UI controls on the Content Explorer by configuring the appropriate scopes on the downscoped token. To learn more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
 

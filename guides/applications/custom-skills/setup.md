@@ -19,8 +19,7 @@ Setting up a Custom Skill is a multi-step process.
 
 To set up a Custom Skill you will need to pass the following requirements.
 
-* You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+* You need to be a be able to access the [Developer Console][devconsole] for your enterprise, or sign up for a [developer account][devaccount].
 
 ## Create the app
 
@@ -30,8 +29,7 @@ Head over to the [Developer Console][devconsole] and select "Create New App".
 
 ### 2. Create a Custom Skill
 
-Select the "Custom Skill" option from the list of application types and select
-"Next".
+Select the "Custom Skill" option from the list of application types and select "Next".
 
 <ImageFrame border>
 
@@ -41,8 +39,7 @@ Select the "Custom Skill" option from the list of application types and select
 
 ### 3. Provide a name
 
-On the next screen, provide a unique name for your application. This name needs
-to be unique across all applications on Box.
+On the next screen, provide a unique name for your application. This name needs to be unique across all applications on Box.
 
 <ImageFrame border width="600" center>
 
@@ -52,8 +49,7 @@ to be unique across all applications on Box.
 
 ## Approval
 
-Before a Custom Skill can be used it needs to be assigned to a folder for which the
-skill should trigger.
+Before a Custom Skill can be used it needs to be assigned to a folder for which the skill should trigger.
 
 <CTA to="g://applications/custom-skills/approval">
 Learn more about approving Custom Skills
@@ -62,22 +58,15 @@ Learn more about approving Custom Skills
 
 ## Basic configuration
 
-Before a Custom Skill can be enabled enabled on a folder, some basic additional
-configuration needs to be set up.
+Before a Custom Skill can be enabled enabled on a folder, some basic additional configuration needs to be set up.
 
 ### Invocation URL
 
-Custom Skills work by sending a payload for every file uploaded a remote URL.
-This URL is called the invocation URL.
+Custom Skills work by sending a payload for every file uploaded a remote URL. This URL is called the invocation URL.
 
-The Invocation URL can be any HTTP endpoint representing a server, development
-machine, or serverless function. The only condition is that the URL is publicly
-available and accessible by the Box servers. For this reason, `localhost` is not
-a valid address.
+The Invocation URL can be any HTTP endpoint representing a server, development machine, or serverless function. The only condition is that the URL is publicly available and accessible by the Box servers. For this reason, `localhost` is not a valid address.
 
-To set up the Invocation URL, head over to the [Developer Console][devconsole],
-select your application, and select on the "Configuration" panel on the left
-hand side.
+To set up the Invocation URL, head over to the [Developer Console][devconsole], select your application, and select on the "Configuration" panel on the left hand side.
 
 Scroll down to the "Invocation URL" section.
 
@@ -87,14 +76,11 @@ Scroll down to the "Invocation URL" section.
 
 </ImageFrame>
 
-Fill in a secure HTTPs address and save the form. The invocation URL has now
-been configured.
+Fill in a secure HTTPs address and save the form. The invocation URL has now been configured.
 
 ### File Extensions
 
-By default a Custom Skill will trigger for any file type in the folder. To
-specify specific file extensions to trigger the Skill for, scroll down to the
-"File Extensions" section of the "Configuration" panel of your application.
+By default a Custom Skill will trigger for any file type in the folder. To specify specific file extensions to trigger the Skill for, scroll down to the "File Extensions" section of the "Configuration" panel of your application.
 
 <ImageFrame border width="600" center>
 

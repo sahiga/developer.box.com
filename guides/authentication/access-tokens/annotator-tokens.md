@@ -16,13 +16,9 @@ isIndex: false
 ---
 # Annotator Tokens
 
-Annotations is one of the key features supported by new Box View, that allows
-developers to provide collaboration capabilities right from within the embedded
-Box preview in their application.
+Annotations is one of the key features supported by new Box View, that allows developers to provide collaboration capabilities right from within the embedded Box preview in their application.
 
-Box View supports three annotation types: highlight only, highlight
-annotation, and point annotation. Annotations are only supported on document
-and image previews.
+Box View supports three annotation types: highlight only, highlight annotation, and point annotation. Annotations are only supported on document and image previews.
 
 <ImageFrame border>
 
@@ -32,38 +28,23 @@ and image previews.
 
 ## What is an Annotator Token
 
-An Annotator Token is an Access Token that allows an application to create a
-Preview Embed Link for a file that a user can make annotations on. As an
-application might not create a new App User for every one of the application's
-users, the Annotator token allows the application to track which of their
-own users made the annotations.
+An Annotator Token is an Access Token that allows an application to create a Preview Embed Link for a file that a user can make annotations on. As an application might not create a new App User for every one of the application's users, the Annotator token allows the application to track which of their own users made the annotations.
 
-The Annotator Token is used instead of a regular Access Token, App Token, or File
-Token to generate a preview session (an expiring embed link) that is linked to a
-unique user ID and display name.
+The Annotator Token is used instead of a regular Access Token, App Token, or File Token to generate a preview session (an expiring embed link) that is linked to a unique user ID and display name.
 
 <Message warning>
 
-Since a preview session generated using an annotator token is tied to a
-specific external user, it is strongly recommended that an application
-generates different preview sessions using different annotator tokens for
-different end users of an application.
+Since a preview session generated using an annotator token is tied to a specific external user, it is strongly recommended that an application generates different preview sessions using different annotator tokens for different end users of an application.
 
 </Message>
 
 ## External user info
 
-The external display name associated with an annotation is essentially a
-stateless "label" appended to the annotation. This means that once an annotation
-has been added, the display name is permanently associated with the annotation
-and cannot be updated unless the annotation is deleted and added again with the
-updated display name.
+The external display name associated with an annotation is essentially a stateless "label" appended to the annotation. This means that once an annotation has been added, the display name is permanently associated with the annotation and cannot be updated unless the annotation is deleted and added again with the updated display name.
 
 ## Create without SDKs
 
-To create an annotator token, follow the instructions for [manually
-authenticating through JWT](g://authentication/jwt/without-sdk) but replace the
-JWT claim with the following data.
+To create an annotator token, follow the instructions for [manually authenticating through JWT](g://authentication/jwt/without-sdk) but replace the JWT claim with the following data.
 
 <Tabs>
 
@@ -169,10 +150,7 @@ $claims = [
 
 <!-- markdownlint-enable line-length -->
 
-Then, convert this claim to an assertion according to the guide and pass this
-assertion to the [`POST /oauth2/token`](e://post-oauth2-token)
-endpoint together with an existing valid Access Token, App Token, or File Token,
-as well as a set of scopes, and the resource for which to create the token.
+Then, convert this claim to an assertion according to the guide and pass this assertion to the [`POST /oauth2/token`](e://post-oauth2-token) endpoint together with an existing valid Access Token, App Token, or File Token, as well as a set of scopes, and the resource for which to create the token.
 
 <Tabs>
 
@@ -303,8 +281,7 @@ $params = [
 
 ## Create with SDKs
 
-To create a JWT annotator token with an SDK an application can exchange any
-active token for another token.
+To create a JWT annotator token with an SDK an application can exchange any active token for another token.
 
 <Tabs>
 

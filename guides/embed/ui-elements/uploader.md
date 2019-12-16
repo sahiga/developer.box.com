@@ -16,33 +16,23 @@ isIndex: false
 ---
 # Content Uploader
 
-The Box Content Uploader UI Element allows developers to embed an upload widget
-in their desktop or mobile web application. Users can select files or use drag
-and drop to upload. Large files will be uploaded with the [Chunked
-Upload](e://post-files-upload-sessions) API.
+The Box Content Uploader UI Element allows developers to embed an upload widget in their desktop or mobile web application. Users can select files or use drag and drop to upload. Large files will be uploaded with the [Chunked Upload](e://post-files-upload-sessions) API.
 
 ## Installation
 
-[Learn how to install](g://embed/ui-elements/installation) Box UI elements
-either through NPM or the Box CDN.
+[Learn how to install](g://embed/ui-elements/installation) Box UI elements either through NPM or the Box CDN.
 
 <Message>
 
 # Browser support
 
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
+UI elements have [limited support](g://embed/ui-elements/browser) for older browsers. Make sure to add the right polyfills for your targeted browsers.
 
 </Message>
 
 ## Authentication
 
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
+The UI Elements are designed in an authentication agnostic way so whether you are using UI Elements for users who have Box accounts (Managed Users) or non-Box accounts (App Users), UI Elements should work out of the box. The reason for this is that UI Elements only expect a "token" to be passed in for authentication, and Box provides two different ways to generate tokens - OAuth and JWT.
 
 <CTA to="g://authentication/select">
 Learn about selecting an authentication method
@@ -67,9 +57,7 @@ Learn about selecting an authentication method
 
 # Access Token
 
-These demos may not fully function until you provide a valid access token. For
-testing purposes, you can use your temporary developer token. This will need
-to be updated under the JS tab in the demo.
+These demos may not fully function until you provide a valid access token. For testing purposes, you can use your temporary developer token. This will need to be updated under the JS tab in the demo.
 
 </Message>
 
@@ -176,16 +164,9 @@ uploader.removeAllListeners();
 
 ## Scopes
 
-If your application requires the end user to only be able to access a subset of
-the Content Explorer functionality, you can use [Downscoping][downscope] to
-appropriately downscope the Access Token to a resulting token that has the
-desired set of permissions, and can thus, be securely passed to the end user
-client initializing the Content Explorer.
+If your application requires the end user to only be able to access a subset of the Content Explorer functionality, you can use [Downscoping][downscope] to appropriately downscope the Access Token to a resulting token that has the desired set of permissions, and can thus, be securely passed to the end user client initializing the Content Explorer.
 
-Below are a set of UI Element-specific scopes to go alongside Downscoping. These
-allow developers to enable/disable UI controls on the Content Explorer by
-configuring the appropriate scopes on the downscoped token. To learn
-more, see [Special Scopes for Box UI Elements][scopes].
+Below are a set of UI Element-specific scopes to go alongside Downscoping. These allow developers to enable/disable UI controls on the Content Explorer by configuring the appropriate scopes on the downscoped token. To learn more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
 

@@ -6,74 +6,48 @@ scId: security/terms-of-service
 id: security/terms-of-service
 isIndex: true
 ---
+<!-- alex disable reject -->
+
 # Terms of Service
 
-The Box API allows administrators to configure Terms of Services for working on
-Box, and for users to accept & re-accept Terms of Services for custom
-applications.
+The Box API allows administrators to configure Terms of Services for working on Box, and for users to accept & re-accept Terms of Services for custom applications.
 
 ## Terminology
 
 ### Terms of Services
 
-A Terms of Service is a enterprise-level record that represent the conditions
-within which all users are allowed to work with an enterprise's data in Box.
+A Terms of Service is a enterprise-level record that represent the conditions within which all users are allowed to work with an enterprise's data in Box.
 
-There are currently two types of Terms of Service for any enterprise that can be
-enabled and disabled independently. The **Managed Terms of Service** can be
-enabled for the enterprise's own users, where the \*_External Terms of Service_
-can be enabled for users from other enterprises that collaborated in on the
-primary enterprise's data.
+There are currently two types of Terms of Service for any enterprise that can be enabled independently. The **Managed Terms of Service** can be enabled for the enterprise's own users, where the \*_External Terms of Service_ can be enabled for users from other enterprises that collaborated in on the primary enterprise's data.
 
 ## Terms of Service User Statuses
 
-A Terms of Service User Status represents the status of the Terms of Service
-acceptance for a specific user. There is exactly one Terms of Service User
-Status for any given combination of Terms of Service and a user.
+A Terms of Service User Status represents the status of the Terms of Service acceptance for a specific user. There is exactly one Terms of Service User Status for any given combination of Terms of Service and a user.
 
-There are multiple Terms of Service User Statuses for any Terms of Service,
-specifically one for each each user.
+There are multiple Terms of Service User Statuses for any Terms of Service, specifically one for each each user.
 
-There could be multiple Terms of Service User Statuses for a given user. The
-user could accept or reject multiple External Terms of Services for different
-enterprises they have been collaborated into, in addition to accepting or
-rejecting their own enterprise’s Managed Terms of Service.
+There could be multiple Terms of Service User Statuses for a given user. The user could accept or reject multiple External Terms of Services for different enterprises they have been collaborated into, in addition to accepting or rejecting their own enterprise’s Managed Terms of Service.
 
 ## APIs
 
-Applications that are authenticated as a Box Admin that has the **Edit settings
-for your company** permissions can view, create, and edit Terms of Services for
-their enterprise via the API.
+Applications that are authenticated as a Box Admin that has the **Edit settings for your company** permissions can view, create, and edit Terms of Services for their enterprise via the API.
 
-* [`GET /terms_of_services/:id`](e://get-terms-of-services-id):
-  To get the information for a specific Terms of Service
-* [`GET /terms_of_services`](e://get-terms-of-services):
-  To get a list of all the Terms of Services used within an enterprise, either
-  for managed or external users.
-* [`POST /terms_of_services`](e://post-terms-of-services):
-  To create Terms of Service settings for either an external or managed user.
-* [`PUT /terms_of_services/:id`](e://put-terms-of-services-id):
-  To update a specific Terms of Service setting
+* [`GET /terms_of_services/:id`](e://get-terms-of-services-id): To get the information for a specific Terms of Service
+* [`GET /terms_of_services`](e://get-terms-of-services): To get a list of all the Terms of Services used within an enterprise, either for managed or external users.
+* [`POST /terms_of_services`](e://post-terms-of-services): To create Terms of Service settings for either an external or managed user.
+* [`PUT /terms_of_services/:id`](e://put-terms-of-services-id): To update a specific Terms of Service setting
 
-Additionally, application can view and accept Terms of Services for a regular
-user via the API.
+Additionally, application can view and accept Terms of Services for a regular user via the API.
 
-* [euserstatuses][euserstatuses]:
-  To get a list of all the accepted and rejected Terms of Services for a user
-* [euserstatuses_post][euserstatuses_post]:
-  To accept or reject a specific Terms of Service for the first time
-* [euserstatuses_put][euserstatuses_put]:
-  To accept or reject a specific Terms of Service that had been previously
-  accepted or rejected.
+* [`GET /terms_of_service_user_statuses`][euserstatuses]: To get a list of all the Terms of Services for a user
+* [`POST /terms_of_service_user_statuses`][euserstatuses_post]: To accept or reject a specific Terms of Service for the first time
+* [`PUT /terms_of_service_user_statuses/:id`][euserstatuses_put]: To accept or reject a specific Terms of Service that had been previously accepted or rejected.
 
 ## Scopes
 
-The following scopes should be granted to the application in order to take the
-outlined actions.
+The following scopes should be granted to the application in order to take the outlined actions.
 
-* **Manage Enterprise Properties**: Required to enable, edit, or disable the
-  enterprise'S settings for Terms of Services as well as to view them for
-  external users.
+* **Manage Enterprise Properties**: Required to enable or edit the enterprise's settings for Terms of Services as well as to view them for external users.
 * **Manage Users**: Required to accept Terms of Services for other users.
 
 [euserstatuses]: e://get-terms-of-service-user-statuses

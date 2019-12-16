@@ -14,17 +14,15 @@ scId: webhooks/handle
 id: webhooks/handle/verify-signatures
 isIndex: false
 ---
+<!-- alex disable attacks -->
+
 # Verify Webhook Signatures
 
-To protect your application against man-in-the-middle and replay attacks it is
-essential to verify webhook signatures. Verification ensures that the webhook
-payloads were actually sent by Box and that the contents of the payloads have
-not been changed in transport.
+To protect your application against man-in-the-middle and replay attacks it is essential to verify webhook signatures. Verification ensures that the webhook payloads were actually sent by Box and that the contents of the payloads have not been changed in transport.
 
 ## Verify with SDK
 
-Although it is possible to verify SDKs manually using your own code, convenience
-methods are provided in our SDKs.
+Although it is possible to verify SDKs manually using your own code, convenience methods are provided in our SDKs.
 
 <Samples id="x_webhooks" variant="validate_signatures">
 
@@ -32,13 +30,11 @@ methods are provided in our SDKs.
 
 ## Verify manually
 
-If using our SDKs is not an option the following steps describe the basics of
-how to verify a signature.
+If using our SDKs is not an option the following steps describe the basics of how to verify a signature.
 
 ### 1. Ensure valid timestamp
 
-Firstly, ensure that the timestamp in the `BOX-DELIVERY-TIMESTAMP` header of the
-payload is no older than ten minutes.
+Firstly, ensure that the timestamp in the `BOX-DELIVERY-TIMESTAMP` header of the payload is no older than ten minutes.
 
 <Tabs>
 
@@ -74,11 +70,9 @@ expired = date >= expiry_date
 
 ### 2. Calculate HMAC signature
 
-Then, calculate the HMAC of the payload using either of the two signatures
-found in the application's configuration on the [developer console][console].
+Then, calculate the HMAC of the payload using either of the two signatures found in the application's configuration on the [developer console][console].
 
-Make sure to append the bytes of the body of the payload first, and then the
-bytes of the timestamp found in the `BOX-DELIVERY-TIMESTAMP` header.
+Make sure to append the bytes of the body of the payload first, and then the bytes of the timestamp found in the `BOX-DELIVERY-TIMESTAMP` header.
 
 <Tabs>
 
@@ -152,12 +146,9 @@ digest2 = base64.b64encode(hmac2)
 
 ### 5. Compare signatures
 
-Finally, compare the encoded digest with the value of the
-`BOX-SIGNATURE-PRIMARY` or `BOX-SIGNATURE-SECONDARY` headers.
+Finally, compare the encoded digest with the value of the `BOX-SIGNATURE-PRIMARY` or `BOX-SIGNATURE-SECONDARY` headers.
 
-Make sure to compare the value of the `BOX-SIGNATURE-PRIMARY` header
-to the digest created with the primary key, and the value of the
-`BOX-SIGNATURE-SECONDARY` header to the digest created with the secondary key.
+Make sure to compare the value of the `BOX-SIGNATURE-PRIMARY` header to the digest created with the primary key, and the value of the `BOX-SIGNATURE-SECONDARY` header to the digest created with the secondary key.
 
 <Tabs>
 

@@ -13,32 +13,25 @@ scId: embed/ui-elements
 id: embed/ui-elements/viewers-and-events
 isIndex: false
 ---
+<!-- alex disable black -->
+
 # Preview - Viewers & Events
 
 <!-- markdownlint-disable no-duplicate-header -->
 
-This page describes the preview experience for each file type. It also lists the
-events you can listen for by viewer type.
+This page describes the preview experience for each file type. It also lists the events you can listen for by viewer type.
 
 ## Text Viewer
 
-The text viewer renders previews of text files. For code files like `py` or
-`rb`, it uses [`highlight.js`](https://github.com/isagalaev/highlight.js) to add
-syntax highlighting.
+The text viewer renders previews of text files. For code files like `py` or `rb`, it uses [`highlight.js`](https://github.com/isagalaev/highlight.js) to add syntax highlighting.
 
 ### Behavior
 
-The text viewer displays the first 192 KB of text in the file. Additional text is
-truncated and a notification and download button are appended to the bottom of
-the preview.
+The text viewer displays the first 192 KB of text in the file. Additional text is truncated and a notification and download button are appended to the bottom of the preview.
 
-Re-sizing the viewer window will reflow the text to fit the available space and
-the zoom in and out buttons will increase and decrease font size respectively.
+Re-sizing the viewer window will reflow the text to fit the available space and the zoom in and out buttons will increase and decrease font size respectively.
 
-This viewer supports printing and will attempt to print with appropriate syntax
-highlighting when either `print()` is invoked or the print button is pressed.
-Note that printing large files may cause some browsers to hang for a few
-seconds.
+This viewer supports printing and will attempt to print with appropriate syntax highlighting when either `print()` is invoked or the print button is pressed. Note that printing large files may cause some browsers to freeze for a few seconds.
 
 ### Controls
 
@@ -57,7 +50,7 @@ seconds.
 
 ### Events
 
-The text viewer fires the following events.
+The text viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -80,10 +73,9 @@ The text viewer fires the following events.
 
 <!-- markdownlint-enable line-length -->
 
-## 60 Video Viewer
+## 360 Video Viewer
 
-The 360 video viewer renders a preview of a video stored as an equirectangular
-projection (often recorded with a special camera).
+The 360 video viewer renders a preview of a video stored as an equirectangular projection (often recorded with a 360 camera).
 
 ### Behavior
 
@@ -91,20 +83,15 @@ This viewer gives you an interactive view of the 360 degree video.
 
 ### Controls
 
-* Change the view direction with the left mouse button (single touch on
-  touch-enabled device).
+* Change the view direction with the left mouse button (single touch on touch-enabled device).
 
 ### VR button
 
-When using a browser that supports WebVR and a suitable VR device is attached to
-your computer, a VR button will be available to allow toggling in and out of VR
-mode.
+When using a browser that supports WebVR and a suitable VR device is attached to your computer, a VR button will be available to allow toggling in and out of VR mode.
 
 ### Limitations
 
-Currently, this previewer requires that the file be named with a `.360`
-preceding the file extension. This is so that Preview SDK knows to run this
-viewer rather than the standard video preview.
+Currently, this previewer requires that the file be named with a `.360` preceding the file extension. This is so that Preview SDK knows to run this viewer rather than the standard video preview.
 
 ### Supported File Extensions
 
@@ -113,7 +100,7 @@ viewer rather than the standard video preview.
 
 ### Events
 
-The 360 video viewer fires the following events.
+The 360 video viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -134,17 +121,13 @@ The 360 video viewer fires the following events.
 
 ## SWF Viewer
 
-The SWF viewer uses [`SWFObject`](https://github.com/swfobject/swfobject) to embed
-SWF files.
+The SWF viewer uses [`SWFObject`](https://github.com/swfobject/swfobject) to embed SWF files.
 
 ### Behavior
 
-If the user has the Adobe Flash Player plugin, `SWFObject` will embed the SWF file
-and allow the plugin to render relevant content.
+If the user has the Adobe Flash Player plugin, `SWFObject` will embed the SWF file and allow the plugin to render relevant content.
 
-Note that all network requests made by the flash content will be blocked due to
-security constraints, so any content that requires network connectivity will not
-be rendered.
+Note that all network requests made by the flash content will be blocked due to security constraints, so any content that requires network connectivity will not be rendered.
 
 ### Supported File Extensions
 
@@ -152,7 +135,7 @@ be rendered.
 
 ### Events
 
-The SWF viewer fires the following events.
+The SWF viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -177,21 +160,13 @@ The presentation viewer renders previews of PowerPoint files.
 
 ### Behavior
 
-The presentation viewer remembers which slide you were viewing upon closing the
-preview. The next time that file is opened, you will immediately be brought to
-that slide. Scrolling the mouse up and down, or swiping up and down on mobile
-will transition between slides. Zooming in or out will increase or decrease the
-size of the slide respectively. If the zoom level causes the content to
-overflow, scrolling the mouse will allow you to scroll around the slide. To
-return to normal scrolling behavior, the user must zoom out until the overflow
-is removed.
+The presentation viewer remembers which slide you were viewing upon closing the preview. The next time that file is opened, you will immediately be brought to that slide. Scrolling the mouse up and down, or swiping up and down on mobile will transition between slides. Zooming in or out will increase or decrease the size of the slide respectively. If the zoom level causes the content to overflow, scrolling the mouse will allow you to scroll around the slide. To return to normal scrolling behavior, the user must zoom out until the overflow is removed.
 
 ### Controls
 
 * Zoom In
 * Zoom Out
-* Set Page: either with the up and down arrows, or by clicking the page number
-  and entering text
+* Set Page: either with the up and down arrows, or by clicking the page number and entering text
 * Fullscreen: can be exited with the escape key
 
 ### Supported File Extensions
@@ -210,7 +185,7 @@ is removed.
 
 ### Events
 
-The presentation viewer fires the following events.
+The presentation viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -244,10 +219,7 @@ The MP4 viewer renders previews for video files.
 
 ### Behavior
 
-The MP4 viewer uses a black background to create a better viewing experience.
-Volume can be muted or unmuted by clicking the volume icon, or changed by
-dragging the volume scrubber. The position of the video can be changed by
-clicking or dragging the playback scrubber.
+The MP4 viewer uses a black background to create a better viewing experience. Volume can be muted or unmuted by clicking the volume icon, or changed by dragging the volume scrubber. The position of the video can be changed by clicking or dragging the playback scrubber.
 
 ### Controls
 
@@ -269,7 +241,7 @@ Settings are available through the cog icon in the preview toolbar.
 
 ### Events
 
-The MP4 viewer fires the following events.
+The MP4 viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -298,9 +270,7 @@ The MP3 viewer displays previews for audio files.
 
 ### Behavior
 
-Volume can be muted or unmuted by clicking the volume icon, or changed by
-dragging the volume scrubber. The position of the audio can be changed by
-clicking or dragging the playback scrubber.
+Volume can be muted or unmuted by clicking the volume icon, or changed by dragging the volume scrubber. The position of the audio can be changed by clicking or dragging the playback scrubber.
 
 ### Controls
 
@@ -320,7 +290,7 @@ Settings are available through the cog icon in the preview toolbar.
 
 ### Events
 
-The MP3 viewer fires the following events.
+The MP3 viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -345,21 +315,17 @@ The MP3 viewer fires the following events.
 
 ## Office Viewer
 
-The Office viewer renders previews of Microsoft Office documents by embedding an
-`<iframe>` of Microsoft's Office Online viewer.
+The Office viewer renders previews of Microsoft Office documents by embedding an `<iframe>` of Microsoft's Office Online viewer.
 
 ### Behavior
 
-The Office viewer currently supports previews of Excel files using Microsoft
-Office Online from within the Box Web Application. Support for platform use
-cases and other Office file formats is in progress.
+The Office viewer currently supports previews of Excel files using Microsoft Office Online from within the Box Web Application. Support for platform use cases and other Office file formats is in progress.
 
 There are several limitations at the moment:
 
 * File must be downloadable
 * File size cannot be greater than 5MB
-* File cannot be shared via a Box shared link with a password (shared links
-  without passwords are okay)
+* File cannot be shared via a Box shared link with a password (shared links without passwords are okay)
 
 ### Supported File Extensions
 
@@ -367,7 +333,7 @@ There are several limitations at the moment:
 
 ### Events
 
-The Office viewer fires the following events.
+The Office viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -388,28 +354,15 @@ The Office viewer fires the following events.
 
 ## Markdown Viewer
 
-The Markdown viewer uses
-[`Remarkable`](https://github.com/jonschlinkert/remarkable) to parse markdown
-files and [`highlight.js`](https://github.com/isagalaev/highlight.js) to add
-syntax highlighting to code blocks contained within.
+The Markdown viewer uses [`Remarkable`](https://github.com/jonschlinkert/remarkable) to parse markdown files and [`highlight.js`](https://github.com/isagalaev/highlight.js) to add syntax highlighting to code blocks contained within.
 
 ### Behavior
 
-The Markdown viewer parses the first 192KB of raw markdown in the file and
-renders it using GitHub's Markdown style. Additional content is truncated and a
-notification along with a download button are appended to the bottom of the
-preview.
+The Markdown viewer parses the first 192KB of raw markdown in the file and renders it using GitHub's Markdown style. Additional content is truncated and a notification along with a download button are appended to the bottom of the preview.
 
-The viewer supports
-[GitHub Flavored
-Markdown](https://guides.github.com/features/mastering-markdown/) including
-tables, syntax highlighting, and automatic URL linking.
+The viewer supports [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) including tables, syntax highlighting, and automatic URL linking.
 
-Re-sizing the viewer window will reflow the markdown to fit the available space.
-Also, this viewer supports printing and will attempt to print the parsed
-markdown and with syntax highlighting on code when either `print()` is invoked
-or the print button is pressed. Note that printing large files may cause some
-browsers to hang for a few seconds.
+Re-sizing the viewer window will reflow the markdown to fit the available space. Also, this viewer supports printing and will attempt to print the parsed markdown and with syntax highlighting on code when either `print()` is invoked or the print button is pressed. Note that printing large files may cause some browsers to freeze for a few seconds.
 
 ### Controls
 
@@ -421,7 +374,7 @@ browsers to hang for a few seconds.
 
 ### Events
 
-The Markdown viewer fires the following events.
+The Markdown viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -443,31 +396,18 @@ The Markdown viewer fires the following events.
 
 ## `Model3D` viewer
 
-The `Model3D` viewer renders previews of 3D model files and allows you to enable
-different rendering modes to inspect various aspects of the model. for example
-wireframe, texture coordinates, and more. Animation data is also supported for
-files that contain it (for example `box3d`, `fbx`, `dae`).
+The `Model3D` viewer renders previews of 3D model files and allows you to enable different rendering modes to inspect various aspects of the model. for example wireframe, texture coordinates, and more. Animation data is also supported for files that contain it (for example `box3d`, `fbx`, `dae`).
 
 ### Behavior
 
-The `Model3D` viewer gives you an interactive view of the model. The left mouse
-button allows you to orbit about the model (single touch on touch-enabled
-device). Double-clicking somewhere on the model allows you to change orbit
-focus.
+The `Model3D` viewer gives you an interactive view of the model. The left mouse button allows you to orbit about the model (single touch on touch-enabled device). Double-clicking somewhere on the model allows you to change orbit focus.
 
 ### Controls
 
-* Zoom (change distance to the model) with the mouse wheel (or two-finger scroll
-  on a touch-enabled device).
-* Pan (lateral movement) with the right mouse button (or three-finger swipe on a
-  touch-enabled device).
-* Animation Selection: If the model that is being viewed contains animations,
-  two animation buttons will be visible in the toolbar. The first allows you to
-  play and pause the animation and the second allows the selection of the
-  current animation.
-* VR button: If using a browser that supports WebVR and a suitable VR device is
-  attached to your computer, the VR button will allow toggling in and out of VR
-  mode.
+* Zoom (change distance to the model) with the mouse wheel (or two-finger scroll on a touch-enabled device).
+* Pan (lateral movement) with the right mouse button (or three-finger swipe on a touch-enabled device).
+* Animation Selection: If the model that is being viewed contains animations, two animation buttons will be visible in the toolbar. The first allows you to play and pause the animation and the second allows the selection of the current animation.
+* VR button: If using a browser that supports WebVR and a suitable VR device is attached to your computer, the VR button will allow toggling in and out of VR mode.
 
 ### Settings
 
@@ -482,12 +422,7 @@ Settings are available through the cog icon in the preview toolbar.
 
 ## `Box3D` Packages
 
-Preview gives users the ability to view a single file within Box so, by default,
-you can't view textures on your model. However, the Box web application gives
-users the ability to create a Box3D package that combines all dependent files
-into a single file that can be shared and previewed. To do this, right-click the
-model file within Box and choose "Create 3D Package". All referenced files found
-within Box will be included in the resulting package.
+Preview gives users the ability to view a single file within Box so, by default, you can't view textures on your model. However, the Box web application gives users the ability to create a Box3D package that combines all dependent files into a single file that can be shared and previewed. To do this, right-click the model file within Box and choose "Create 3D Package". All referenced files found within Box will be included in the resulting package.
 
 ### Supported File Extensions
 
@@ -495,7 +430,7 @@ within Box will be included in the resulting package.
 
 ### Events
 
-The `Model3D` viewer fires the following events.
+The `Model3D` viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -516,29 +451,20 @@ The `Model3D` viewer fires the following events.
 
 ## 360 Image viewer
 
-The 360 image viewer renders a preview of an image stored as an equirectangular
-projection (often taken with a special camera).
+The 360 image viewer renders a preview of an image stored as an equirectangular projection (often taken with a 360 camera).
 
 ### Behavior
 
-This viewer gives you an interactive view of a 360 degree image. First, a low
-resolution version of the image is loaded to give a quick view before the full
-resolution image is finished loading. Clicking and dragging with the left mouse
-button will change the view direction (single touch and drag on touch-enabled
-device).
+This viewer gives you an interactive view of a 360 degree image. First, a low resolution version of the image is loaded to give a quick view before the full resolution image is finished loading. Clicking and dragging with the left mouse button will change the view direction (single touch and drag on touch-enabled device).
 
 ### Controls
 
 * Fullscreen (can be exited with the escape key)
-* VR Button: When using a browser that supports WebVR and a suitable VR device
-  is attached to your computer, a VR button will be available to allow toggling
-  in and out of VR mode.
+* VR Button: When using a browser that supports WebVR and a suitable VR device is attached to your computer, a VR button will be available to allow toggling in and out of VR mode.
 
 ### Limitations
 
-Currently, this previewer requires that the file be named with a '.360'
-preceding the file extension. This is so that Preview SDK knows to run this
-viewer rather than the standard image viewer.
+Currently, this previewer requires that the file be named with a '.360' preceding the file extension. This is so that Preview SDK knows to run this viewer rather than the standard image viewer.
 
 ### Supported File Extensions
 
@@ -548,7 +474,7 @@ viewer rather than the standard image viewer.
 
 ### Events
 
-The 360 image viewer fires the following events.
+The 360 image viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -573,10 +499,7 @@ The image viewer renders previews of image files.
 
 ### Behavior
 
-Rotating the viewer will rotate the image 90 degrees clockwise. At the default
-zoom level, clicking on the image will zoom in once. When zoomed in, clicking on
-the document will return to the default zoom level. When zoomed out, clicking on
-the document will zoom in until the original zoom level is reached.
+Rotating the viewer will rotate the image 90 degrees clockwise. At the default zoom level, clicking on the image will zoom in once. When zoomed in, clicking on the document will return to the default zoom level. When zoomed out, clicking on the document will zoom in until the original zoom level is reached.
 
 ### Controls
 
@@ -601,7 +524,7 @@ the document will zoom in until the original zoom level is reached.
 
 ### Events
 
-The image viewer fires the following events.
+The image viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -634,18 +557,14 @@ The multi-image viewer renders previews of multi-image files (`tiff`, `tif`).
 
 ### Behavior
 
-At the default zoom level, clicking on the image will zoom in once. When zoomed
-in, clicking on the document will return to the default zoom level. When zoomed
-out, clicking on the document will zoom in until the original zoom level is
-reached.
+At the default zoom level, clicking on the image will zoom in once. When zoomed in, clicking on the document will return to the default zoom level. When zoomed out, clicking on the document will zoom in until the original zoom level is reached.
 
 ### Controls
 
 * Zoom In
 * Zoom Out
 * Fullscreen: can be exited with the escape key
-* Set Page: either with the up and down arrows, or by clicking the page number
-  and entering text
+* Set Page: either with the up and down arrows, or by clicking the page number and entering text
 
 ### Supported File Extensions
 
@@ -663,7 +582,7 @@ reached.
 
 ### Events
 
-The image viewer fires the following events.
+The image viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -711,16 +630,13 @@ The document viewer renders previews for a variety of document types.
 
 ### Behavior
 
-The document viewer remembers which page you were viewing upon closing the
-preview. The next time that file is opened, you will immediately be brought to
-that page. Resizing the viewer window will cause the document to resize.
+The document viewer remembers which page you were viewing upon closing the preview. The next time that file is opened, you will immediately be brought to that page. Resizing the viewer window will cause the document to resize.
 
 ### Controls
 
 * Zoom In
 * Zoom Out
-* Set Page: either with the up and down arrows, or by clicking the page number
-  and entering text
+* Set Page: either with the up and down arrows, or by clicking the page number and entering text
 * Fullscreen (can be exited with the escape key)
 
 ### Supported File Extensions
@@ -745,7 +661,7 @@ that page. Resizing the viewer window will cause the document to resize.
 
 ### Events
 
-The document viewer fires the following events.
+The document viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -791,21 +707,13 @@ The document viewer fires the following events.
 
 ## `<iframe>` viewer
 
-The `<iframe>` viewer embeds an frame to show content rendered from an external
-source.
+The `<iframe>` viewer embeds an frame to show content rendered from an external source.
 
 ### Behavior
 
-The `<iframe>` viewer is used for previews of Box Notes and Box DICOM files, and
-these previews currently only work from within the Box Web Application. Platform
-customers should use the [Box DICOM Viewer](https://boxdicom.com/#viewer) to
-preview DICOM studies over the API.
+The `<iframe>` viewer is used for previews of Box Notes and Box DICOM files, and these previews currently only work from within the Box Web Application. Platform customers should use the [Box DICOM Viewer](https://boxdicom.com/#viewer) to preview DICOM studies over the API.
 
-Both Box Notes and Box DICOM have full-featured viewers within the main Box Web
-Application, but these full viewers are not initialized when users navigate from
-previews of other files that may be in the same directory as the Notes and DICOM
-files. In this situation, the `<iframe>` viewer embeds an view-only render of the
-Box Note or Box DICOM file.
+Both Box Notes and Box DICOM have full-featured viewers within the main Box Web Application, but these full viewers are not initialized when users navigate from previews of other files that may be in the same directory as the Notes and DICOM files. In this situation, the `<iframe>` viewer embeds an view-only render of the Box Note or Box DICOM file.
 
 ### Supported File Extensions
 
@@ -813,7 +721,7 @@ Box Note or Box DICOM file.
 
 ### Events
 
-The `<iframe>` viewer fires the following events.
+The `<iframe>` viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -834,15 +742,11 @@ The `<iframe>` viewer fires the following events.
 
 ## DASH viewer
 
-The DASH viewer renders previews for video files using [shaka][shaka].
+The DASH viewer renders previews for video files using [`Shaka Player`][shaka].
 
 ### Behavior
 
-The DASH viewer uses a black background to create a more native viewing
-experience. Video is streamed in chunks of bytes at an initial quality
-determined automatically. Volume can be muted or unmuted by clicking the volume
-icon, or changed by dragging the volume scrubber. The position of the video can
-be changed by clicking or dragging the playback scrubber.
+The DASH viewer uses a black background to create a more native viewing experience. Video is streamed in chunks of bytes at an initial quality determined automatically. Volume can be muted or unmuted by clicking the volume icon, or changed by dragging the volume scrubber. The position of the video can be changed by clicking or dragging the playback scrubber.
 
 ### Controls
 
@@ -865,7 +769,7 @@ Settings are available through the cog icon in the preview toolbar.
 
 ### Events
 
-The DASH viewer fires the following events.
+The DASH viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -894,15 +798,11 @@ The DASH viewer fires the following events.
 
 ## CSV viewer
 
-The CSV viewer uses [`PapaParse`](https://github.com/mholt/PapaParse) to parse
-CSV and TSV files and [reactv][reactv] to display the parsed data
-in a table.
+The CSV viewer uses [`PapaParse`](https://github.com/mholt/PapaParse) to parse CSV and TSV files and [`React Virtualized`][reactv] to display the parsed data in a table.
 
 ### Behavior
 
-Resizing the viewer window will cause the table to resize, and the zoom in and
-out buttons will increase and decrease font size respectively. Currently, column
-and row sizes are fixed and overflowing text will be truncated.
+Resizing the viewer window will cause the table to resize, and the zoom in and out buttons will increase and decrease font size respectively. Currently, column and row sizes are fixed and overflowing text will be truncated.
 
 This viewer does not support printing.
 
@@ -918,7 +818,7 @@ This viewer does not support printing.
 
 ### Events
 
-The CSV viewer fires the following events.
+The CSV viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 

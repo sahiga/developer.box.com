@@ -15,9 +15,7 @@ isIndex: false
 ---
 # Request Desired Representation
 
-To select a specific representation call the [get_files_id][get_files_id]
-endpoint with a [x-rep-hints][x-rep-hints]-header defining the
-required representation format.
+To select a specific representation call the [`GET /files/:id`][get_files_id] endpoint with a [`X-Rep-Hints`][x-rep-hints]-header defining the required representation format.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
@@ -27,9 +25,7 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 
 ## Multiple dimensions
 
-Some formats will require the `dimensions` to be passed in to select a
-specific size. This can be achieved by appending the `dimensions` to the
-header.
+Some formats will require the `dimensions` to be passed in to select a specific size. This can be achieved by appending the `dimensions` to the header.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
@@ -39,8 +35,7 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 
 ## Multiple representations
 
-Multiple representations can be fetched by chaining the different
-types in the `X-Rep-Hints`-header.
+Multiple representations can be fetched by chaining the different types in the `X-Rep-Hints`-header.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
@@ -50,8 +45,7 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 
 ## API Response
 
-This API call will result in one or more representations with a `url_template`
-value that includes a `{+asset_path}` value.
+This API call will result in one or more representations with a `url_template` value that includes a `{+asset_path}` value.
 
 ```json
 {
@@ -80,9 +74,7 @@ value that includes a `{+asset_path}` value.
 
 <Message type="notice">
 
-The `url_template` in this response is an **opaque** URL. This URL format
-might change over time and no assumptions should be made about its format
-except for the presence of the `{+asset_path}` variable.
+The `url_template` in this response is an **opaque** URL. This URL format might change over time and no assumptions should be made about its format except for the presence of the `{+asset_path}` variable.
 
 </Message>
 

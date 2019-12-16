@@ -14,9 +14,7 @@ isIndex: false
 ---
 # Populate Content
 
-Once the architecture files have been defined through the `etc/skel`
-structure in your service account, you can now use the following script to copy
-anything under the `skel` directly to the new user's root directory.
+Once the architecture files have been defined through the `etc/skel` structure in your service account, you can now use the following script to copy anything under the `skel` directly to the new user's root directory.
 
 <Tabs>
 

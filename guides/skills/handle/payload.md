@@ -15,14 +15,9 @@ isIndex: false
 ---
 # Parse Skills Payload
 
-When a new file is uploaded, copied, or moved to a folder monitored by a Skills
-app, the invocation URL that was specified during application setup and
-authentication will receive an event payload from Box.
+When a new file is uploaded, copied, or moved to a folder monitored by a Skills app, the invocation URL that was specified during application setup and authentication will receive an event payload from Box.
 
-The event payload will contain all information needed to read in the content of
-the uploaded file to send to a processing system, such as a machine learning
-system, and to write metadata back to the file once the processing system has
-completed.
+The event payload will contain all information needed to read in the content of the uploaded file to send to a processing system, such as a machine learning system, and to write metadata back to the file once the processing system has completed.
 
 ## Example Payload
 
@@ -153,16 +148,8 @@ The Skills event payload can be broken down into the following top level objects
 
 <!-- markdownlint-enable line-length -->
 
-At a bare minimum, the following three pieces of information needed to download
-the file and update metadata for the file:
+At a bare minimum, the following three pieces of information needed to download the file and update metadata for the file:
 
-* **Read token**: Located within the `token` object, the read token will allow
-  you   to call the [download file endpoint](endpoint://get_files_id) to
-  download the file content to send to the processing system.
-* **Write token**: Located within the `token` object, the write token will allow
-  you to call the
-  [create metadata on file endpoint](e://post_files_id_metadata_id_id)
-  once the file processing has completed.
-* **File ID**: Located within the `source` object, the file ID will be needed by
-  the above two endpoints to determine which file should be downloaded or have
-  metadata applied to it.
+* **Read token**: Located within the `token` object, the read token will allow you to call the [download file endpoint](endpoint://get_files_id) to download the file content to send to the processing system.
+* **Write token**: Located within the `token` object, the write token will allow you to call the [create metadata on file endpoint](e://post_files_id_metadata_id_id) once the file processing has completed.
+* **File ID**: Located within the `source` object, the file ID will be needed by the above two endpoints to determine which file should be downloaded or have metadata applied to it.

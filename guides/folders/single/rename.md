@@ -15,8 +15,7 @@ isIndex: false
 ---
 # Rename Folder
 
-To rename a folder in Box you will need to provide our API with a new `name` for
-the folder.
+To rename a folder in Box you will need to provide our API with a new `name` for the folder.
 
 <Samples id="put_folders_id" variant="rename">
 
@@ -24,13 +23,10 @@ the folder.
 
 <Message type="notice">
 
-# Name restrictions
+# 名前に関する制約事項
 
-There are some restrictions to the file name. Names containing non-printable
-ASCII characters, forward and backward slashes (`/`, `\`), as well as names
-with trailing spaces are prohibited.
+ファイル名にはいくつかの制約事項があります。印字不可能なASCII文字を含む名前、スラッシュおよびバックスラッシュ(`/`、`\`)を含む名前、末尾にスペースを含む名前は禁止されています。
 
-Additionally, the special names `.` and `..` are reserved names and therefore
-also prohibited.
+Additionally, the names `.` and `..` are reserved names and therefore also prohibited.
 
 </Message>

@@ -15,8 +15,7 @@ isIndex: false
 ---
 # Delete Webhook
 
-To remove a webhook from a file or folder in Box you will need to provide our
-API with the ID of the webhook to remove.
+Box上のファイルやフォルダからWebhookを削除するには、削除するWebhookのIDをAPIに渡す必要があります。
 
 <Samples id="delete_webhooks_id">
 
@@ -38,12 +37,9 @@ The following reasons can cause webhooks to be deleted.
 
 1. Deleting a Box application deletes all webhooks associated with the application.
 2. Deleting all access tokens associated with a webhook.
-3. If webhooks could not be delivered for a system-determined amount of time
-   then Box automatically removes the webhook.
+3. If webhooks could not be delivered for a system-determined amount of time then Box automatically removes the webhook.
 
-In all of these cases Box would send a webhook payload with the `WEBHOOK.DELETED`
-event name to the notification URL. In this case the body of the payload will
-include the following additional information.
+In all of these cases Box would send a webhook payload with the `WEBHOOK.DELETED` event name to the notification URL. In this case the body of the payload will include the following additional information.
 
 ```json
 "additional_info": {

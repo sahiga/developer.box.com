@@ -15,8 +15,7 @@ isIndex: false
 ---
 # List All Retention Policies
 
-To list all Retention Policies that have been created in an enterprise, call
-the [retention_policies][retention_policies] API endpoint.
+To list all Retention Policies that have been created in an enterprise, call the [`GET /retention_policies`][retention_policies] API endpoint.
 
 <Samples id="get_retention_policies">
 
@@ -24,8 +23,7 @@ the [retention_policies][retention_policies] API endpoint.
 
 ## Required Scopes
 
-Before using any of the Retention Policy APIs, an application must have the
-right scopes enabled. See [Required Scopes][scopes] for more details.
+Before using any of the Retention Policy APIs, an application must have the right scopes enabled. See [Required Scopes][scopes] for more details.
 
 [retention_policies]: e://get_retention_policies
 

@@ -17,9 +17,7 @@ isIndex: false
 ---
 # Update Webhook
 
-To update a webhook you will need to provide the
-API with the ID of the webhook to change, and the new `target` file or folder,
-as well as an optional new `address` to send webhooks to.
+To update a webhook you will need to provide the API with the ID of the webhook to change, and the new `target` file or folder, as well as an optional new `address` to send webhooks to.
 
 <Samples id="put_webhooks_id">
 

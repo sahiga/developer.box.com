@@ -15,17 +15,13 @@ isIndex: false
 ---
 # Create Comment
 
-To create a comment, call the [post_comments][post_comments] API with the
-message of the comment, as well as the ID of the file to leave the comment on.
+To create a comment, call the [`POST /comments`][post_comments] API with the message of the comment, as well as the ID of the file to leave the comment on.
 
 <Samples id="post_comments">
 
 </Samples>
 
-A comment's message can also mentions users using the `@` sign. To do so, add
-the string `@[userid:name]` anywhere within the message. The `user_id` is the
-target user's ID, where the `name` can be any custom phrase. In the Box UI this
-name will link to the user's profile.
+A comment's message can also mentions users using the `@` sign. To do so, add the string `@[userid:name]` anywhere within the message. The `user_id` is the target user's ID, where the `name` can be any custom phrase. In the Box UI this name will link to the user's profile.
 
 Then, pass this string as the `tagged_message` instead of the `message`.
 

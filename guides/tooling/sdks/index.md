@@ -19,24 +19,19 @@ To make working with the Box API easier we provide the following SDKs and CLI.
 
 | Platform                          | Maintained? | Parity? |
 | --------------------------------- | ----------- | ------- |
-| [Java SDK][javasdk]               | Yes         | Full    |
-| [.NET SDK][dotnetsdk]             | Yes         | Full    |
-| [Python SDK][pythonsdk]           | Yes         | Full    |
-| [Node SDK][nodesdk]               | Yes         | Full    |
-| [CLI][cli]                        | Yes         | Full    |
-| [iOS Content SDK][iossdk]         | Yes         | Partial |
-| [Android Content SDK][androidsdk] | Yes         | Partial |
+| [Java SDK][javasdk]               | はい          | Full    |
+| [.NET SDK][dotnetsdk]             | はい          | Full    |
+| [Python SDK][pythonsdk]           | はい          | Full    |
+| [Node SDK][nodesdk]               | はい          | Full    |
+| [CLI][cli]                        | はい          | Full    |
+| [iOS Content SDK][iossdk]         | はい          | Partial |
+| [Android Content SDK][androidsdk] | はい          | Partial |
 
 <Message type="notice">
 
-**Maintained:** Fully maintained projects are actively developed by Box. They
-receive the latest security updates and new features. For support with these
-projects please visit GitHub or [our Platform support forum][forum].
+**Maintained:** Fully maintained projects are actively developed by Box. They receive the latest security updates and new features. For support with these projects please visit GitHub or [our Platform support forum][forum].
 
-**API Parity**: Projects with full API parity are actively updated with all
-platform functionality as this becomes available on the Box Platform. Projects
-with partial API parity lack some functionality while we work on bringing
-these projects to full parity.
+**API Parity**: Projects with full API parity are actively updated with all platform functionality as this becomes available on the Box Platform. Projects with partial API parity lack some functionality while we work on bringing these projects to full parity.
 
 </Message>
 

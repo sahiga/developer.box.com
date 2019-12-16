@@ -16,8 +16,7 @@ isIndex: false
 ---
 # Refresh a Token
 
-An Access Token can be refreshed by using the Refresh Token that came with the
-Access Token. This can be done before or after the Access Token expires.
+An Access Token can be refreshed by using the Refresh Token that came with the Access Token. This can be done before or after the Access Token expires.
 
 To do this, the application passes the `refresh_token` to the [`POST
 /oauth2/token`](endpoint://post-oauth2-token) endpoint as follows.
@@ -37,8 +36,7 @@ curl -X POST https://api.box.com/oauth2/token \
 
 # Usage in SDKs
 
-All of the Box SDKs support automatic Access Token renewal for JWT and OAuth 2.0
-applications.
+All of the Box SDKs support automatic Access Token renewal for JWT and OAuth 2.0 applications.
 
 </Message>
 
@@ -46,13 +44,9 @@ applications.
 
 # Refresh token expiration
 
-A refresh token is valid for 60 days and can be used to obtain a new access
-token and refresh token only once. If the access token and refresh token are
-not refreshed within 60 days, the user will need to be re-authorized.
+A refresh token is valid for 60 days and can be used to obtain a new access token and refresh token only once. If the access token and refresh token are not refreshed within 60 days, the user will need to be re-authorized.
 
-Every time an application uses the refresh token to get a new access token the
-refresh token is invalidated and a new refresh token is returned with the
-new access token.
+Every time an application uses the refresh token to get a new access token the refresh token is invalidated and a new refresh token is returned with the new access token.
 
 This new refresh token is then again only valid for 1 use within 60 days.
 

@@ -17,9 +17,7 @@ isIndex: false
 ---
 # Create Shared Link
 
-Shared links may be created directly for file or folder resources to generate a
-read-only URL to permit users with the appropriate access level to view the
-content.
+Shared links may be created directly for file or folder resources to generate a read-only URL to permit users with the appropriate access level to view the content.
 
 <Message type="notice">
 
@@ -43,15 +41,13 @@ Optionally when creating a shared link the following may be specified:
 
 <Message type="notice">
 
-If an access level is not specified when creating a shared link it will use
-the default access level specified by the enterprise admin.
+If an access level is not specified when creating a shared link it will use the default access level specified by the enterprise admin.
 
 </Message>
 
 ## Create Shared Link for File
 
-To create a shared link on a file, specify the ID of the file with any optional
-shared link parameters.
+To create a shared link on a file, specify the ID of the file with any optional shared link parameters.
 
 <Samples id="put_files_id_shared_link_create">
 
@@ -59,8 +55,7 @@ shared link parameters.
 
 ## Create Shared Link for Folder
 
-To create a shared link on a folder, specify the ID of the folder with any
-optional shared link parameters.
+To create a shared link on a folder, specify the ID of the folder with any optional shared link parameters.
 
 <Samples id="put_folders_id_shared_link_create">
 

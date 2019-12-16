@@ -16,9 +16,7 @@ isIndex: false
 ---
 # Webhook Payload
 
-When an event triggers a webhook for a file or a folder, it make a HTTP call to the
-`address` specified when the webhook was created. The payload of this call
-contains some request headers, and a JSON body.
+When an event triggers a webhook for a file or a folder, it make a HTTP call to the `address` specified when the webhook was created. The payload of this call contains some request headers, and a JSON body.
 
 ## Payload headers
 
@@ -51,16 +49,13 @@ USER-AGENT:               Box-WH-Client/0.1
 
 <Message type="notice">
 
-We recommend [setting up][setup_sigs] and [verifying signatures][verify_sigs]
-of the webhook payloads.
+We recommend [setting up][setup_sigs] and [verifying signatures][verify_sigs] of the webhook payloads.
 
 </Message>
 
 ## Payload body
 
-The body of a webhook payload is a JSON object that describes the file or folder
-(target) that triggered the webhook, as well as the event that has been
-triggered.
+The body of a webhook payload is a JSON object that describes the file or folder (target) that triggered the webhook, as well as the event that has been triggered.
 
 <!-- markdownlint-disable line-length -->
 

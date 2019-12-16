@@ -12,9 +12,7 @@ isIndex: true
 ---
 # Access Tokens
 
-Access Tokens are at the core of every Box API call. They represent an
-authenticated user to the Box servers and determine what files and folders an
-application has access to.
+Access Tokens are at the core of every Box API call. They represent an authenticated user to the Box servers and determine what files and folders an application has access to.
 
 <CTA to="guide://authentication/select">
 Learn about the different ways an app can get authorized
@@ -23,8 +21,7 @@ Learn about the different ways an app can get authorized
 
 ## Application Types & Access Tokens
 
-The following shows how each application type is expected to create an Access
-Token.
+The following shows how each application type is expected to create an Access Token.
 
 <!-- markdownlint-disable line-length -->
 

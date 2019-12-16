@@ -16,8 +16,7 @@ isIndex: false
 ---
 # Install Node SDK
 
-The Box Node SDK can be used to make API calls to the Box APIs in a Node
-project.
+The Box Node SDK can be used to make API calls to the Box APIs in a Node project.
 
 <CTA to="https://github.com/box/box-node-sdk">
 Learn more about the Node SDK on GitHub
@@ -26,8 +25,7 @@ Learn more about the Node SDK on GitHub
 
 ## NPM installation
 
-To install the Node SDK run the following command from your terminal
-window or command prompt using the [Node Package Manager][npm].
+To install the Node SDK run the following command from your terminal window or command prompt using the [Node Package Manager][npm].
 
 ```shell
 npm install box-node-sdk --save

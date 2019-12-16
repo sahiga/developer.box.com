@@ -11,6 +11,8 @@ scId: tooling/salesforce-toolkit
 id: tooling/salesforce-toolkit/methods
 isIndex: false
 ---
+<!-- alex disable failed -->
+
 # Methods and Operations
 
 ## Toolkit Details
@@ -24,16 +26,13 @@ Class Name: `box.Toolkit`
 String to indicate the most recent error that occurred when calling instance
 methods.
 
-The presence of this string does not mean the operation failed. It is possible
-the error was recoverable; however, the lack of a value in this string does
-indicate the operation was successful.
+The presence of this string does not mean the operation failed. It is possible the error was recoverable; however, the lack of a value in this string does indicate the operation was successful.
 
 ### `Enum CollaborationType`
 
 Enum to indicate the [type of collaboration][collab-type].
 
-Possible values: `EDITOR`, `VIEWER`, `PREVIEWER`, `UPLOADER`, `COOWNER`,
-`OWNER`, `PREVIEWERUPLOADER`, or `VIEWERUPLOADER`
+Possible values: `EDITOR`, `VIEWER`, `PREVIEWER`, `UPLOADER`, `COOWNER`, `OWNER`, `PREVIEWERUPLOADER`, or `VIEWERUPLOADER`
 
 ## Static Methods
 
@@ -50,8 +49,7 @@ Parameters:
 Returns:
 
 * `true` if the user's account existed and was deleted.
-* `false` if the user's account was not deleted for any reason (including
-  because it didn't exist).
+* `false` if the user's account was not deleted for any reason (including because it didn't exist).
 
 ### `deleteUserAssociation`
 
@@ -66,8 +64,7 @@ Returns:
 Returns:
 
 * `true` if the user's account existed and was deleted.
-* `false` if the user's account was not deleted for any reason (including
-  because it didn't exist).
+* `false` if the user's account was not deleted for any reason (including because it didn't exist).
 
 ## Instance Methods (Constructors / Destructors)
 
@@ -83,17 +80,11 @@ Treat this method as a destructor for the `box.Toolkit()` method.
 
 <Message type="warning">
 
-This method is critical. It must be called after all folder / collaboration
-operations are complete. Every time. No Exceptions.
+This method is critical. It must be called after all folder / collaboration operations are complete. Every time. No Exceptions.
 
 </Message>
 
-Since Salesforce doesn't allow callouts after database updates / inserts /
-deletes have occurred, the Toolkit class maintains some collections of objects
-to be inserted once all callout operations are complete. If this method is not
-called, those objects won't be in the database, and the tables that keep track
-of user / record / folder associations will be out of sync and will need some
-advanced debugging to fix.
+Since Salesforce doesn't allow callouts after database updates / inserts / deletes have occurred, the Toolkit class maintains some collections of objects to be inserted once all callout operations are complete. If this method is not called, those objects won't be in the database, and the tables that keep track of user / record / folder associations will be out of sync and will need some advanced debugging to fix.
 
 Parameters:
 
@@ -105,11 +96,7 @@ Returns:
 
 ## Generic Methods
 
-The Box for Salesforce Developer Toolkit provides a global method that accepts
-an [HttpRequest][sf-httprequest] object as a parameter and returns an
-[HttpResponse][sf-httpresponse] object. This method will utilize the
-authentication details of the Service Account to make callouts to Box's APIs,
-allowing you to focus on the business logic of your integration.
+The Box for Salesforce Developer Toolkit provides a global method that accepts an [HttpRequest][sf-httprequest] object as a parameter and returns an [HttpResponse][sf-httpresponse] object. This method will utilize the authentication details of the Service Account to make callouts to Box's APIs, allowing you to focus on the business logic of your integration.
 
 ### `sendRequest`
 
@@ -123,12 +110,9 @@ allowing you to focus on the business logic of your integration.
 
 Returns:
 
-* An [HttpResponse][sf-httpresponse] object with the response details from
-  calling Box's APIs.
-* `Toolkit.BoxApiException` if there is any missing information from the
-  HttpRequest input.
-* `null` if there was an issue getting the authentication details for the
-  Service Account. In this case, check `mostRecentError`.
+* An [HttpResponse][sf-httpresponse] object with the response details from calling Box's APIs.
+* `Toolkit.BoxApiException` if there is any missing information from the HttpRequest input.
+* `null` if there was an issue getting the authentication details for the Service Account. In this case, check `mostRecentError`.
 
 ## File Operations
 
@@ -138,9 +122,7 @@ Returns:
 
 Available in version 3.46 and above.
 
-Salesforce has a String length limit of 6 million characters. Due to string
-bloat in the base64 encoding/decoding process, this results in an effective
-file size limit of 4.3 megabytes.
+Salesforce has a String length limit of 6 million characters. Due to string bloat in the base64 encoding/decoding process, this results in an effective file size limit of 4.3 megabytes.
 
 </Message>
 
@@ -172,8 +154,7 @@ Returns:
 
 Returns:
 
-* `string` returned is the Box folder id of the object root folder for the
-  record id passed in.
+* `string` returned is the Box folder id of the object root folder for the record id passed in.
 
 ## Folder Operations
 
@@ -199,15 +180,13 @@ Returns:
 
 Returns:
 
-* `string` returned is the Box folder id of the object root folder for the
-  record id passed in.
+* `string` returned is the Box folder id of the object root folder for the record id passed in.
 
 ### `getFolderUrl`
 
 * This method gets the embed widget URL for a particular record so customers
   can use their own embed logic if desired.
-* This method respects seamless login settings so the URL will automatically
-  log the user in if seamless login is enabled.
+* This method respects seamless login settings so the URL will automatically log the user in if seamless login is enabled.
 
 <!-- markdownlint-disable line-length -->
 
@@ -220,9 +199,7 @@ Returns:
 
 Returns:
 
-* `string` returned is a URL that points to the folder associated with the
-  Salesforce record Id passed. This URL is for the Box Embed Widget and can be
-  embedded in any Visualforce page.
+* `string` returned is a URL that points to the folder associated with the Salesforce record Id passed. This URL is for the Box Embed Widget and can be embedded in any Visualforce page.
 
 ### `createObjectFolderForRecordId`
 
@@ -237,8 +214,7 @@ Returns:
 Returns:
 
 * `string` returned is the Box folder Id of the root folder that was created.
-* If the root folder already existed, the value returned is the Box folder id
-  of the root folder that already existed.
+* If the root folder already existed, the value returned is the Box folder id of the root folder that already existed.
 
 ### `createFolder`
 
@@ -255,8 +231,7 @@ Returns:
 Returns:
 
 * `string` returned is the Box folder id of the folder that was created.
-* `null` is returned if a folder is not created. In this case, check
-  `mostRecentError` for details.
+* `null` is returned if a folder is not created. In this case, check `mostRecentError` for details.
 
 ### `createFolderForRecordId`
 
@@ -273,10 +248,8 @@ Returns:
 Returns:
 
 * `string` returned is the Box folder id of the folder that was created.
-* `null` is returned if a folder is not created. In this case, check
-  `mostRecentError` for details.
-* If the Salesforce record was already associated with a Box folder, the
-  existing Box folder id is returned.
+* `null` is returned if a folder is not created. In this case, check `mostRecentError` for details.
+* If the Salesforce record was already associated with a Box folder, the existing Box folder id is returned.
 
 ### `moveFolder`
 
@@ -309,10 +282,8 @@ Returns:
 
 Returns:
 
-* List returned is a collection of all folder mapping entries associated with
-  this record.
-* Generally, it will be an empty list if no folder mapping entries exist, but
-  under some circumstances, it could be `null`.
+* List returned is a collection of all folder mapping entries associated with this record.
+* Generally, it will be an empty list if no folder mapping entries exist, but under some circumstances, it could be `null`.
 
 ### `getFolderIdByRecordId`
 
@@ -326,8 +297,7 @@ Returns:
 
 Returns:
 
-* `string` returned is the Box folder id associated with the Salesforce record
-  id passed in.
+* `string` returned is the Box folder id associated with the Salesforce record id passed in.
 
 ### `getRecordIdByFolderId`
 
@@ -341,8 +311,7 @@ Returns:
 
 Returns:
 
-* `id` returned is the Salesforce record id associated with the Box folder id
-  passed in.
+* `id` returned is the Salesforce record id associated with the Box folder id passed in.
 
 ### `createFolderAssociation`
 
@@ -357,19 +326,13 @@ Returns:
 
 Returns:
 
-* `boxFRUPc` object - The FRUP object returned will be `null` if there was an
-  error (check `mostRecentError`). Upon calling the `commitChanges` method, this
-  FRUP entry will be inserted into the database. This method ensures consistency
-  with other folder associations by not allowing the same folder to be associated
-  with multiple records or vice versa.
+* `boxFRUPc` object - The FRUP object returned will be `null` if there was an error (check `mostRecentError`). Upon calling the `commitChanges` method, this FRUP entry will be inserted into the database. This method ensures consistency with other folder associations by not allowing the same folder to be associated with multiple records or vice versa.
 
 ## Collaboration Methods
 
 <Message type="warning">
 
-Collaborations created by the Box for Salesforce Developer Toolkit will not
-send collaboration emails to collaborators. Only the service account used for
-the Box for Salesforce integration will receive a collaboration email.
+Collaborations created by the Box for Salesforce Developer Toolkit will not send collaboration emails to collaborators. Only the service account used for the Box for Salesforce integration will receive a collaboration email.
 
 </Message>
 

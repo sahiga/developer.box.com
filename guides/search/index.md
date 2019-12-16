@@ -15,5 +15,4 @@ isIndex: true
 ---
 # Search
 
-The Box APIs provides a few ways to search using both full-text search and
-metadata search.
+The Box APIs provides a few ways to search using both full-text search and metadata search.

@@ -17,12 +17,9 @@ isIndex: false
 ---
 # Find Item from Shared Link
 
-The [find item for shared link](endpoint://get_shared_items) API is designed to
-accept a shared link as an input using a `BoxApi` header and return the file or
-folder object that the shared link is set for.
+The [find item for shared link](endpoint://get_shared_items) API is designed to accept a shared link as an input using a `BoxApi` header and return the file or folder object that the shared link is set for.
 
-To get the file or folder object associated with a shared link, supply
-the full shared link URL in the request.
+To get the file or folder object associated with a shared link, supply the full shared link URL in the request.
 
 <Samples id="get_shared_items">
 

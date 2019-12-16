@@ -16,40 +16,25 @@ isIndex: false
 ---
 # Content Preview
 
-The Box Content Preview UI Element allows developers to easily embed high
-quality and interactive previews of Box files in their desktop or mobile web
-application. The library fetches information about the file and its converted
-representations through the Box API, chooses the appropriate viewer for the file
-type, dynamically loads the necessary static assets and file representations,
-and finally renders the file. This UI Element also allows previews of multiple
-files to be loaded in the same container and exposes arrows to navigate between
-those files.
+The Box Content Preview UI Element allows developers to embed high quality and interactive previews of Box files in their desktop or mobile web application. The library fetches information about the file and its converted representations through the Box API, chooses the appropriate viewer for the file type, dynamically loads the necessary static assets and file representations, and finally renders the file. This UI Element also allows previews of multiple files to be loaded in the same container and exposes arrows to navigate between those files.
 
-This UI Element powers Preview in the main Box web application as well as the
-'expiring embed' Box API endpoint.
+This UI Element powers Preview in the main Box web application as well as the 'expiring embed' Box API endpoint.
 
 ## Installation
 
-[Learn how to install](g://embed/ui-elements/installation) Box UI elements
-either through NPM or the Box CDN.
+[Learn how to install](g://embed/ui-elements/installation) Box UI elements either through NPM or the Box CDN.
 
 <Message>
 
 # Browser support
 
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
+UI elements have [limited support](g://embed/ui-elements/browser) for older browsers. Make sure to add the right polyfills for your targeted browsers.
 
 </Message>
 
 ## Authentication
 
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
+The UI Elements are designed in an authentication agnostic way so whether you are using UI Elements for users who have Box accounts (Managed Users) or non-Box accounts (App Users), UI Elements should work out of the box. The reason for this is that UI Elements only expect a "token" to be passed in for authentication, and Box provides two different ways to generate tokens - OAuth and JWT.
 
 <CTA to="g://authentication/select">
 Learn about selecting an authentication method
@@ -58,17 +43,11 @@ Learn about selecting an authentication method
 
 ## Supported File Types
 
-Box Content Preview supports 120+ file types, including most document and image
-formats, HD video, 3D models, 360-degree images, and 360-degree videos. You can
-find the full list of supported file types [here][filetypes].
+Box Content Preview supports 120+ file types, including most document and image formats, HD video, 3D models, 360-degree images, and 360-degree videos. You can find the full list of supported file types [here][filetypes].
 
 <Message warning>
 
-Please note that where supported file types contain references to other
-objects, for example `DWG` files, those references are not supported in the
-Box preview. A notice will be displayed to all end users viewing a DWG file
-that contains unsupported references letting them know to take alternate steps
-to complete their workflow.
+Please note that where supported file types contain references to other objects, for example `DWG` files, those references are not supported in the Box preview. A notice will be displayed to all end users viewing a DWG file that contains unsupported references letting them know to take alternate steps to complete their workflow.
 
 </Message>
 
@@ -189,13 +168,7 @@ preview.removeAllListeners();
 
 ## Token Generator Function
 
-The Preview library optionally takes a token generator function instead of a
-string token. Using a token generator function allows you to dynamically
-determine what tokens Preview should use. For example, you can pass in different
-access tokens for each file or make sure your token is refreshed and valid
-before showing a preview. The token generator function should return a promise
-that resolves in either a single string token that applies to all of the files
-being previewed or a map of typed file IDs to access token for those files.
+The Preview library optionally takes a token generator function instead of a string token. Using a token generator function allows you to dynamically determine what tokens Preview should use. For example, you can pass in different access tokens for each file or make sure your token is refreshed and valid before showing a preview. The token generator function should return a promise that resolves in either a single string token that applies to all of the files being previewed or a map of typed file IDs to access token for those files.
 
 ```js
 // Example token generator function that resolves to a single access token
@@ -216,9 +189,7 @@ var mapTokenGenerator = function() {
 
 ## Events
 
-The preview object exposes `addListener` and `removeListener` for binding to
-events. Event listeners should be bound before `show()` is called, otherwise
-events can be missed.
+The preview object exposes `addListener` and `removeListener` for binding to events. Event listeners should be bound before `show()` is called, otherwise events can be missed.
 
 ```js
 const listener = (value) => {
@@ -238,12 +209,8 @@ preview.removeListener(EVENTNAME, listener);
 
 `EVENTNAME` can be one of the following:
 
-* `viewer` event will be fired when we have the viewer instance first available.
-  This will be the same object that is also a property included in the `load`
-  event. Preview fires this event before `load` so that clients can attach their
-  listeners before the `load` event is fired.
-* `load` event will be fired on every preview load when `show()` is called or if
-  inter-preview navigation occurs. The event data will contain:
+* `viewer` event will be triggered when we have the viewer instance first available. This will be the same object that is also a property included in the `load` event. Preview triggers this event before `load` so that clients can attach their listeners before the `load` event is triggered.
+* `load` event will be triggered on every preview load when `show()` is called or if inter-preview navigation occurs. The event data will contain:
 
 ```js
 error: 'message', // Error message if any error occurred while loading
@@ -252,22 +219,15 @@ metrics: {...},   // Performance metrics
 file: {...}       // Box file object with properties defined in file.js
 ```
 
-* `navigate` event will be fired when navigation happens. The event includes the
-  file ID of the file being navigated to, and this event will fire before
-  `load`.
-* `notification` event will be fired when either the preview wrapper or one of
-  the viewers wants to notify something like a warning or non-fatal error. The
-  event data will contain:
+* `navigate` event will be triggered when navigation happens. The event includes the file ID of the file being navigated to, and this event will trigger before `load`.
+* `notification` event will be triggered when either the preview wrapper or one of the viewers wants to notify something like a warning or non-fatal error. The event data will contain:
 
 ```js
 message: 'message', // Message to show
 type: 'warning'    // 'warning', 'notice', or 'error'
 ```
 
-* `viewerevent` Each viewer will fire its own sets of events. For example, the
-  Image viewer will fire `rotate` or `resize`, etc. while other viewers may fire
-  another set of events. The preview wrapper will also re-emit events at the
-  preview level, with event data containing:
+* `viewerevent` Each viewer will trigger its own sets of events. For example, the Image viewer will trigger `rotate` or `resize`, etc. while other viewers may trigger another set of events. The preview wrapper will also re-emit events at the preview level, with event data containing:
 
 ```js
 event: EVENTNAME,         // Event name
@@ -318,16 +278,9 @@ preview.addListener("rotate", data => {
 
 ## Scopes
 
-If your application requires the end user to only be able to access a subset of
-the Content Explorer functionality, you can use [Downscoping][downscope] to
-appropriately downscope the Access Token to a resulting token that has the
-desired set of permissions, and can thus, be securely passed to the end user
-client initializing the Content Explorer.
+If your application requires the end user to only be able to access a subset of the Content Explorer functionality, you can use [Downscoping][downscope] to appropriately downscope the Access Token to a resulting token that has the desired set of permissions, and can thus, be securely passed to the end user client initializing the Content Explorer.
 
-Below are a set of UI Element-specific scopes to go alongside Downscoping. These
-allow developers to enable/disable UI controls on the Content Explorer by
-configuring the appropriate scopes on the downscoped token. To learn
-more, see [Special Scopes for Box UI Elements][scopes].
+Below are a set of UI Element-specific scopes to go alongside Downscoping. These allow developers to enable/disable UI controls on the Content Explorer by configuring the appropriate scopes on the downscoped token. To learn more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
 
@@ -350,8 +303,7 @@ more, see [Special Scopes for Box UI Elements][scopes].
 
 # Enable highlight annotations with scopes The highlight scope is not included
 
-with `annotation_edit` and `annotation_view_all` scopes. The downscoped access
-token will need to include the `item_download` scope to enable highlighting.
+with `annotation_edit` and `annotation_view_all` scopes. The downscoped access token will need to include the `item_download` scope to enable highlighting.
 
 </Message>
 

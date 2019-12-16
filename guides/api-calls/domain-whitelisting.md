@@ -15,14 +15,11 @@ isIndex: false
 ---
 # Domain Whitelisting
 
-To use the Box APIs it is important that your application and users have access
-to the following domains, where needed.
+To use the Box APIs it is important that your application and users have access to the following domains, where needed.
 
 ## File Preview
 
-To enable file preview, your application might need to load javascript file from
-the Box content delivery network (CDN). This file is loaded from the following
-domains.
+To enable file preview, your application might need to load javascript file from the Box content delivery network (CDN). This file is loaded from the following domains.
 
 * `boxcdn.net`
 * `boxcloud.com`
@@ -38,9 +35,7 @@ The following API domains are used to download files via the Box API.
 
 <Message type="warning">
 
-Ensuring access to these domains is only a first step to downloading a file.
-To download a file the users need to have proper access permissions and need
-to be fully authenticated where needed.
+Ensuring access to these domains is only a first step to downloading a file. To download a file the users need to have proper access permissions and need to be fully authenticated where needed.
 
 </Message>
 

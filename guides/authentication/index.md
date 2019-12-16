@@ -10,11 +10,7 @@ isIndex: true
 ---
 # Authentication
 
-Authentication with the Box API uses an Access Token to identify a user. The
-way in which an Access Token is acquired depends on the method used to authorize
-a user. The type of authorization available to an application depends on the
-use-case as well as the type of application that has been created in the developer
-console.
+Authentication with the Box API uses an Access Token to identify a user. The way in which an Access Token is acquired depends on the method used to authorize a user. The type of authorization available to an application depends on the use-case as well as the type of application that has been created in the developer console.
 
 <!-- markdownlint-disable line-length -->
 
@@ -29,8 +25,7 @@ console.
 
 <Message warning>
 
-Enterprise and Partner Integrations exist for legacy purposes. Please use
-Custom Apps instead and use the relevant authentication method where needed.
+Enterprise and Partner Integrations exist for legacy purposes. Please use Custom Apps instead and use the relevant authentication method where needed.
 
 </Message>
 
@@ -41,9 +36,7 @@ Learn how to select an authorization type
 
 ## Access Tokens for Authentication
 
-Every API endpoint requires a valid and active **Access Token** to make API
-calls. An Access Token is a unique string that identifies an authenticated Box
-user to the API endpoints.
+Every API endpoint requires a valid and active **Access Token** to make API calls. An Access Token is a unique string that identifies an authenticated Box user to the API endpoints.
 
 ```curl
 curl https://api.box.com/2.0/users/me \
@@ -52,10 +45,7 @@ curl https://api.box.com/2.0/users/me \
 
 ## User Authorization
 
-There are a few ways to get an an Access Token for a user. There is
-client-side authorization through [OAuth 2.0][oauth2], server-side authorization
-using [JWT][jwt], as well as a long lived [App Token][apptoken] and a
-short-lived [Developer Token][devtoken].
+There are a few ways to get an an Access Token for a user. There is client-side authorization through [OAuth 2.0][oauth2], server-side authorization using [JWT][jwt], as well as a long lived [App Token][apptoken] and a short-lived [Developer Token][devtoken].
 
 [oauth2]: guide://authentication/oauth2
 

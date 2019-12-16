@@ -15,27 +15,22 @@ isIndex: false
 ---
 # Create Web App Integration
 
-The following guide explains how to set up a Web App Integration for a Custom
-App.
+The following guide explains how to set up a Web App Integration for a Custom App.
 
 ## Prerequisites
 
 Before we can get started, we the following requirements need to be met.
 
-* You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
-* You need to have created a Custom App with
-  [OAuth 2.0 authentication][custom-oauth2] on the developer console.
+* You need to be a be able to access the [Developer Console][devconsole] for your enterprise, or sign up for a [developer account][devaccount].
+* You need to have created a Custom App with [OAuth 2.0 authentication][custom-oauth2] on the developer console.
 
 ## 1. Create a New Integration
 
-Log in to developer console, find your application, and in the left-hand sidebar
-find the "Integrations" panel. Click "Create a web app integration".
+Log in to developer console, find your application, and in the left-hand sidebar find the "Integrations" panel. Click "Create a web app integration".
 
 ## 2. Configure Integration
 
-Configure the integration to your liking. The following is some guidance for
-each value.
+Configure the integration to your liking. The following is some guidance for each value.
 
 ### App Info
 
@@ -65,23 +60,13 @@ each value.
 
 The status of this integration.
 
-* **Development**: The integration is visible and available only to developers
-  assigned to the application. This option is best used when the application is
-  still in development and the developer wants to test the integration.
-* **Online**: The integration is visible and available to all Box users. This
-  option is best used when development has completed and the application is
-  ready to be publish in the App Gallery.
-* **Maintenance**: The integration is visible and available only to developers
-  assigned to the application. This option is best used after the integration
-  has been publicly released yet needs to perform maintenance updates or
-  troubleshoot problems. Use this option to temporarily take the integration
-  offline for everyone except the integration's developers.
+* **Development**: The integration is visible and available only to developers assigned to the application. This option is best used when the application is still in development and the developer wants to test the integration.
+* **Online**: The integration is visible and available to all Box users. This option is best used when development has completed and the application is ready to be publish in the App Gallery.
+* **Maintenance**: The integration is visible and available only to developers assigned to the application. This option is best used after the integration has been publicly released yet needs to perform maintenance updates or troubleshoot problems. Use this option to temporarily take the integration offline for everyone except the integration's developers.
 
 ### Callback Parameters
 
-The "Callback Parameters" section configures the parameters that Box sends to
-the callback URL when a user accepts a confirmation prompt. If not configured,
-Box does not send any parameters to the callback URL.
+The "Callback Parameters" section configures the parameters that Box sends to the callback URL when a user accepts a confirmation prompt. If not configured, Box does not send any parameters to the callback URL.
 
 The following parameters are available.
 
@@ -101,38 +86,25 @@ The following parameters are available.
 
 ## Examples Uses of Box Integrations
 
-When a user chooses a popup integration, Box sends a callback request to the
-primary callback URL. It sends the callback parameters have been configured to
-the server. In some cases, Box may make a second request if the
-client can't get all the data it needs from the first request.
+When a user chooses a popup integration, Box sends a callback request to the primary callback URL. It sends the callback parameters have been configured to the server. In some cases, Box may make a second request if the client can't get all the data it needs from the first request.
 
 The following example does not require a client callback URL:
 
-* The popup integration executes a REST call using a `download_file_url`
-  callback parameter.
+* The popup integration performs a REST call using a `download_file_url` callback parameter.
 * The user clicks OK in the confirmation prompt to accept the popup.
-* Box sends a request to the following URL (the primary callback URL plus the
-  callback parameter):
-  `http://www.doceditor.com/service?apikey=abc&file=&redirect=`.
-* The response from the callback URL displays a user interface to the user who
-  made the request. The popup has all the information needed to continue the
-  action and an additional client callback is not needed.
+* Box sends a request to the following URL (the primary callback URL plus the callback parameter): `http://www.doceditor.com/service?apikey=abc&file=&redirect=`.
+* The response from the callback URL displays a user interface to the user who made the request. The popup has all the information needed to continue the action and an additional client callback is not needed.
 
 The following example requires a client callback URL:
 
-* The popup integration executes a REST call using a file-callback parameter.
+* The popup integration performs a REST call using a file-callback parameter.
 * The user clicks OK in the confirmation prompt to accept the popup.
-* The popup displays a page in which Box sends a POST request with the contents
-  of a file along with the callback parameters to the remote server.
-* Box receives the response from the remote server and directs the client to
-  POST the response to the client callback URL. The server identified by the URL
-  interprets the response and redirects the user with the correct session ID.
+* The popup displays a page in which Box sends a POST request with the contents of a file along with the callback parameters to the remote server.
+* Box receives the response from the remote server and directs the client to POST the response to the client callback URL. The server identified by the URL interprets the response and redirects the user with the correct session ID.
 
 ## Client-callback URL Request Format
 
-The POST request that Box sends to the client callback URL takes the response
-from the primary callback URL and forwards it to the same URL along with the
-same data as the original callback.
+The POST request that Box sends to the client callback URL takes the response from the primary callback URL and forwards it to the same URL along with the same data as the original callback.
 
 <!-- markdownlint-disable line-length -->
 
@@ -145,14 +117,11 @@ same data as the original callback.
 The response to the client-callback request is an HTTP status 302, redirecting
 the user to the correct URL or to the HTML for a user interface.
 
-Most often the URL points to a separate API or custom script developed for web
-app integrations, which parses the result of the primary callback URL. Also,
-note that the URL has to be publicly accessible on the internet.
+Most often the URL points to a separate API or custom script developed for web app integrations, which parses the result of the primary callback URL. Also, note that the URL has to be publicly accessible on the internet.
 
 ## Making Integration Public Available
 
-To make a Box integration publicly available it needs to be listed in the App
-Gallery. Follow the [App Gallery][app-gallery] guide for more details.
+To make a Box integration publicly available it needs to be listed in the App Gallery. Follow the [App Gallery][app-gallery] guide for more details.
 
 [custom-oauth2]: g://applications/custom-apps/oauth2-setup
 

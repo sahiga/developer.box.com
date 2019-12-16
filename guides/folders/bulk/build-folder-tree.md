@@ -17,13 +17,9 @@ isIndex: false
 ---
 # Build Folder Tree
 
-The following examples provide an example on how to create a JSON representation
-of a folder tree. A folder tree is the name of a folder, and every subfolder
-within that folder.
+The following examples provide an example on how to create a JSON representation of a folder tree. A folder tree is the name of a folder, and every subfolder within that folder.
 
-The sample below allows for specifying the starting **root** folder and the
-maximum depth the code should traverse. It also allows for configuring what user
-is authenticated by allowing the passing in of an initialized SDK client.
+The sample below allows for specifying the starting **root** folder and the maximum depth the code should traverse. It also allows for configuring what user is authenticated by allowing the passing in of an initialized SDK client.
 
 <!-- markdownlint-disable line-length -->
 

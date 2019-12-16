@@ -15,8 +15,7 @@ isIndex: false
 ---
 # Access Token Object
 
-When an Access Token is requested through the OAuth 2.0 or JWT methods, an
-Access Token resource is returned via the API.
+When an Access Token is requested through the OAuth 2.0 or JWT methods, an Access Token resource is returned via the API.
 
 ```curl
 curl -X POST https://api.box.com/oauth2/token \
@@ -34,6 +33,4 @@ curl -X POST https://api.box.com/oauth2/token \
 }
 ```
 
-Within this object we can see the actual token string (`access_token`), as well
-as the refresh token (`refresh_token`) that can be used to request a new Access
-Token when the current one expires (`expires_in`).
+Within this object we can see the actual token string (`access_token`), as well as the refresh token (`refresh_token`) that can be used to request a new Access Token when the current one expires (`expires_in`).

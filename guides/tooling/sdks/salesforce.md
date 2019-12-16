@@ -17,9 +17,7 @@ isIndex: false
 ---
 # Install Salesforce SDK
 
-The Salesforce SDK can be deployed directly to Sandbox or Developer
-Organizations by clicking using the [Deploy to Salesforce][deploy_salesforce]
-functionality.
+The Salesforce SDK can be deployed directly to Sandbox or Developer Organizations by clicking using the [Deploy to Salesforce][deploy_salesforce] functionality.
 
 <Message type="notice">
 
@@ -34,9 +32,7 @@ The SDK is also distributed as an unmanaged package:
 
 <Message type="warning">
 
-Unmanaged packages can't be upgraded once installed in a Salesforce org so
-future upgrades will have to be applied by cloning the repositories locally
-and updating classes from your IDE.
+Unmanaged packages can't be upgraded once installed in a Salesforce org so future upgrades will have to be applied by cloning the repositories locally and updating classes from your IDE.
 
 </Message>
 

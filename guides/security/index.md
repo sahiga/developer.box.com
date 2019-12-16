@@ -10,5 +10,4 @@ isIndex: true
 ---
 # Security
 
-The Box API offers a few important ways to ensure everyone working with your
-data is secure and compliant.
+The Box API offers a few important ways to ensure everyone working with your data is secure and compliant.

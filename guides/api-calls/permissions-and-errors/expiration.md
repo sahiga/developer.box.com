@@ -11,15 +11,14 @@ isIndex: false
 ---
 # Token & URL Expiration
 
-Across the Box API there are a few tokens, codes, and URLs that automatically
-expire. The following is a quick overview of their respective expiration times.
+Across the Box API there are a few tokens, codes, and URLs that automatically expire. The following is a quick overview of their respective expiration times.
 
-|                       |                                |
-| --------------------- | ------------------------------ |
-| [Authorization Codes] | Expires after 30 seconds       |
-| [Access Tokens]       | expires after 60 minutes       |
-| [Refresh Tokens]      | Expires after 60 days or 1 use |
-| [Download URLs]       | Expires after 15 minutes       |
+|                                            |                                |
+| ------------------------------------------ | ------------------------------ |
+| [Authorization Codes][Authorization Codes] | Expires after 30 seconds       |
+| [Access Tokens][Access Tokens]             | expires after 60 minutes       |
+| [Refresh Tokens][Refresh Tokens]           | Expires after 60 days or 1 use |
+| [Download URLs][Download URLs]             | Expires after 15 minutes       |
 
 See each respective guide for more details.
 

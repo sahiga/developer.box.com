@@ -14,8 +14,7 @@ isIndex: false
 ---
 # Update Metadata Template
 
-Updating a metadata template can be achieved by passing a set of operations to
-the [endpoint][endpoint] API.
+Updating a metadata template can be achieved by passing a set of operations to the [`PUT /metadata_templates/:id/:id/schema`][endpoint] API.
 
 <Samples id="put_metadata_templates_id_id_schema">
 
@@ -23,14 +22,11 @@ the [endpoint][endpoint] API.
 
 ## Safe Operations
 
-Each operation in the list provided to the API performs a transformation of the
-template, changing it's schema. The following is a list of operations that can
-be used in this API and won't affect any previous templates.
+Each operation in the list provided to the API performs a transformation of the template, changing it's schema. The following is a list of operations that can be used in this API and won't affect any previous templates.
 
 ### Edit template properties
 
-The operation `editTemplate` allows for editing any of the base properties of
-the template, like the `displayName`, `copyInstanceOnItemCopy` and more.
+The operation `editTemplate` allows for editing any of the base properties of the template, like the `displayName`, `copyInstanceOnItemCopy` and more.
 
 | Parameter |                                                 |
 | --------- | ----------------------------------------------- |
@@ -68,13 +64,11 @@ The operation `addField` adds an field to a template.
 }
 ```
 
-This will add a new non-hidden string field with a `displayName` and `key` of
-**category**.
+This will add a new non-hidden string field with a `displayName` and `key` of **category**.
 
 ### Reorder fields
 
-The operation `reorderFields` reorders the list of fields in a template to match
-the requested field list.
+The operation `reorderFields` reorders the list of fields in a template to match the requested field list.
 
 | Parameter   |                                                   |
 | ----------- | ------------------------------------------------- |
@@ -87,13 +81,11 @@ the requested field list.
 }
 ```
 
-This will reorder the fields for the template to have `field2` first, followed by
-`field1`, then `field3`.
+This will reorder the fields for the template to have `field2` first, followed by `field1`, then `field3`.
 
 ### Add enum option
 
-The operation `addEnumOption` adds an enum option at the end of the enum option
-list for the specified field.
+The operation `addEnumOption` adds an enum option at the end of the enum option list for the specified field.
 
 <!-- markdownlint-disable line-length -->
 
@@ -139,13 +131,11 @@ The operation `reorderEnumOptions` reorders the list of options in an enum.
 }.
 ```
 
-This will reorder the enum options for field category to have `option2` first,
-followed by `option1`, then `option3`.
+This will reorder the enum options for field category to have `option2` first, followed by `option1`, then `option3`.
 
 ### Reorder multi select options
 
-The operation `reorderMultiSelectOptions` reorders the list of options in a
-multi select.
+The operation `reorderMultiSelectOptions` reorders the list of options in a multi select.
 
 <!-- markdownlint-disable line-length -->
 
@@ -168,13 +158,11 @@ multi select.
 }.
 ```
 
-This will reorder the multi select options for field category to have `option2`
-first, followed by `option1`, then `option3`.
+This will reorder the multi select options for field category to have `option2` first, followed by `option1`, then `option3`.
 
 ### Add multi-select option
 
-The `addMultiSelectOption` operation adds a multi select option at the end of
-the multi select option list for the specified field.
+The `addMultiSelectOption` operation adds a multi select option at the end of the multi select option list for the specified field.
 
 <!-- markdownlint-disable line-length -->
 
@@ -199,17 +187,13 @@ This will add a new multi select option **Technology** under the field `category
 
 ## Hazardous Operations
 
-Each operation in the list provided to the API performs a transformation of the
-template, changing it's schema. The following is a list of operations that can
-be used in this API and can potentially change the data of any previously
-assigned templates.
+Each operation in the list provided to the API performs a transformation of the template, changing it's schema. The following is a list of operations that can be used in this API and can potentially change the data of any previously assigned templates.
 
 These changes will be logged as template changes but not as file changes.
 
 ### Edit a field
 
-The operation `editField` option edits any number of the base properties of a
-field like the `displayName`, `description`, `key`, and `hidden` state.
+The operation `editField` option edits any number of the base properties of a field like the `displayName`, `description`, `key`, and `hidden` state.
 
 <!-- markdownlint-disable line-length -->
 
@@ -230,10 +214,7 @@ field like the `displayName`, `description`, `key`, and `hidden` state.
 }
 ```
 
-This will update the field `category` to have a new display name of
-**Customer Group**. If the key is changed, existing values of the specified
-field are migrated to the new key. The search index will be updated yet it can
-take time depending on how many files are affected by the change.
+This will update the field `category` to have a new display name of **Customer Group**. If the key is changed, existing values of the specified field are migrated to the new key. The search index will be updated yet it can take time depending on how many files are affected by the change.
 
 <Message warning>
 
@@ -260,9 +241,7 @@ The operation `removeField` removes an field from a template.
 }
 ```
 
-This will remove the field `brand` from the template as well as all instances of
-the template. The search index will be updated yet it can take time depending on
-how many files are affected by the change.
+This will remove the field `brand` from the template as well as all instances of the template. The search index will be updated yet it can take time depending on how many files are affected by the change.
 
 <Message warning>
 
@@ -295,10 +274,7 @@ The operation `editEnumOption` edits an option for an enum.
 }
 ```
 
-This will rename the `enumOption` `FY11` to `FY16`. Existing instances of
-the template with the value set will be migrated to the new option. The search
-index will be updated yet it can take time depending on how many files are
-affected by the change.
+This will rename the `enumOption` `FY11` to `FY16`. Existing instances of the template with the value set will be migrated to the new option. The search index will be updated yet it can take time depending on how many files are affected by the change.
 
 <Message warning>
 
@@ -327,12 +303,9 @@ The operation `removeEnumOption` removes an option for an enum.
 }
 ```
 
-This will remove the `enumOption` `FY11` from the field `fy`. It will also
-remove the `enumOption` from all instances of the template. If the field on an
-instance of the template was set to this option then the value will be unset.
+This will remove the `enumOption` `FY11` from the field `fy`. It will also remove the `enumOption` from all instances of the template. If the field on an instance of the template was set to this option then the value will be unset.
 
-The search index will be updated yet it can take time depending on how many
-files are affected by the change.
+The search index will be updated yet it can take time depending on how many files are affected by the change.
 
 <Message warning>
 
@@ -365,10 +338,7 @@ The operation `editMultiSelectOption` edits an option for a multi select.
 }
 ```
 
-This will rename the `multiSelectOption` `FY11` to `FY16`. Existing instances of
-the template with the value set will be migrated to the new option. The search
-index will be updated yet it can take time depending on how many files are
-affected by the change.
+This will rename the `multiSelectOption` `FY11` to `FY16`. Existing instances of the template with the value set will be migrated to the new option. The search index will be updated yet it can take time depending on how many files are affected by the change.
 
 <Message warning>
 
@@ -397,13 +367,9 @@ The operation `removeMultiSelectOption` removes an option for an multi select.
 }
 ```
 
-This will remove the `multiSelectOption` `FY11` from the field `fy`. It will
-also remove the `multiSelectOption` from all instances of the template. If the
-field on an instance of the template was set to this option then the value will
-be unset.
+This will remove the `multiSelectOption` `FY11` from the field `fy`. It will also remove the `multiSelectOption` from all instances of the template. If the field on an instance of the template was set to this option then the value will be unset.
 
-The search index will be updated yet it can take time depending on how many
-files are affected by the change.
+The search index will be updated yet it can take time depending on how many files are affected by the change.
 
 <Message warning>
 

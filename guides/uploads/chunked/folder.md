@@ -17,9 +17,7 @@ isIndex: false
 ---
 # Upload All Files in Folder
 
-Sometimes an application might want to upload all files from a folder. To do so
-with the SDKs and the CLI requires traversing the folder tree, finding every
-file and uploading it accordingly.
+Sometimes an application might want to upload all files from a folder. To do so with the SDKs and the CLI requires traversing the folder tree, finding every file and uploading it accordingly.
 
 <!-- markdownlint-disable line-length -->
 
@@ -475,24 +473,15 @@ box folders:upload ./folder_name_to_upload --parent-folder=$folder_id
 
 ## Breakdown
 
-The scripts above use the Box SDKs and the CLI to upload an entire folder. For
-the SDK scripts, they start by creating a directory in Box to match the local
-folder.
+The scripts above use the Box SDKs and the CLI to upload an entire folder. For the SDK scripts, they start by creating a directory in Box to match the local folder.
 
-After the new directory is created, it uploads all files within the directory
-making sure to use all available Box features to make the uploads successful.
+After the new directory is created, it uploads all files within the directory making sure to use all available Box features to make the uploads successful.
 
-Using the [Preflight][preflight] API the files are checked for conflicts and
-size restrictions before they are uploaded. If a naming conflict is found, the
-script instead uploads a new version of that file.
+Using the [Preflight][preflight] API the files are checked for conflicts and size restrictions before they are uploaded. If a naming conflict is found, the script instead uploads a new version of that file.
 
-Using the the `SHA` hash of the file the scripts add a `Content-MD5` header on
-upload to make sure the file is successfully uploaded to Box without any bytes
-lost or tampered with.
+Using the the `SHA` hash of the file the scripts add a `Content-MD5` header on upload to make sure the file is successfully uploaded to Box without any bytes lost or tampered with.
 
-Finally, if a file size exceeds 20MB\`, the script uses the [Chunked
-Upload][chunked] feature to make sure uploads are more reliable for larger
-files.
+Finally, if a file size exceeds 20MB\`, the script uses the [Chunked Upload][chunked] feature to make sure uploads are more reliable for larger files.
 
 [preflight]: g://uploads/check
 

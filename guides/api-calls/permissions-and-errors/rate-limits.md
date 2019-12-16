@@ -16,8 +16,7 @@ isIndex: false
 ---
 # Rate Limits
 
-Most of the Box APIs have rate limits in place in order to prevent abuse by
-third-party services or users.
+Most of the Box APIs have rate limits in place in order to prevent misuse by third-party services or users.
 
 ## Per API rate limits
 
@@ -35,8 +34,7 @@ There are currently a few distinct rate limits in place within the Box API.
 
 ## Rate limit error
 
-When an application hits a rate limit, the API will return an API response with
-a HTTP status code of `429 Too Many Requests`.
+When an application hits a rate limit, the API will return an API response with a HTTP status code of `429 Too Many Requests`.
 
 The response will include the following headers and JSON body.
 
@@ -59,9 +57,7 @@ Please see the [Client Error resource](resource://client_error) for more details
 
 <Message type="notice">
 
-The `Retry-After` header provides guidance on when the API call can be
-retried. In general, we advise using an exponential back-off strategy for
-retrying API calls.
+The `Retry-After` header provides guidance on when the API call can be retried. In general, we advise using an exponential back-off strategy for retrying API calls.
 
 </Message>
 

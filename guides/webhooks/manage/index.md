@@ -20,11 +20,9 @@ The Box API allows for programmatic creation and deletion of webhooks.
 
 <Message type="warning">
 
-# Scopes & Permissions
+# スコープと権限
 
-Please ensure you have the "Manage webhooks" application scope enabled in the
-configuration tab of the [developer console][console] for your application or
-you will receive a `403` error when trying to make API calls.
+Please ensure you have the "Manage webhooks" application scope enabled in the configuration tab of the [developer console][console] for your application or you will receive a `403` error when trying to make API calls.
 
 </Message>
 

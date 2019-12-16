@@ -15,8 +15,7 @@ isIndex: false
 ---
 # Customize Logo
 
-Each of the Box UI Elements allow for specifying a custom logo to place in the
-top-left corner of the embedded container.
+Each of the Box UI Elements allow for specifying a custom logo to place in the top-left corner of the embedded container.
 
 <ImageFrame border>
 
@@ -24,13 +23,9 @@ top-left corner of the embedded container.
 
 </ImageFrame>
 
-By default, each of the UI Elements uses a generic placeholder as a logo. This
-is meant to be replaced by either a Box logo or a custom logo, such as a
-company's logo.
+By default, each of the UI Elements uses a generic placeholder as a logo. This is meant to be replaced by either a Box logo or a custom logo, such as a company's logo.
 
-To add a logo to a UI Element, supply a URL for a logo as an option in in the
-Javascript setup code. The following is an example of how to do this with the
-Content Preview UI Element.
+To add a logo to a UI Element, supply a URL for a logo as an option in in the Javascript setup code. The following is an example of how to do this with the Content Preview UI Element.
 
 ```js
 var preview = new Box.Preview();
@@ -50,12 +45,10 @@ preview.show(fileId, accessToken, {
 
 # Box Logo
 
-To present the Box logo in a UI Element, specify the string `box` as the
-`logoURL` option.
+To present the Box logo in a UI Element, specify the string `box` as the `logoURL` option.
 
 </Message>
 
 ## Image size
 
-Images files will be fitted to a maximum height of 32 pixels and a maximum width
-of 80 pixels. Larger images will be shrunk to fit these dimensions.
+Images files will be fitted to a maximum height of 32 pixels and a maximum width of 80 pixels. Larger images will be shrunk to fit these dimensions.

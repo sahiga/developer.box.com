@@ -10,9 +10,7 @@ isIndex: true
 ---
 # Files
 
-Files, together with [Folders][folders], are at the core of the Box API. File
-can be [uploaded][uploads] and [downloaded][downloads], as well as hold
-important metadata information about the content.
+Files, together with [Folders][folders], are at the core of the Box API. File can be [uploaded][uploads] and [downloaded][downloads], as well as hold important metadata information about the content.
 
 [folders]: g://folders
 

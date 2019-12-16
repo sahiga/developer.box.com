@@ -9,5 +9,4 @@ isIndex: true
 ---
 # Embed Box
 
-Box supports a few different ways to embed files and folders straight into your
-front-end application.
+Box supports a few different ways to embed files and folders straight into your front-end application.

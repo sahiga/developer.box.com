@@ -19,21 +19,17 @@ isIndex: false
 ---
 # Add Item to Collection
 
-To add an item to a collection, call the `PUT` endpoint for that specific type of
-item and pass along a list of collection IDs.
+To add an item to a collection, call the `PUT` endpoint for that specific type of item and pass along a list of collection IDs.
 
 <Message warning>
 
-The only collection that is available via the API is the "Favorites"
-collection. The ID of this collection is [different for every
-user](g://collections/list).
+The only collection that is available via the API is the "Favorites" collection. The ID of this collection is [different for every user](g://collections/list).
 
 </Message>
 
 ## Add file to collection
 
-To add a file to a collection, call the `PUT /files/:id` API and pass along a
-list of collection IDs.
+To add a file to a collection, call the `PUT /files/:id` API and pass along a list of collection IDs.
 
 <Samples id="put_files_id" variant="add_to_collection">
 
@@ -41,8 +37,7 @@ list of collection IDs.
 
 ## Add folder to collection
 
-To add a folder to a collection, call the `PUT /folders/:id` API and pass along
-a list of collection IDs.
+To add a folder to a collection, call the `PUT /folders/:id` API and pass along a list of collection IDs.
 
 <Samples id="put_folders_id" variant="add_to_collection">
 
@@ -50,8 +45,7 @@ a list of collection IDs.
 
 ## Add web link to collection
 
-To add a web link to a collection, call the `PUT /web_links/:id` API and pass
-along a list of collection IDs.
+To add a web link to a collection, call the `PUT /web_links/:id` API and pass along a list of collection IDs.
 
 <Samples id="put_web_links_id" variant="add_to_collection">
 

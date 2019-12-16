@@ -15,9 +15,7 @@ isIndex: false
 ---
 # Get Retention Policy
 
-To get the information for a specific Retention Policy that has been created in
-an enterprise, call the [retention][retention] API endpoint
-with the `id` of the policy.
+To get the information for a specific Retention Policy that has been created in an enterprise, call the [`GET /retention_policies/:id`][retention] API endpoint with the `id` of the policy.
 
 <Samples id="get_retention_policies_id">
 
@@ -25,8 +23,7 @@ with the `id` of the policy.
 
 ## Required Scopes
 
-Before using any of the Retention Policy APIs, an application must have the
-right scopes enabled. See [Required Scopes][scopes] for more details.
+Before using any of the Retention Policy APIs, an application must have the right scopes enabled. See [Required Scopes][scopes] for more details.
 
 [retention]: e://get_retention_policies_id
 

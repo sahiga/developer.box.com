@@ -7,20 +7,15 @@ isIndex: true
 ---
 # Trash
 
-Before items are deleted they might end up in a user's trash. The trash can be
-managed by a user through any of the Box apps, and by an application via the
-API.
+Before items are deleted they might end up in a user's trash. The trash can be managed by a user through any of the Box apps, and by an application via the API.
 
 ## Two-stage Deletion Process
 
-Box uses a two-stage process to remove or **trash** [files], [folders], and
-[web links] before permanently deleting them.
+Box uses a two-stage process to remove or **trash** [files][files], [folders][folders], and [web links][web links] before permanently deleting them.
 
-By default, items can be restored after they are **trashed** within a 30 day
-period before they are **purged**. The purge window can be modified by
-an enterprise administrator.
+By default, items can be restored after they are **trashed** within a 30 day time frame before they are **purged**. The purge window can be modified by an enterprise administrator.
 
-More details can be found in the Box community article on [Managing Trash]
+More details can be found in the Box community article on [Managing Trash][Managing Trash]
 
 [files]: https://box.dev/en/reference/resources/file/
 

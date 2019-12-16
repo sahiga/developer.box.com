@@ -17,8 +17,7 @@ isIndex: false
 ---
 # As-User Header
 
-It is possible to for an OAuth 2.0 application to act on behalf of another user
-through the `As-User` header.
+It is possible to for an OAuth 2.0 application to act on behalf of another user through the `As-User` header.
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
@@ -28,17 +27,13 @@ curl https://api.box.com/2.0/folders/0 \
 
 <Message>
 
-In this situation the user ID is the Box identifier for a user. User IDs can
-found for any user via the `GET /users` endpoint, which is only available to
-admins, or by calling the `GET /users/me` endpoint with an authenticated user session.
+In this situation the user ID is the Box identifier for a user. User IDs can found for any user via the `GET /users` endpoint, which is only available to admins, or by calling the `GET /users/me` endpoint with an authenticated user session.
 
 </Message>
 
 ## Preconditions
 
-Using the `As-User` header has a few requirements. Firstly, the application
-needs to be configured to perform actions as users in the [developer
-console][devconsole].
+Using the `As-User` header has a few requirements. Firstly, the application needs to be configured to perform actions as users in the [developer console][devconsole].
 
 <ImageFrame border center>
 
@@ -46,9 +41,7 @@ console][devconsole].
 
 </ImageFrame>
 
-Additionally, the authenticated user needs to be a user with admin permissions,
-meaning either an admin, co-admin, or service account. See our guide on [User
-Types](g://authentication/user-types) for more details.
+Additionally, the authenticated user needs to be a user with admin permissions, meaning either an admin, co-admin, or service account. See our guide on [User Types](g://authentication/user-types) for more details.
 
 ## As-User using SDKs
 
@@ -94,9 +87,7 @@ client.asUser('[USER_ID]');
 
 <Message warning>
 
-Please note that some of our SDKs create new clients for the other user, while
-others modify the existing client and provide a way to return to a state where
-the client authenticates for the original user itself.
+Please note that some of our SDKs create new clients for the other user, while others modify the existing client and provide a way to return to a state where the client authenticates for the original user itself.
 
 </Message>
 

@@ -15,10 +15,7 @@ isIndex: false
 ---
 # Setup Shared Folders
 
-As a final step to manage access to shared folders, we'll create the folder
-structures needed within the service account. Then, groups will map to the
-needed permissions based on user types and level of access needed to those
-folders. We'll use a Market Department as an example.
+As a final step to manage access to shared folders, we'll create the folder structures needed within the service account. Then, groups will map to the needed permissions based on user types and level of access needed to those folders. We'll use a Market Department as an example.
 
 <Tabs>
 
@@ -52,15 +49,9 @@ folders. We'll use a Market Department as an example.
 
 </Tabs>
 
-Working from this sample folder structure, we can use the folder tree creator
-code we used earlier to create the `etc/skel` structure. That code may be
-modified to make your own structure.
+Working from this sample folder structure, we can use the folder tree creator code we used earlier to create the `etc/skel` structure. That code may be modified to make your own structure.
 
-Once created, we'll need the IDs of the folders that each group will need to
-access. For example, Marketing managers will likely have `editor` access to all
-folders within the Marketing Department. On the other hand, Marketing project
-managers will likely need `editor` access to only the `Projects` folder. We'll
-create two groups and give them these permissions.
+Once created, we'll need the IDs of the folders that each group will need to access. For example, Marketing managers will likely have `editor` access to all folders within the Marketing Department. On the other hand, Marketing project managers will likely need `editor` access to only the `Projects` folder. We'll create two groups and give them these permissions.
 
 <Tabs>
 
@@ -569,9 +560,7 @@ box groups:create "Marketing Project Managers" --invite=admins_and_members --vie
 
 </Tabs>
 
-Once the groups are created, simply add the user to that group and they will
-have the prescribed access to the shared folders created within the service
-account.
+Once the groups are created, add the user to that group and they will have the prescribed access to the shared folders created within the service account.
 
 <Tabs>
 

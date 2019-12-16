@@ -13,38 +13,31 @@ isIndex: true
 ---
 # SDKs & Tools
 
-The following tools are actively developed and supported by Box. These tools
-receive regular product updates, as well as security updates.
+The following tools are actively developed and supported by Box. These tools receive regular product updates, as well as security updates.
 
 ## Official SDKs & CLIs
 
 | Platform                          | Maintained? | Parity? |
 | --------------------------------- | ----------- | ------- |
-| [Java SDK][javasdk]               | Yes         | Full    |
-| [.NET SDK][dotnetsdk]             | Yes         | Full    |
-| [Python SDK][pythonsdk]           | Yes         | Full    |
-| [Node SDK][nodesdk]               | Yes         | Full    |
-| [CLI][cli]                        | Yes         | Full    |
-| [iOS Content SDK][iossdk]         | Yes         | Full    |
-| [Android Content SDK][androidsdk] | Yes         | Partial |
+| [Java SDK][javasdk]               | はい          | Full    |
+| [.NET SDK][dotnetsdk]             | はい          | Full    |
+| [Python SDK][pythonsdk]           | はい          | Full    |
+| [Node SDK][nodesdk]               | はい          | Full    |
+| [CLI][cli]                        | はい          | Full    |
+| [iOS Content SDK][iossdk]         | はい          | Full    |
+| [Android Content SDK][androidsdk] | はい          | Partial |
 
 <Message type="notice">
 
-**Maintained:** Fully maintained projects are actively developed by Box. They
-receive the latest security updates and new features. For support with these
-projects please visit GitHub or [our Platform support forum][forum].
+**Maintained:** Fully maintained projects are actively developed by Box. They receive the latest security updates and new features. For support with these projects please visit GitHub or [our Platform support forum][forum].
 
-**API Parity**: Projects with full API parity are actively updated with all
-platform functionality as this becomes available on the Box Platform. Projects
-with partial API parity lack some functionality while we work on bringing
-these projects to full parity.
+**API Parity**: Projects with full API parity are actively updated with all platform functionality as this becomes available on the Box Platform. Projects with partial API parity lack some functionality while we work on bringing these projects to full parity.
 
 </Message>
 
 ## Official UI Libraries
 
-Extend your application with pre-built UI components to browse, share, and
-preview files on Box.
+Extend your application with pre-built UI components to browse, share, and preview files on Box.
 
 <!-- markdownlint-disable line-length -->
 
@@ -64,17 +57,13 @@ preview files on Box.
 
 <Message type="notice">
 
-**Maintained:** Fully maintained projects are actively developed by Box. They
-receive the latest security updates and new features.  For support with these
-projects please visit GitHub or [our Platform support
-forum][forum]."
+**Maintained:** Fully maintained projects are actively developed by Box. They receive the latest security updates and new features.  For support with these projects please visit GitHub or [our Platform support forum][forum]."
 
 </Message>
 
 ## Unofficial & Community Tools
 
-The following tools are developed by Box and maintained by Box and its community
-members. These tools do not receive regular product updates or security updates.
+The following tools are developed by Box and maintained by Box and its community members. These tools do not receive regular product updates or security updates.
 
 <!-- markdownlint-disable line-length -->
 
@@ -89,18 +78,9 @@ members. These tools do not receive regular product updates or security updates.
 
 <Message type="notice">
 
-**Maintained:** Projects with limited maintenance are updated by Box in
-collaboration with the community. They receive irregular security updates. If
-you are a Box customer on a premium support plan, please contact customer
-services for any urgent feature requests for these tools. For other support
-queries with these projects please visit GitHub or [our Platform support
-forum][forum].
+**Maintained:** Projects with limited maintenance are updated by Box in collaboration with the community. They receive irregular security updates. If you are a Box customer on a premium support plan, please contact customer services for any urgent feature requests for these tools. For other support queries with these projects please visit GitHub or [our Platform support forum][forum].
 
-**API Parity:**  Projects with limited API parity can lack some functionality
-as new features are not automatically rolled out to these projects as they
-become available for the Box Platform. If you are a Box customer on a premium
-support plan, please contact customer services for any urgent feature requests
-for these tools.
+**API Parity:**  Projects with limited API parity can lack some functionality as new features are not automatically rolled out to these projects as they become available for the Box Platform. If you are a Box customer on a premium support plan, please contact customer services for any urgent feature requests for these tools.
 
 </Message>
 

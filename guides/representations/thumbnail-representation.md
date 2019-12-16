@@ -17,27 +17,19 @@ isIndex: false
 ---
 # Get Thumbnail Representation
 
-A thumbnail is a small image, either as `.png` or as `.jpg` that can be used in
-an application as a representation of the file, for example as a placeholder for
-a link that downloads or previews the file.
+A thumbnail is a small image, either as `.png` or as `.jpg` that can be used in an application as a representation of the file, for example as a placeholder for a link that downloads or previews the file.
 
-All thumbnail representations except `1024x1024` and `2048x2048` PNGs are
-generated upon uploading the source file to Box.
+All thumbnail representations except `1024x1024` and `2048x2048` PNGs are generated upon uploading the source file to Box.
 
-An alternative way to get a thumbnail for a file is using the
-[thumbnail API][thumbnail_api].
+An alternative way to get a thumbnail for a file is using the [thumbnail API][thumbnail_api].
 
 ## The process
 
 To get a thumbnail representation follow the following steps
 
 * [List all representations][list-all-representations]
-* [Request a thumbnail][request-a-representation]
-  by passing the `X-Ref-Hints`-header for the desired thumbnail format
-  and size, for example `[jpg?dimensions=32x32]`.
-* [Download the thumbnail][download-a-representation]
-  by calling the `url_template`, replacing the `{+asset_path}` with an empty
-  string.
+* [Request a thumbnail][request-a-representation] by passing the `X-Ref-Hints`-header for the desired thumbnail format and size, for example `[jpg?dimensions=32x32]`.
+* [Download the thumbnail][download-a-representation] by calling the `url_template`, replacing the `{+asset_path}` with an empty string.
 
 ## Examples
 
@@ -82,20 +74,15 @@ Some restrictions apply to the sizes marked as `*`.
 
 ### JPEG `2048x2048`
 
-The JPEG `2048x2048` size is only available when the
-original file is a JPEG. We recommend either requesting a PNG or both a PNG
-and a JPEG for this dimension.
+The JPEG `2048x2048` size is only available when the original file is a JPEG. We recommend either requesting a PNG or both a PNG and a JPEG for this dimension.
 
 ### Video files
 
-JPEG `2048x2048`, PNG `2048x20148` and PNG `1024x1024` representations are not
-available for video files.
+JPEG `2048x2048`, PNG `2048x20148` and PNG `1024x1024` representations are not available for video files.
 
 ### Original file size
 
-Thumbnails are not scaled up. If the original file size of the file uploaded to
-Box is smaller than the representation dimensions, the resulting thumbnail is
-capped at the size of the original file.
+Thumbnails are not scaled up. If the original file size of the file uploaded to Box is smaller than the representation dimensions, the resulting thumbnail is capped at the size of the original file.
 
 ## Supported file types
 

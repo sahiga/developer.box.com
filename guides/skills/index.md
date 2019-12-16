@@ -9,14 +9,9 @@ isIndex: true
 ---
 # Box Skills
 
-Box Skills are designed to allow the coupling of custom processing services for
-files uploaded in Box, with the intent of enhancing the underlying metadata of
-the file. The benefit towards this system is that it permits the storage of
-rich information about any files, which may then be used to automated tasks and
-future processes.
+Box Skills are designed to allow the coupling of custom processing services for files uploaded in Box, with the intent of enhancing the underlying metadata of the file. The benefit towards this system is that it permits the storage of rich information about any files, which may then be used to automated tasks and future processes.
 
-In general the end-to-end process of a Skills application follows the following
-flow:
+In general the end-to-end process of a Skills application follows the following flow:
 
 <!-- markdownlint-disable line-length -->
 
@@ -34,9 +29,6 @@ flow:
 
 # Skills Kit
 
-To simplify your integration with Box Skills, a [Skills
-Kit](guide://skills/kit) has been made available to obfuscate many
-complexities of the above steps. The Skills Kit is currently only available in
-Node.
+To simplify your integration with Box Skills, a [Skills Kit](guide://skills/kit) has been made available to obfuscate many complexities of the above steps. The Skills Kit is currently only available in Node.
 
 </Message>

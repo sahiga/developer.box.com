@@ -17,34 +17,26 @@ isIndex: false
 ---
 # Get Basic Thumbnail
 
-A thumbnail is a small image, either as `.png` or as `.jpg` that can be used in
-an application as a representation of the file, for example as a placeholder for
-a link that downloads or previews the file.
+A thumbnail is a small image, either as `.png` or as `.jpg` that can be used in an application as a representation of the file, for example as a placeholder for a link that downloads or previews the file.
 
-An alternative way to get a thumbnail for a file is using the
-[representations API][thumb_representations].
+An alternative way to get a thumbnail for a file is using the [representations API][thumb_representations].
 
 ## Requesting
 
-To request a file thumbnail use the [get_files_id_thumbnail_id][get_files_id_thumbnail_id]
-endpoint.
+To request a file thumbnail use the [`GET
+/files/:id/thumbnail.:extension`][get_files_id_thumbnail_id] endpoint.
 
 <Samples id="get_files_id_thumbnail_id">
 
 </Samples>
 
-When a thumbnail was successfully created, this will return the thumbnail
-in the body of the response as binary data.
+When a thumbnail was successfully created, this will return the thumbnail in the body of the response as binary data.
 
 ## Asynchronous thumbnail creation
 
-Sometimes the thumbnail can not be created directly. Instead, the API will
-return a `HTTP 202` with a `Location` response header. The location
-is for a temporary image that can be used while the thumbnail is being
-generated.
+Sometimes the thumbnail can not be created directly. Instead, the API will return a `HTTP 202` with a `Location` response header. The location is for a temporary image that can be used while the thumbnail is being generated.
 
-A `Retry-After` response header is also provided to present you with
-an estimated amount of seconds before retrying this endpoint.
+A `Retry-After` response header is also provided to present you with an estimated amount of seconds before retrying this endpoint.
 
 ## Supported file sizes
 
@@ -65,9 +57,7 @@ Some restrictions apply to the sizes marked as `*`.
 
 ### Original file size
 
-Thumbnails are not scaled up. If the original file size of the file uploaded to
-Box is smaller than the representation dimensions, the resulting thumbnail is
-capped at the size of the original file.
+Thumbnails are not scaled up. If the original file size of the file uploaded to Box is smaller than the representation dimensions, the resulting thumbnail is capped at the size of the original file.
 
 ## Supported file types
 

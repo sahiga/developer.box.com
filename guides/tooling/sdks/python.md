@@ -16,8 +16,7 @@ isIndex: false
 ---
 # Install Python SDK
 
-The Box Python SDK can be used to make API calls to the Box APIs in a Python
-project.
+The Box Python SDK can be used to make API calls to the Box APIs in a Python project.
 
 <CTA to="https://github.com/box/box-python-sdk">
 Learn more about the Python SDK on GitHub
@@ -26,8 +25,7 @@ Learn more about the Python SDK on GitHub
 
 ## Installation
 
-To install the Python SDK run the following command from your terminal
-window or command prompt using [pip][pip].
+To install the Python SDK run the following command from your terminal window or command prompt using [pip][pip].
 
 ```shell
 pip install boxsdk
@@ -35,8 +33,7 @@ pip install boxsdk
 
 ## JWT application
 
-When working with a Box App that uses server-side [JWT authentication][jwt], the
-following additional module needs to be installed.
+When working with a Box App that uses server-side [JWT authentication][jwt], the following additional module needs to be installed.
 
 ```shell
 pip install "boxsdk[jwt]"

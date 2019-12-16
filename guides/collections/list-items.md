@@ -26,8 +26,6 @@ To list all files, folders and web links in a folder call the [`GET
 
 <Message warning>
 
-The only collection that is available via the API is the "Favorites"
-collection. The ID of this collection is [different for every
-user](g://collections/list).
+The only collection that is available via the API is the "Favorites" collection. The ID of this collection is [different for every user](g://collections/list).
 
 </Message>

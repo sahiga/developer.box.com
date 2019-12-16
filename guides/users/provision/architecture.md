@@ -14,39 +14,21 @@ isIndex: false
 ---
 # Create Architecture Skeleton
 
-Our first requirement is to copy general files and folders into each individual
-user's root folder on account creation. This problem has been solved within
-standard Linux distributions through a special directory called `/etc/skel`,
-which we'll emulate with a Box specific solution here. When adding a new user in
-Linux, the files and folders within `/etc/skel` are copied to the new user's
-home directory.
+Our first requirement is to copy general files and folders into each individual user's root folder on account creation. This problem has been solved within standard Linux distributions through a directory called `/etc/skel`, which we'll emulate with a Box specific solution here. When adding a new user in Linux, the files and folders within `/etc/skel` are copied to the new user's home directory.
 
-When creating a
-[JWT-based Box application](guide://applications/custom-apps/jwt-setup), a
-[Service Account](guide://authentication/user-types/app-users) is created
-within the Box Enterprise. A Service Account is similar in functionality to a
-co-admin within a Box Enterprise, and most useful to this use case, can own,
-copy, and collaborate other users on files and folders. More importantly, you
-don't have to use a Service Account strictly for developing custom applications
-for users, and instead, can use a Service Account in more of an automation
-capacity.
+When creating a [JWT-based Box application](guide://applications/custom-apps/jwt-setup), a [Service Account](guide://authentication/user-types/app-users) is created within the Box Enterprise. A Service Account is similar in functionality to a co-admin within a Box Enterprise, and most useful to this use case, can own, copy, and collaborate other users on files and folders. More importantly, you don't have to use a Service Account strictly for developing custom applications for users, and instead, can use a Service Account in more of an automation capacity.
 
 <Message>
 
 # Box Custom Application Requirements
 
-When creating your JWT-based custom Box application for this recipe, you'll
-need to enable the following scopes: **Manage users**, **Manage groups**,
-**Perform Actions as Users**, and **Generate User Access Tokens**.
+When creating your JWT-based custom Box application for this recipe, you'll need to enable the following scopes: **Manage users**, **Manage groups**, **Perform Actions as Users**, and **Generate User Access Tokens**.
 
-See [JWT Application Setup](guide://applications/custom-apps/jwt-setup) for
-more information on creating a JWT-based Box application and the scopes in a
-Box application.
+See [JWT Application Setup](guide://applications/custom-apps/jwt-setup) for more information on creating a JWT-based Box application and the scopes in a Box application.
 
 </Message>
 
-We'll start by creating the `etc` and `skel` folders and granting ownership of
-the folders to the Service Account.
+We'll start by creating the `etc` and `skel` folders and granting ownership of the folders to the Service Account.
 
 <Tabs>
 
@@ -108,8 +90,7 @@ the folders to the Service Account.
 
 </Tabs>
 
-The code here can optionally be reused to build any folder structure formatted
-as the JSON objects above demonstrate.
+The code here can optionally be reused to build any folder structure formatted as the JSON objects above demonstrate.
 
 <Tabs>
 

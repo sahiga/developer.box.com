@@ -15,15 +15,15 @@ scId: api-calls/permissions-and-errors
 id: api-calls/permissions-and-errors/common-errors
 isIndex: false
 ---
+<!-- alex disable failed -->
+
 # Common Errors
 
-The Box APIs uses [HTTP status codes][status-codes] to communicate if a request
-has been successfully processed or not.
+The Box APIs uses [HTTP status codes][status-codes] to communicate if a request has been successfully processed or not.
 
 ## Client error
 
-Most client errors in the HTTP 4XX, and some server errors in the HTTP 5XX range
-returns a standard client error JSON object.
+Most client errors in the HTTP 4XX, and some server errors in the HTTP 5XX range returns a standard client error JSON object.
 
 ```json
 {
@@ -40,8 +40,7 @@ Please see the [Client Error resource](resource://client_error) for more details
 
 ## Common error codes
 
-Please check our [Developer Troubleshooting Articles][articles]
-for solution to common errors encountered when working with the Box APIs.
+Please check our [Developer Troubleshooting Articles][articles] for solution to common errors encountered when working with the Box APIs.
 
 ### 400 Bad Request
 

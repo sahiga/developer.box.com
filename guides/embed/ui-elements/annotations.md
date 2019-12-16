@@ -16,30 +16,22 @@ isIndex: false
 ---
 # Annotations
 
-Box Annotations allow developers to provide collaboration capabilities right
-from within the embedded Box preview in their application. Box Annotations fit a
-wide range of use cases and can be used to draw the previewer's attention and/or
-provide feedback on specific parts of a document or images.
+Box Annotations allow developers to provide collaboration capabilities right from within the embedded Box preview in their application. Box Annotations fit a wide range of use cases and can be used to draw the previewer's attention and/or provide feedback on specific parts of a document or images.
 
 <CTA to="g://embed/ui-elements/preview">
 Learn more about Content Preview
 
 </CTA>
 
-Box Content Preview currently supports four annotation types - highlight
-comment, highlight only, draw, and point annotation. Box Annotations are today
-supported on documents and image previews only. You can find the full list of
-supported file types for Box Content Preview [here][filetypes].
+Box Content Preview currently supports four annotation types - highlight comment, highlight only, draw, and point annotation. Box Annotations are today supported on documents and image previews only. You can find the full list of supported file types for Box Content Preview [here][filetypes].
 
 ## Browser support
 
-[Learn more about browser support](g://embed/ui-elements/browser) for Box UI
-element.
+[Learn more about browser support](g://embed/ui-elements/browser) for Box UI element.
 
 ## Usage
 
-Box Annotations can be used by pulling from our [NPM
-package](https://www.npmjs.com/package/box-annotations).
+Box Annotations can be used by pulling from our [NPM package](https://www.npmjs.com/package/box-annotations).
 
 ## Initialization
 
@@ -57,37 +49,20 @@ const annotator = new annotatorConf.CONSTRUCTOR(options);
 annotator.init(scale);
 ```
 
-Where `disabledAnnotationTypes` is a string of valid annotation types to
-disable. See [Enabling/Disabling Annotations and Annotation
-Types](#section-enabling-disabling-annotations-and-annotation-types) below for
-more details on viewer specific annotation configurations.
+Where `disabledAnnotationTypes` is a string of valid annotation types to disable. See [Enabling/Disabling Annotations and Annotation Types](#section-enabling-disabling-annotations-and-annotation-types) below for more details on viewer specific annotation configurations.
 
 ## Authentication
 
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
+The UI Elements are designed in an authentication agnostic way so whether you are using UI Elements for users who have Box accounts (Managed Users) or non-Box accounts (App Users), UI Elements should work out of the box. The reason for this is that UI Elements only expect a "token" to be passed in for authentication, and Box provides two different ways to generate tokens - OAuth and JWT.
 
 <CTA to="g://authentication/select">
 Learn about selecting an authentication method
 
 </CTA>
 
-If your application requires the end user to only be able to access a subset of
-the Annotations functionality, you can use
-[Downscoping](g://authentication/access-tokens/downscope) to appropriately
-downscope your Access Token to a resulting token that has the desired set of
-permissions, and can thus, be securely passed to the end user client
-initializing Annotations.
+If your application requires the end user to only be able to access a subset of the Annotations functionality, you can use [Downscoping](g://authentication/access-tokens/downscope) to appropriately downscope your Access Token to a resulting token that has the desired set of permissions, and can thus, be securely passed to the end user client initializing Annotations.
 
-Below are a set of new Annotation-specific scopes to go alongside Downscoping.
-These allow developers to enable/disable functionality on Box
-Annotations by configuring the appropriate scopes on the downscoped token. To
-learn more, see [Special Scopes for the Box UI
-Elements](g://embed/ui-elements/scopes).
+Below are a set of new Annotation-specific scopes to go alongside Downscoping. These allow developers to enable/disable functionality on Box Annotations by configuring the appropriate scopes on the downscoped token. To learn more, see [Dedicated scopes for the Box UI Elements](g://embed/ui-elements/scopes).
 
 ## Parameters & Options
 
@@ -168,10 +143,7 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 
 ## Enabling/Disabling Annotations and Annotation Types
 
-Annotation types can be selectively disabled through preview options. Viewer
-options override global `showAnnotations` value, for that viewer. See [Box
-Content Preview](g://embed/ui-elements/preview) for more details on how to
-set up the Preview instances that are used with Box Annotations here.
+Annotation types can be selectively turned off through preview options. Viewer options override global `showAnnotations` value, for that viewer. See [Box Content Preview](g://embed/ui-elements/preview) for more details on how to set up the Preview instances that are used with Box Annotations here.
 
 ```js
 preview.show(..., {
@@ -194,15 +166,11 @@ preview.show(..., {
 });
 ```
 
-This enables or disabled the annotations if `enabled` is set. This respects the
-`showAnnotations` value if empty. The `enabledTypes` value is a list of
-annotation types to enable for this viewer. If empty, will respect default types
-for that annotator.
+This turns the annotations on if `enabled` is set to `true`. This respects the `showAnnotations` value if empty. The `enabledTypes` value is a list of annotation types to enable for this viewer. If empty, will respect default types for that annotator.
 
 ### Example
 
-Enable all annotations, turn off for Image Viewers, and enable only point
-annotations on Document viewer:
+Enable all annotations, turn off for Image Viewers, and enable only point annotations on Document viewer:
 
 ```js
 preview.show(fileId, token, {
@@ -225,43 +193,31 @@ preview.show(fileId, token, {
 
 ## Annotators
 
-The name of an annotator can be one of the following `DocAnnotator` or
-`ImageAnnotator`. Call `boxAnnotations.getAnnotators()` to get the list of
-possible annotators.
+The name of an annotator can be one of the following `DocAnnotator` or `ImageAnnotator`. Call `boxAnnotations.getAnnotators()` to get the list of possible annotators.
 
 ## Additional Methods
 
 <!-- markdownlint-disable line-length -->
 
 * `annotator.init()` initializes the annotator.
-* `annotator.isModeAnnotatable(/* String */ type)` returns whether or not the
-  current annotation mode is enabled for the current viewer/annotator.
-* `annotator.showModeAnnotateButton(/* String */ currentMode)` shows the
-  annotate button for the specified annotation mode.
-* `annotator.getAnnotateButton(/* String */ annotatorSelector)` gets the
-  annotation button element.
+* `annotator.isModeAnnotatable(/* String */ type)` returns whether or not the current annotation mode is enabled for the current viewer/annotator.
+* `annotator.showModeAnnotateButton(/* String */ currentMode)` shows the annotate button for the specified annotation mode.
+* `annotator.getAnnotateButton(/* String */ annotatorSelector)` gets the annotation button element.
 * `annotator.showAnnotations()` fetches and shows saved annotations.
 * `annotator.hideAnnotations()` hides annotations.
-* `annotator.hideAnnotationsOnPage(/* number */ pageNum)` hides annotations on a
-  specified page.
+* `annotator.hideAnnotationsOnPage(/* number */ pageNum)` hides annotations on a specified page.
 * `annotator.setScale()` sets the zoom scale.
-* `annotator.toggleAnnotationHandler()` toggles annotation modes on and off.
-  When an annotation mode is on, annotation threads will be created at that
-  location.
+* `annotator.toggleAnnotationHandler()` toggles annotation modes on and off. When an annotation mode is on, annotation threads will be created at that location.
 * `annotator.disableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)` disables the specified annotation mode.
 * `annotator.enableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)` enables the specified annotation mode.
-* `annotator.getAnnotatedEl(/* HTMLElement */ containerEl)` determines the
-  annotated element in the viewer.
-* `annotator.createAnnotationThread(/* Annotation[] */ annotations, /* Object */ location, /* String */ [annotation type])`
-  creates the proper type of annotation thread, adds it to the in-memory map, and returns it.
+* `annotator.getAnnotatedEl(/* HTMLElement */ containerEl)` determines the annotated element in the viewer.
+* `annotator.createAnnotationThread(/* Annotation[] */ annotations, /* Object */ location, /* String */ [annotation type])` creates the proper type of annotation thread, adds it to the in-memory map, and returns it.
 
 <!-- markdownlint-enable line-length -->
 
 ## Events
 
-Events can be bound to the annotator object with `addListener` and removed with
-`removeListener`. Event listeners should be bound before `showAnnotations()` is
-called, otherwise events can be missed.
+Events can be bound to the annotator object with `addListener` and removed with `removeListener`. Event listeners should be bound before `showAnnotations()` is called, otherwise events can be missed.
 
 ```js
 /* global BoxAnnotations */
@@ -289,14 +245,9 @@ annotator.removeListener(EVENTNAME, listener);
 
 `EVENTNAME` can be one of the following
 
-* `annotator` event will be fired when we have the annotator instance first
-  available. Box Annotations fires this event before `load` so that clients can
-  attach their listeners before the `load` event is fired from Box Content
-  Preview.
-* `annotationsfetched` event will be fired when annotations have been fetched
-  from the Box API.
-* `annotationmodeenter` event will be fired on when an annotation mode is
-  entered. The event data will contain:
+* `annotator` event will be triggered when we have the annotator instance first available. Box Annotations trigger this event before `load` so that clients can attach their listeners before the `load` event is triggered from Box Content Preview.
+* `annotationsfetched` event will be triggered when annotations have been fetched from the Box API.
+* `annotationmodeenter` event will be triggered on when an annotation mode is entered. The event data will contain:
 
 ```js
 {
@@ -307,8 +258,7 @@ annotator.removeListener(EVENTNAME, listener);
 }
 ```
 
-`annotationmodeexit` event will be fired on when an annotation mode is exited.
-The event data will contain:
+`annotationmodeexit` event will be triggered on when an annotation mode is exited. The event data will contain:
 
 ```js
 {
@@ -319,8 +269,7 @@ The event data will contain:
 }
 ```
 
-`annotationerror` event will be fired when an annotation error has occurred. The
-event data will contain:
+`annotationerror` event will be triggered when an annotation error has occurred. The event data will contain:
 
 ```js
 {
@@ -328,8 +277,7 @@ event data will contain:
 }
 ```
 
-`annotationpending` event will be fired when an annotation thread was created
-but has not yet been saved on the server. The event data will contain:
+`annotationpending` event will be triggered when an annotation thread was created but has not yet been saved on the server. The event data will contain:
 
 ```js
 {
@@ -342,8 +290,7 @@ but has not yet been saved on the server. The event data will contain:
 }
 ```
 
-`annotationthreadsaved` event will be fired when an annotation thread was saved
-on the server. The event data will contain:
+`annotationthreadsaved` event will be triggered when an annotation thread was saved on the server. The event data will contain:
 
 ```js
 {
@@ -356,8 +303,7 @@ on the server. The event data will contain:
 }
 ```
 
-`annotationthreaddeleted` event will be fired when an annotation thread was
-deleted on the server. The event data will contain:
+`annotationthreaddeleted` event will be triggered when an annotation thread was deleted on the server. The event data will contain:
 
 ```js
 {
@@ -370,8 +316,7 @@ deleted on the server. The event data will contain:
 }
 ```
 
-`annotationsaved` event will be fired when an annotation is added and saved to
-an existing annotation thread on the server. The event data will contain:
+`annotationsaved` event will be triggered when an annotation is added and saved to an existing annotation thread on the server. The event data will contain:
 
 ```js
 {
@@ -384,9 +329,7 @@ an existing annotation thread on the server. The event data will contain:
 }
 ```
 
-`annotationdeleted` event will be fired when an annotation is deleted from an
-existing thread on the server. The entire annotation thread is not deleted. The
-event data will contain:
+`annotationdeleted` event will be triggered when an annotation is deleted from an existing thread on the server. The entire annotation thread is not deleted. The event data will contain:
 
 ```js
 {
@@ -399,8 +342,7 @@ event data will contain:
 }
 ```
 
-`annotationcanceled` event will be fired when an annotation is canceled from
-posting on either a new or existing thread. The event data will contain:
+`annotationcanceled` event will be triggered when an annotation is canceled from posting on either a new or existing thread. The event data will contain:
 
 ```js
 {
@@ -413,8 +355,7 @@ posting on either a new or existing thread. The event data will contain:
 }
 ```
 
-`annotationdeleteerror` event will be fired when an error occurs while deleting
-an annotation on either a new or existing thread. The event data will contain:
+`annotationdeleteerror` event will be triggered when an error occurs while deleting an annotation on either a new or existing thread. The event data will contain:
 
 ```js
 {
@@ -427,8 +368,7 @@ an annotation on either a new or existing thread. The event data will contain:
 }
 ```
 
-`annotationcreateerror` event will be fired when an error occurs while posting
-an annotation on either a new or existing thread. The event data will contain:
+`annotationcreateerror` event will be triggered when an error occurs while posting an annotation on either a new or existing thread. The event data will contain:
 
 ```js
 {
@@ -441,10 +381,7 @@ an annotation on either a new or existing thread. The event data will contain:
 }
 ```
 
-`annotatorevent` Each annotator will fire its own sets of events. For example,
-the Image Annotator will fire `rotate` or `resize`, etc. while other annotator
-may fire another set of events. The Annotator wrapper will also re-emit events
-at the Preview level in Box Content Preview, with event data containing:
+`annotatorevent` Each annotator will trigger its own sets of events. For example, the Image Annotator will trigger `rotate` or `resize`, etc. while other annotator may trigger another set of events. The Annotator wrapper will also re-emit events at the Preview level in Box Content Preview, with event data containing:
 
 ```js
 {
@@ -536,7 +473,7 @@ The following methods are available for the annotation threads.
 
 ### Thread Events
 
-All annotation threads fire the following events. The event data will contain:
+All annotation threads trigger the following events. The event data will contain:
 
 ```js
 {
@@ -588,14 +525,10 @@ The following methods are available for the annotation dialog.
 
 ## Supported Annotation Types
 
-Point annotations are supported on both document and image formats. Highlight
-comment, highlight only, and draw annotations are only supported on document
-formats.
+Point annotations are supported on both document and image formats. Highlight comment, highlight only, and draw annotations are only supported on document formats.
 
-Supported document file extensions: `pdf`, `doc`, `docx`, `ppt`, `pptx`, `xlsx`,
-`xls`, `xlsm`.
+Supported document file extensions: `pdf`, `doc`, `docx`, `ppt`, `pptx`, `xlsx`, `xls`, `xlsm`.
 
-Supported image file extensions: `ai`, `bmp`, `dcm`, `eps`, `gif`, `png`, `ps`,
-`psd`, `svs`, `tga`, `tif`, `tiff`.
+Supported image file extensions: `ai`, `bmp`, `dcm`, `eps`, `gif`, `png`, `ps`, `psd`, `svs`, `tga`, `tif`, `tiff`.
 
 [filetypes]: https://community.box.com/t5/Managing-Your-Content/What-file-types-and-fonts-are-supported-by-Box-s-Content-Preview/ta-p/327#FileTypesSupported

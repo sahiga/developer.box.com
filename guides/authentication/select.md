@@ -13,8 +13,7 @@ isIndex: false
 ---
 # Select Auth Method
 
-The type of authorization your application can use depends on the type of
-Box Application that you've configured in the developer console.
+The type of authorization your application can use depends on the type of Box Application that you've configured in the developer console.
 
 <CTA to="guide://applications/select">
 Learn how to select the application type for your app
@@ -29,37 +28,30 @@ The following authorization methods are available to each Box Application type.
 
 | Box Application Type         | Supports OAuth 2.0? | JWT? | App Token? | Developer Token? |
 | ---------------------------- | ------------------- | ---- | ---------- | ---------------- |
-| [Custom App][custom-app]     | Yes                 | Yes  | Yes        | Yes              |
-| [Custom Skill][custom-skill] | No                  | No   | No         | No               |
-| Enterprise Integration       | Yes                 | Yes  | No         | Yes              |
-| Partner Integration          | No                  | No   | Yes        | No               |
+| [Custom App][custom-app]     | はい                  | はい   | はい         | はい               |
+| [Custom Skill][custom-skill] | いいえ                 | いいえ  | いいえ        | いいえ              |
+| Enterprise Integration       | はい                  | はい   | いいえ        | はい               |
+| Partner Integration          | いいえ                 | いいえ  | はい         | いいえ              |
 
 <!-- markdownlint-enable line-length -->
 
 <Message warning>
 
-Enterprise and Partner Integrations exist for legacy purposes. Please use
-Custom Apps instead and use the relevant authentication method where needed.
+Enterprise and Partner Integrations exist for legacy purposes. Please use Custom Apps instead and use the relevant authentication method where needed.
 
 </Message>
 
 <Message>
 
-When you are creating a [Custom Skill][custom-skill] or Partner Integration
-application there is no need to select a authentication method as there is no
-choice to be made.
+When you are creating a [Custom Skill][custom-skill] or Partner Integration application there is no need to select a authentication method as there is no choice to be made.
 
-In the case of Custom Skills, there isn't even a need to set up anything further
-as every Skills Event-payload will include an Access Token that can be used to
-make the API calls.
+In the case of Custom Skills, there isn't even a need to set up anything further as every Skills Event-payload will include an Access Token that can be used to make the API calls.
 
 </Message>
 
 ### Client-side OAuth 2.0
 
-Client-side OAuth 2.0 is only available to [Custom Apps][custom-app] and
-Enterprise Integrations. It requires the application to redirect a user to the
-Box website to grant the application's access to their data.
+Client-side OAuth 2.0 is only available to [Custom Apps][custom-app] and Enterprise Integrations. It requires the application to redirect a user to the Box website to grant the application's access to their data.
 
 <ImageFrame center width="400" shadow border>
 
@@ -75,8 +67,7 @@ Client-side authentication is the ideal authentication method for apps that:
 
 * Work with users that already have existing Box accounts
 * Want or require users to know that they are using Box
-* Want to store data within the user's Box account and not within the the
-  application's Box account
+* Want to store data within the user's Box account and not within the the application's Box account
 
 </Message>
 
@@ -87,11 +78,7 @@ Learn about client-side authentication with OAuth 2.0
 
 ### Server-side JWT
 
-Server-side authentication using JSON Web Tokens (JWT) is only available to
-[Custom Apps][custom-app] and Enterprise Integrations. It does not involve a
-user into the authorization flow and as such can be used to act on behalf of any
-user in an enterprise. JWT uses a public/private key pair verify the
-application's permissions.
+Server-side authentication using JSON Web Tokens (JWT) is only available to [Custom Apps][custom-app] and Enterprise Integrations. It does not involve a user into the authorization flow and as such can be used to act on behalf of any user in an enterprise. JWT uses a public/private key pair verify the application's permissions.
 
 <ImageFrame center shadow border>
 
@@ -108,8 +95,7 @@ Server-side authentication with JWT is the ideal authentication method for apps 
 * Work with users that don't have a Box account
 * Want to use their own identity system
 * Don't want users to have to know that they are using Box
-* Want to store data within the application's Box account and not within the the
-  user's Box account
+* Want to store data within the application's Box account and not within the the user's Box account
 
 </Message>
 
@@ -120,21 +106,15 @@ Learn about server-side authentication with JWT
 
 ### Server-side App Tokens
 
-A server-side App Token is an authentication method where the application only
-has access to read and write data to its own account. This is mainly used by Box
-View applications. By using this authentication method there is no need to
-authorize a user as the application is automatically authenticated as the
-Service Account that belongs to that application.
+A server-side App Token is an authentication method where the application only has access to read and write data to its own account. This is mainly used by Box View applications. By using this authentication method there is no need to authorize a user as the application is automatically authenticated as the Service Account that belongs to that application.
 
 <Message>
 
 # When to use App Tokens?
 
-Server-side authentication with App Tokens is the ideal authentication method
-for apps that:
+Server-side authentication with App Tokens is the ideal authentication method for apps that:
 
-* Work in an environment that either has no user model, or has users that don't
-  have Box accounts
+* Work in an environment that either has no user model, or has users that don't have Box accounts
 * Want to use their own identity system
 * Don't want users to have to know that they are using Box
 * Want to store data in the application's Service Account and not a user's account
@@ -148,17 +128,13 @@ Learn about server-side authentication with App Tokens
 
 ### Developer Token
 
-A server-side Developer Token is a short-lived authentication available to
-developers creating applications that use OAuth 2.0. It is an Access
-Token that is only valid for 1 hour, and authenticates as the developer who
-created the token.
+A server-side Developer Token is a short-lived authentication available to developers creating applications that use OAuth 2.0. It is an Access Token that is only valid for 1 hour, and authenticates as the developer who created the token.
 
 <Message>
 
 # When to use a Developer Token?
 
-A Developer Token is the ideal authentication method during development and
-testing. It is ideal in situations where the developer:
+A Developer Token is the ideal authentication method during development and testing. It is ideal in situations where the developer:
 
 * Wants to quickly test an API calls
 * Does not want to authenticate as a different user
@@ -169,30 +145,26 @@ testing. It is ideal in situations where the developer:
 
 ## Comparison
 
-The following is a quick overview of the key difference between client-side and
-server-side authentication.
+The following is a quick overview of the key difference between client-side and server-side authentication.
 
 <!-- markdownlint-disable line-length -->
 
 |                                   | OAuth 2.0 | JWT | App Tokens | Developer Token |
 | --------------------------------- | --------- | --- | ---------- | --------------- |
-| Requires user involvement?        | Yes       | No  | No         | Yes             |
-| Requires admin approval?          | No        | Yes | Yes        | No              |
-| Can act on behalf of other users? | Yes       | Yes | No         | Yes             |
-| Do users see Box?                 | Yes       | No  | No         | Yes             |
-| Can create App Users?             | No        | Yes | No         | Yes             |
-| Can be used in production?        | Yes       | Yes | Yes        | No              |
+| Requires user involvement?        | はい        | いいえ | いいえ        | はい              |
+| Requires admin approval?          | いいえ       | はい  | はい         | いいえ             |
+| Can act on behalf of other users? | はい        | はい  | いいえ        | はい              |
+| Do users see Box?                 | はい        | いいえ | いいえ        | はい              |
+| Can create App Users?             | いいえ       | はい  | いいえ        | はい              |
+| Can be used in production?        | はい        | はい  | はい         | いいえ             |
 
 <!-- markdownlint-enable line-length -->
 
 <Message>
 
-An Access Token is tied to a specific Box user and the way the token has been
-obtained determines who that user is.
+An Access Token is tied to a specific Box user and the way the token has been obtained determines who that user is.
 
-For example, when using client-side authentication the token represents the
-user who granted access to their account, while while when using server-side
-authentication the token defaults to a Service Account.
+For example, when using client-side authentication the token represents the user who granted access to their account, while while when using server-side authentication the token defaults to a Service Account.
 
 </Message>
 

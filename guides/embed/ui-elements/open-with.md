@@ -15,68 +15,47 @@ isIndex: false
 ---
 # Content Open With
 
-The Box Content Open With UI Element allows developers to embed a dropdown to
-open content stored in box with a partner application, or locally on the
-desktop.
+The Box Content Open With UI Element allows developers to embed a dropdown to open content stored in box with a partner application, or locally on the desktop.
 
-The Element fetches information about enabled integrations using the
-Box API, and calls out to partner services. Users can then take action in these
-services, and the edited content will be automatically saved back to Box.
+The Element fetches information about enabled integrations using the Box API, and calls out to partner services. Users can then take action in these services, and the edited content will be automatically saved back to Box.
 
-The integrations included in the Open With Element are Adobe Sign, Google Suite,
-and Box Edit. Additional information on the Google Suite integration can be
-found on the [Box Community site][community].
+The integrations included in the Open With Element are Adobe Sign, Google Suite, and Box Edit. Additional information on the Google Suite integration can be found on the [Box Community site][community].
 
-Currently, the element only supports [App Users](g://authentication/user-types)
-for authentication.
+Currently, the element only supports [App Users](g://authentication/user-types) for authentication.
 
 ## Installation
 
-[Learn how to install](g://embed/ui-elements/installation) Box UI elements
-either through NPM or the Box CDN.
+[Learn how to install](g://embed/ui-elements/installation) Box UI elements either through NPM or the Box CDN.
 
 <Message>
 
 # Browser support
 
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
+UI elements have [limited support](g://embed/ui-elements/browser) for older browsers. Make sure to add the right polyfills for your targeted browsers.
 
 </Message>
 
 ## Box Edit
 
-Box Edit requires additional setup in order to be integrated into a custom
-application. Box Edit uses the desktop application [Box Tools][tools] in order
-to open content locally.
+Box Edit requires additional setup in order to be integrated into a custom application. Box Edit uses the desktop application [Box Tools][tools] in order to open content locally.
 
 * Requests must use a secure connection (from an `https` domain)
-* The application's domain must be whitelisted by Box Tools. Instructions can be
-  found [here][custom-domains]. The ideal workflow is to bundle these steps
-  within an installer that also installs Box Tools.
-* Safari requires a browser extension to connect to box tools. More details can
-  be found [here][safari].
+* The application's domain must be whitelisted by Box Tools. Instructions can be found [here][custom-domains]. The ideal workflow is to bundle these steps within an installer that also installs Box Tools.
+* Safari requires a browser extension to connect to box tools. More details can be found [here][safari].
 
 ## G Suite
 
-A valid G Suite account is required in order to use the Box for G Suite
-integration. To connect a user's G Suite and Box account, the
-`external_app_user_id` of the app user must be updated to be the email address
-associated with the user's G Suite account.
+A valid G Suite account is required in order to use the Box for G Suite integration. To connect a user's G Suite and Box account, the `external_app_user_id` of the app user must be updated to be the email address associated with the user's G Suite account.
 
-The `external_app_user_id` of an app user can be updated via the
-[`PUT /users/:id`](e://put-users-id) endpoint.
+The `external_app_user_id` of an app user can be updated via the [`PUT /users/:id`](e://put-users-id) endpoint.
 
 ## Setup
 
-The Open With UI Element is intended to be used after whitelisting your
-application and enabling integrations for app users using Box API endpoints.
+The Open With UI Element is intended to be used after whitelisting your application and enabling integrations for app users using Box API endpoints.
 
 ### Activate application
 
-The 'Open With' UI Element is available to any developer building with the Box
-Platform. To activate it for your instance, add the "Enable integrations" scope
-to your application in the developer console.
+The 'Open With' UI Element is available to any developer building with the Box Platform. To activate it for your instance, add the "Enable integrations" scope to your application in the developer console.
 
 <ImageFrame border>
 
@@ -84,15 +63,11 @@ to your application in the developer console.
 
 </ImageFrame>
 
-Once your application has been activated for API calls it will need to be
-reauthorized in your enterprise. The steps for performing these actions are
-available [here](g://applications/custom-apps/app-approval).
+Once your application has been activated for API calls it will need to be reauthorized in your enterprise. The steps for performing these actions are available [here](g://applications/custom-apps/app-approval).
 
 ## List available integrations
 
-The first step to assigning an app integration to a user is to get the list of
-integrations that are available. This `GET` request can be made with the following
-`cURL` request.
+The first step to assigning an app integration to a user is to get the list of integrations that are available. This `GET` request can be made with the following `cURL` request.
 
 ```curl
 curl -X GET https://api.box.com/2.0/app_integrations \
@@ -116,8 +91,7 @@ The app integration IDs are used to assign an integration to a given user.
 
 ## Get a specific integration
 
-To obtain additional information about a specific integration, based on ID, the
-following GET request may be made.
+To obtain additional information about a specific integration, based on ID, the following GET request may be made.
 
 ```curl
 curl -X GET \
@@ -143,8 +117,7 @@ curl -X GET \
 
 ## Add integration to user
 
-To add an app integration to a valid app user, three pieces of information are
-required:
+To add an app integration to a valid app user, three pieces of information are required:
 
 * A valid [Service Account](g://authentication/user-types) Access Token.
 * The ID of the app user to be assigned the integration
@@ -152,15 +125,11 @@ required:
 
 <Message warning>
 
-While the two previous requests to get app integration information can be done
-with any valid token including a valid developer token, adding and removing
-app integrations requires a valid service account's access token. Using a
-developer token will produce a `404 Not Found` error.
+While the two previous requests to get app integration information can be done with any valid token including a valid developer token, adding and removing app integrations requires a valid service account's access token. Using a developer token will produce a `404 Not Found` error.
 
 </Message>
 
-The following `POST` request can be made to assign an app integration to an app
-user:
+The following `POST` request can be made to assign an app integration to an app user:
 
 ```curl
 curl -X POST https://api.box.com/2.0/app_integration_assignments \
@@ -192,14 +161,11 @@ curl -X POST https://api.box.com/2.0/app_integration_assignments \
 }
 ```
 
-The ID in the JSON response can be used to manage app integrations after
-assignment, and should be stored by the application.
+The ID in the JSON response can be used to manage app integrations after assignment, and should be stored by the application.
 
 ## Remove integration from user
 
-To remove an app integration from an app user, the following request may be made
-with a valid service access token and the app integration assignment ID from the
-previous step.
+To remove an app integration from an app user, the following request may be made with a valid service access token and the app integration assignment ID from the previous step.
 
 <!-- markdownlint-disable line-length -->
 
@@ -272,9 +238,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 
 # Access Token
 
-These demos may not fully function until you provide a valid access token. For
-testing purposes, you can use your temporary developer token. This will need
-to be updated under the JS tab in the demo.
+These demos may not fully function until you provide a valid access token. For testing purposes, you can use your temporary developer token. This will need to be updated under the JS tab in the demo.
 
 </Message>
 
@@ -282,12 +246,7 @@ to be updated under the JS tab in the demo.
 
 ## Authentication
 
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
+The UI Elements are designed in an authentication agnostic way so whether you are using UI Elements for users who have Box accounts (Managed Users) or non-Box accounts (App Users), UI Elements should work out of the box. The reason for this is that UI Elements only expect a "token" to be passed in for authentication, and Box provides two different ways to generate tokens - OAuth and JWT.
 
 <CTA to="g://authentication/select">
 Learn about selecting an authentication method
@@ -296,9 +255,7 @@ Learn about selecting an authentication method
 
 ## Scopes
 
-To execute integrations with downscoped tokens, you must include the
-`item_execute_integration` scope as well as the scope required by the specific
-integration you would like to use.
+To run integrations with downscoped tokens, you must include the `item_execute_integration` scope as well as the scope required by the specific integration you would like to use.
 
 * **Google**: `item_readwrite` on the parent folder
 * **Adobe**: `root_readwrite`

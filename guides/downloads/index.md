@@ -8,15 +8,11 @@ isIndex: true
 ---
 # Downloads
 
-The Box API allows for downloading files to the application's server, or directly
-by the end user in a browser.
+The Box API allows for downloading files to the application's server, or directly by the end user in a browser.
 
 ## When not to download
 
-Downloading a file is not always the desired solution, especially if the file is
-only being downloaded for the user to preview, comment, or annotate. In those
-cases we recommend using one of the ways to embed the Box experience straight
-into your application.
+Downloading a file is not always the desired solution, especially if the file is only being downloaded for the user to preview, comment, or annotate. In those cases we recommend using one of the ways to embed the Box experience straight into your application.
 
 <CTA to="g://embed/">
 Learn more about embedding Box
@@ -25,13 +21,9 @@ Learn more about embedding Box
 
 ## Access Errors
 
-It is important to realize that the application needs to have access to the
-file that is to be downloaded. When the application is a authenticated through
-JWT or App Tokens, the user authenticated as is a Service Account. This service
-account does not have access to files besides their own.
+It is important to realize that the application needs to have access to the file that is to be downloaded. When the application is a authenticated through JWT or App Tokens, the user authenticated as is a Service Account. This service account does not have access to files besides their own.
 
-If this user does not have access to the file the application will receive a
-`404 Not Found` error.
+If this user does not have access to the file the application will receive a `404 Not Found` error.
 
 <CTA to="g://authentication/user-types">
 Learn more about different User Types

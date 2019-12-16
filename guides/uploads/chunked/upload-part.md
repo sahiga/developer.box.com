@@ -17,12 +17,9 @@ isIndex: false
 ---
 # Upload Part
 
-To upload a part, first [create an upload session][createsession]. The resulting
-object defines the size of each part and the number of parts to upload.
+To upload a part, first [create an upload session][createsession]. The resulting object defines the size of each part and the number of parts to upload.
 
-Then, upload the bytes for the part you want to upload, specifying the byte
-range for the part, as well as the `SHA` digest to ensure the content is
-uploaded correctly.
+Then, upload the bytes for the part you want to upload, specifying the byte range for the part, as well as the `SHA` digest to ensure the content is uploaded correctly.
 
 <Samples id="put_files_upload_sessions_id">
 
@@ -30,23 +27,19 @@ uploaded correctly.
 
 ## Part Size
 
-Each part’s size must be exactly equal in size to the part size specified in the
-upload session that was created. One exception is the last part of the file, as
-this is allowed to be smaller.
+Each part’s size must be exactly equal in size to the part size specified in the upload session that was created. One exception is the last part of the file, as this is allowed to be smaller.
 
 <Message>
 
 # Tip
 
-As a result, the lower bound of each part's byte range should be
-a multiple of the part size.
+As a result, the lower bound of each part's byte range should be a multiple of the part size.
 
 </Message>
 
 ## Response
 
-After each upload, the resulting response includes the ID and SHA of the part
-uploaded.
+After each upload, the resulting response includes the ID and SHA of the part uploaded.
 
 ```json
 {
@@ -59,28 +52,19 @@ uploaded.
 
 <Message warning>
 
-The client is recommended to log keep all the JSON responses from all part
-uploads as they are needed to [commit the session][commit].
+The client is recommended to log keep all the JSON responses from all part uploads as they are needed to [commit the session][commit].
 
 </Message>
 
 ## Range Overlap
 
-If a part upload request fails with any error code
-`range_overlaps_existing_part` then the application made a mistake in cutting up
-the file into parts and tried to upload a part into a range that already had
-content uploaded for it. The application should assume that this last part was not
-persisted to the session.
+If a part upload request fails with any error code `range_overlaps_existing_part` then the application made a mistake in cutting up the file into parts and tried to upload a part into a range that already had content uploaded for it. The application should assume that this last part was not persisted to the session.
 
 ## Parallel uploads
 
-Although parts can be uploaded in parallel, parts **should** be uploaded in
-order as much as is possible. Parts with a lower byte offset should be uploaded
-before parts with a higher byte offset.
+Although parts can be uploaded in parallel, parts **should** be uploaded in order as much as is possible. Parts with a lower byte offset should be uploaded before parts with a higher byte offset.
 
-The recommended approach is to upload 3 to 5 parts in parallel from a queue
-of parts, ordered by byte offset. If a part upload fails, it should be retried
-before later parts are uploaded.
+The recommended approach is to upload 3 to 5 parts in parallel from a queue of parts, ordered by byte offset. If a part upload fails, it should be retried before later parts are uploaded.
 
 [commit]: g://uploads/chunked/commit-session
 

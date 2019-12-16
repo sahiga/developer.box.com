@@ -16,8 +16,7 @@ isIndex: false
 ---
 # Download in Browser
 
-Sometimes an application wants to embed a file into a page as a HTML element. An
-example would be when working with an audio player.
+Sometimes an application wants to embed a file into a page as a HTML element. An example would be when working with an audio player.
 
 ```html
 <audio controls>
@@ -25,8 +24,7 @@ example would be when working with an audio player.
 </audio>
 ```
 
-In this case, using the regular [download URL][durl] does not work because the
-`dl.boxcloud.com` domain does not support [Cross Origin Resource Sharing][cors].
+In this case, using the regular [download URL][durl] does not work because the `dl.boxcloud.com` domain does not support [Cross Origin Resource Sharing][cors].
 
 Instead an application can use the following format.
 
@@ -38,8 +36,7 @@ https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
 
 # CORS
 
-For this to work the application needs to have the domain of the web site
-hosting this file whitelisted in the [CORS settings][cors].
+For this to work the application needs to have the domain of the web site hosting this file whitelisted in the [CORS settings][cors].
 
 </Message>
 
@@ -47,9 +44,7 @@ hosting this file whitelisted in the [CORS settings][cors].
 
 # Downscope Token
 
-Using this method would expose the Access Token to the end user, allowing them
-to potentially use this token to do more than intended. For this reason we
-recommend [downscoping][downscoping] this token accordingly.
+Using this method would expose the Access Token to the end user, allowing them to potentially use this token to do more than intended. For this reason we recommend [downscoping][downscoping] this token accordingly.
 
 </Message>
 

@@ -19,14 +19,9 @@ isIndex: false
 ---
 # JWT without SDKs
 
-If you are not ready to use any of the official Box SDKs, or an SDK is not
-available in your language of choice, it is totally possible to use the Box APIs
-without them.
+If you are not ready to use any of the official Box SDKs, or an SDK is not available in your language of choice, it is totally possible to use the Box APIs without them.
 
-This guide will take you through user authentication using JWT without the use
-of the Box SDKs. JWT authentication is designed for working directly with the
-Box API without requiring a user to redirect through Box to authorize your
-application.
+This guide will take you through user authentication using JWT without the use of the Box SDKs. JWT authentication is designed for working directly with the Box API without requiring a user to redirect through Box to authorize your application.
 
 ## Overview
 
@@ -37,19 +32,13 @@ To complete a JWT authorization the following steps need to be completed.
 3. [Create the JWT assertion](#3-create-jwt-assertion)
 4. [Request the Access Token](#4-request-access-token)
 
-At the end of this flow, the application has an Access Token that can be used to
-make API calls on behalf of the application.
+At the end of this flow, the application has an Access Token that can be used to make API calls on behalf of the application.
 
 <Message notice>
 
-The access token acquired through JWT is inherently tied to the Service
-Account for the application. Any API call made with this token will seem to
-come from this application and will not have access to files and folders from
-other users without explicitly getting access them.
+The access token acquired through JWT is inherently tied to the Service Account for the application. Any API call made with this token will seem to come from this application and will not have access to files and folders from other users without explicitly getting access them.
 
-It is possible to [act as another user](g://authentication/oauth2/as-user)
-using the `As-User` header or by requesting a
-[User Access Token](g://authentication/jwt/user-access-tokens).
+It is possible to [act as another user](g://authentication/oauth2/as-user) using the `As-User` header or by requesting a [User Access Token](g://authentication/jwt/user-access-tokens).
 
 </Message>
 
@@ -58,14 +47,12 @@ using the `As-User` header or by requesting a
 Before we can get started, you will need to have completed the following steps.
 
 * Create a Box Application within the developer console
-* Create and download the private key configuration file for your application
-  and save it as `config.json`
+* Create and download the private key configuration file for your application and save it as `config.json`
 * Ensure your Box Application is approved for usage within your enterprise
 
 ## 1. Read JSON configuration
 
-After creating a Box Application there should be a `config.json` file containing
-the application's private key and other details. The following is an example.
+After creating a Box Application there should be a `config.json` file containing the application's private key and other details. The following is an example.
 
 <Tabs>
 
@@ -208,18 +195,13 @@ $config = json_decode($json);
 
 # Parsing JSON
 
-In some programming languages there is more than one way to read and parse
-JSON from a file. Refer to guides on your preferred programming language for
-more complete guides, including error handling.
+In some programming languages there is more than one way to read and parse JSON from a file. Refer to guides on your preferred programming language for more complete guides, including error handling.
 
 </Message>
 
 ## 2. Decrypt private key
 
-To create the JWT assertion the application needs the private key from the
-configuration object. This private key is encrypted and requires a passcode to
-unlock. Both the encrypted key and passcode are provided in the configuration
-object.
+To create the JWT assertion the application needs the private key from the configuration object. This private key is encrypted and requires a passcode to unlock. Both the encrypted key and passcode are provided in the configuration object.
 
 <Tabs>
 
@@ -378,21 +360,15 @@ $key = openssl_pkey_get_private($private_key, $passphrase);
 
 # An alternative to loading private key from file
 
-the application might not want to keep both the private key and password
-stored on disk. An alternative option would be to pass in the password as an
-environment variable, separating the private key from the token used to unlock
-the key.
+the application might not want to keep both the private key and password stored on disk. An alternative option would be to pass in the password as an environment variable, separating the private key from the token used to unlock the key.
 
 </Message>
 
 ## 3. Create JWT assertion
 
-To authenticate to the Box API the application needs to create a signed JWT
-assertion that can be exchanged for a traditional OAuth 2.0 Access Token.
+To authenticate to the Box API the application needs to create a signed JWT assertion that can be exchanged for a traditional OAuth 2.0 Access Token.
 
-A JWT assertion is essentially an encrypted JSON object, consisting of a
-`header`, `claims`, and `signature`. Let's start by creating the `claims`,
-sometimes also referred to as the `payload`.
+A JWT assertion is essentially an encrypted JSON object, consisting of a `header`, `claims`, and `signature`. Let's start by creating the `claims`, sometimes also referred to as the `payload`.
 
 <Tabs>
 
@@ -526,9 +502,7 @@ $claims = [
 
 <!-- markdownlint-enable line-length -->
 
-Next, these claims need to be signed using the private key. Depending on the
-language and library used, the `header` of the JWT is configured by defining the
-encryption algorithm and the ID of the public key used to sign the claims.
+Next, these claims need to be signed using the private key. Depending on the language and library used, the `header` of the JWT is configured by defining the encryption algorithm and the ID of the public key used to sign the claims.
 
 <Tabs>
 
@@ -647,17 +621,13 @@ For the header the following parameters are supported.
 
 Using JWT libraries
 
-Signing your own JWT can be a complicated and painful process. Luckily, the
-hard work has already been done for you and libraries exist in pretty much
-every language. Head over to [JWT.io](https://jwt.io/) for an overview.
+Signing your own JWT can be a complicated and painful process. Luckily, the hard work has already been done for you and libraries exist in pretty much every language. Head over to [JWT.io](https://jwt.io/) for an overview.
 
 </Message>
 
 ## 4. Request Access Token
 
-The final step is to exchange the short lived JWT assertion for a more long
-lived OAuth 2.0 Access Token by calling the authentication endpoint with the
-assertion as a parameter.
+The final step is to exchange the short lived JWT assertion for a more long lived OAuth 2.0 Access Token by calling the authentication endpoint with the assertion as a parameter.
 
 <Tabs>
 
@@ -832,16 +802,14 @@ $access_token = json_decode($data)->access_token;
 
 ## Summary
 
-By now the application should be able to authorize an application using JWT
-without using any of the SDKs, by using the following steps.
+By now the application should be able to authorize an application using JWT without using any of the SDKs, by using the following steps.
 
 1. [Read the configuration file](#1-read-json-configuration)
 2. [Decrypt the private key](#2-decrypt-private-key)
 3. [Create the JWT assertion](#3-create-jwt-assertion)
 4. [Request the Access Token](#4-request-access-token)
 
-To learn how to use this token head over to the guide on [Making API
-calls](g://api-calls).
+To learn how to use this token head over to the guide on [Making API calls](g://api-calls).
 
 ## Code Samples
 

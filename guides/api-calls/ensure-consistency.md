@@ -22,13 +22,11 @@ isIndex: false
 ---
 # Ensure Consistency
 
-A few of the Box APIs support special headers to ensure consistency between your
-application and Box.
+A few of the Box APIs support headers to control consistency between your application and Box.
 
 ## Etag, If-Match, and If-None-Match
 
-Many of the file system items (files or folders) that can be requested via the
-API return an `etag` value for the item.
+Many of the file system items (files or folders) that can be requested via the API return an `etag` value for the item.
 
 For example, a file resource returns an `etag` in the JSON response.
 
@@ -48,12 +46,9 @@ curl https://api.box.com/2.0/files/12345 \
 }
 ```
 
-This `etag` can be used as the value of a `If-Match` or `If-None-Match`
-header to either ensure a resource hasn't changed since the `etag` value was
-received, or to prevent unnecessary downloads for items that haven't changed.
+This `etag` can be used as the value of a `If-Match` or `If-None-Match` header to either ensure a resource hasn't changed since the `etag` value was received, or to prevent unnecessary downloads for items that haven't changed.
 
-For example, to fetch the same file only if it has changed, pass in the `etag`
-value in a `If-None-Match` header.
+For example, to fetch the same file only if it has changed, pass in the `etag` value in a `If-None-Match` header.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
@@ -65,11 +60,7 @@ This API call would result in an empty response if the file had not changed.
 
 ## Ensure consistent changes
 
-The `If-Match` header allows your application to ensure that no changes are
-made to items when another application or a user has made changes to the item
-since your application last inspected it. This helps ensure that
-changes aren't lost when two applications or users are changing items at the
-same time.
+The `If-Match` header allows your application to ensure that no changes are made to items when another application or a user has made changes to the item since your application last inspected it. This helps ensure that changes aren't lost when two applications or users are changing items at the same time.
 
 The following endpoints support this header.
 
@@ -87,32 +78,26 @@ The following endpoints support this header.
 
 <!-- markdownlint-enable line-length -->
 
-The response of these APIs calls depends on the existence of the item,
-and whether the `etag` value matches the most recent version.
+The response of these APIs calls depends on the existence of the item, and whether the `etag` value matches the most recent version.
 
 | Item found? | Etag match? | HTTP Status |
 | ----------- | ----------- | ----------- |
-| Yes         | Yes         | 200         |
-| Yes         | No          | 412         |
-| No          | Yes         | 412         |
-| No          | No          | 404         |
+| はい          | はい          | 200         |
+| はい          | いいえ         | 412         |
+| いいえ         | はい          | 412         |
+| いいえ         | いいえ         | 404         |
 
 <Message type="warning">
 
 # Moving items
 
-The `If-Match` header can not be used to prevent moving of files, folders,
-or web links. Instead, Box will always ensure that the latest item is moved to
-the new location.
+The `If-Match` header can not be used to prevent moving of files, folders, or web links. Instead, Box will always ensure that the latest item is moved to the new location.
 
 </Message>
 
 ## Prevent unnecessary request downloads
 
-The `If-None-Match` header allows your application to ensure that no information
-is downloaded for items that have not changed since your application last
-inspected it. This helps ensure no unnecessary information is downloaded,
-speeding up your application and saving on bandwidth.
+The `If-None-Match` header allows your application to ensure that no information is downloaded for items that have not changed since your application last inspected it. This helps ensure no unnecessary information is downloaded, speeding up your application and saving on bandwidth.
 
 <!-- markdownlint-disable line-length -->
 
@@ -125,12 +110,11 @@ speeding up your application and saving on bandwidth.
 
 <!-- markdownlint-enable line-length -->
 
-The response of these APIs calls depends on the existence of the item,
-and whether the `etag` value matches the most recent version.
+The response of these APIs calls depends on the existence of the item, and whether the `etag` value matches the most recent version.
 
 | Item found? | Etag match? | HTTP Status |
 | ----------- | ----------- | ----------- |
-| Yes         | Yes         | 304         |
-| Yes         | No          | 200         |
-| No          | Yes         | 404         |
-| No          | No          | 404         |
+| はい          | はい          | 304         |
+| はい          | いいえ         | 200         |
+| いいえ         | はい          | 404         |
+| いいえ         | いいえ         | 404         |

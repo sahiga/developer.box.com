@@ -15,31 +15,19 @@ isIndex: false
 ---
 # Deprovision User
 
-Part of regular Box enterprise maintenance is removing accounts for users that
-are no longer active in your enterprise. When removing a user from your
-enterprise, you'll need to move all content owned by the user into another
-account before deleting the user account.
+Part of regular Box enterprise maintenance is removing accounts for users that are no longer active in your enterprise. When removing a user from your enterprise, you'll need to move all content owned by the user into another account before deleting the user account.
 
 <Message type="notice">
 
-The delete user request will fail if the user account still has content in
-it. An optional `force` parameter is available in the API call, which will
-force delete the user account along with all content in the account.
+The delete user request will fail if the user account still has content in it. An optional `force` parameter is available in the API call, which will force delete the user account along with all content in the account.
 
 </Message>
 
-The standard best practice when decommissioning a user account is to move all
-content owned by that user into another admin level account or into the
-application service account. Once moved, you can transfer ownership of the
-content to a different user or simply collaborate a user on the content if
-needed.
+The standard best practice when decommissioning a user account is to move all content owned by that user into another admin level account or into the application service account. Once moved, you can transfer ownership of the content to a different user or collaborate a different user on the content if needed.
 
 ## Deprovisioning Example
 
-Use the following code samples to transfer a user's content and then delete the
-user. When content is being transferred, a new folder is created in the
-destination user's root folder following this pattern:
-`employee_email@email.com - employee_name's Files and Folders`
+Use the following code samples to transfer a user's content and then delete the user. When content is being transferred, a new folder is created in the destination user's root folder following this pattern: `employee_email@email.com - employee_name's Files and Folders`
 
 <Tabs>
 

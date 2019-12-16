@@ -16,11 +16,9 @@ isIndex: false
 ---
 # List Collaboration Whitelists for an Enterprise
 
-Listing the collaboration whitelists will return all domains that permit
-collaborations to be created with the current enterprise.
+Listing the collaboration whitelists will return all domains that permit collaborations to be created with the current enterprise.
 
-There are no required parameters for the request, but `limit` and `market`
-parameters may optionally be set to limit and page through the full result set.
+There are no required parameters for the request, but `limit` and `market` parameters may optionally be set to limit and page through the full result set.
 
 <Samples id="get_collaboration_whitelist_entries">
 

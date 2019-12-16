@@ -18,19 +18,13 @@ isIndex: false
 ---
 # Create Upload Session
 
-To create an upload session, call the
-[createsession][createsession] API with the desired `file_name`
-and `folder_id` to put the file in, as well as the `file_size` of the file to be
-uploaded.
+To create an upload session, call the [`POST /files/upload_sessions`][createsession] API with the desired `file_name` and `folder_id` to put the file in, as well as the `file_size` of the file to be uploaded.
 
 <Samples sample="post_files_upload_sessions">
 
 </Samples>
 
-To create a session for a new version of an existing file, call the
-[createsessionversion][createsessionversion] API instead. In this
-case, the `file_name` and `folder_id` are only required when renaming or moving
-the file in the process.
+To create a session for a new version of an existing file, call the [`POST /files/:id/upload_sessions`][createsessionversion] API instead. In this case, the `file_name` and `folder_id` are only required when renaming or moving the file in the process.
 
 <Samples sample="post_files_id_upload_sessions">
 
@@ -38,14 +32,11 @@ the file in the process.
 
 ## Pre-flight Check
 
-Creating an upload session also performs a [preflight check][check], making it
-unnecessary to do so separately when working with chunked uploads.
+Creating an upload session also performs a [preflight check][check], making it unnecessary to do so separately when working with chunked uploads.
 
 ## Response
 
-When a session is created successfully the response includes an [Upload
-Session][uploadsession] that includes a session ID, the number of parts, the
-part sizes, as well as links to the relevant next API endpoints to use.
+When a session is created successfully the response includes an [Upload Session][uploadsession] that includes a session ID, the number of parts, the part sizes, as well as links to the relevant next API endpoints to use.
 
 <!-- markdownlint-disable line-length -->
 
@@ -70,8 +61,7 @@ part sizes, as well as links to the relevant next API endpoints to use.
 
 <!-- markdownlint-enable line-length -->
 
-The upload session defines the size of the parts to use when uploading the
-individual parts.
+The upload session defines the size of the parts to use when uploading the individual parts.
 
 [createsession]: e://post_files_upload_sessions
 

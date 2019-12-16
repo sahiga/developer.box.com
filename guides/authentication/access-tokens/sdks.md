@@ -16,8 +16,7 @@ isIndex: false
 ---
 # Using in SDKs
 
-The SDKs have direct support for JWT and OAuth 2.0 authentication, yet in some
-cases your application might need to provide an Access Token to the SDK directly.
+The SDKs have direct support for JWT and OAuth 2.0 authentication, yet in some cases your application might need to provide an Access Token to the SDK directly.
 
 <Samples id="x_auth" variant="init_with_access_and_refresh_token">
 
@@ -25,8 +24,7 @@ cases your application might need to provide an Access Token to the SDK directly
 
 ## Developer Token
 
-Similarly, developer tokens can be used directly in SDKs without needing any
-further SDK configuration.
+Similarly, developer tokens can be used directly in SDKs without needing any further SDK configuration.
 
 <Samples id="x_auth" variant="init_with_dev_token">
 
@@ -34,8 +32,7 @@ further SDK configuration.
 
 ## App Token
 
-When using App Token authentication it is possible to directly pass the App
-Token to the SDKs.
+When using App Token authentication it is possible to directly pass the App Token to the SDKs.
 
 <Samples id="x_auth" variant="init_with_app_token">
 

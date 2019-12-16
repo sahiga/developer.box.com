@@ -21,10 +21,7 @@ isIndex: false
 
 The Box SDKs have built-in support for client-side OAuth 2.0.
 
-In the process a user is redirected to the Box web app in a browser where they
-log in and authorize the application access to their data before they are
-redirected back to the applications `redirect_url`. This last step requires the
-application to be running on a web server somewhere accessible to the user.
+In the process a user is redirected to the Box web app in a browser where they log in and authorize the application access to their data before they are redirected back to the applications `redirect_url`. This last step requires the application to be running on a web server somewhere accessible to the user.
 
 ## Overview
 
@@ -35,15 +32,11 @@ To complete an OAuth 2.0 flow the following steps need to be completed.
 3. [The user grants the application access](#3-user-grants-application-access)
 4. [Exchange the authorization code for an access token](#4-exchange-code)
 
-At the end of this flow, the application has an Access Token that can be used to
-make API calls on behalf of this user.
+At the end of this flow, the application has an Access Token that can be used to make API calls on behalf of this user.
 
 <Message notice>
 
-The action token acquired through OAuth 2.0 is inherently tied to the user who
-authorized the application. Any API call made with this token will seem to
-come from this application, and the user needs to have access to any file or
-folder the application tries to access with this token.
+The action token acquired through OAuth 2.0 is inherently tied to the user who authorized the application. Any API call made with this token will seem to come from this application, and the user needs to have access to any file or folder the application tries to access with this token.
 
 </Message>
 
@@ -61,8 +54,7 @@ folder the application tries to access with this token.
 
 ## 1. Configure SDK
 
-The first step is to make sure your environment has been prepared with the SDK of
-your choice.
+The first step is to make sure your environment has been prepared with the SDK of your choice.
 
 <Tabs>
 
@@ -122,8 +114,7 @@ Learn more about installing an SDK for your environment
 
 ## 2. Redirect user
 
-Next, redirect the user to the authorization URL. Most of the SDKs support a
-simple way to get the authorization URL for an SDK client.
+Next, redirect the user to the authorization URL. Most of the SDKs support a way to get the authorization URL for an SDK client.
 
 <Tabs>
 
@@ -173,14 +164,11 @@ var authorize_url = sdk.getAuthorizeURL({
 
 <Message>
 
-The way in which a user is redirected to a URL depends on the application
-framework used. Most framework documentation provides extensive guidance on
-this topic.
+The way in which a user is redirected to a URL depends on the application framework used. Most framework documentation provides extensive guidance on this topic.
 
 </Message>
 
-The [redirect URL](endpoint://get-authorize) can also be created manually as
-follows.
+The [redirect URL](endpoint://get-authorize) can also be created manually as follows.
 
 <!-- markdownlint-disable line-length -->
 
@@ -192,16 +180,13 @@ https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=
 
 <Message>
 
-Additional query parameters can be passed along when redirecting the user to
-limit down the scope, or pass along some extra state. See the [reference
-documentation](endpoint://get-authorize) for more information.
+Additional query parameters can be passed along when redirecting the user to limit down the scope, or pass along some extra state. See the [reference documentation](endpoint://get-authorize) for more information.
 
 </Message>
 
 ## 3. User grants application access
 
-Once the user is redirected to the Box web app they will have to log in. After
-they logged in they are presented with a screen to approve your application.
+Once the user is redirected to the Box web app they will have to log in. After they logged in they are presented with a screen to approve your application.
 
 <ImageFrame border center shadow width="400">
 
@@ -209,20 +194,17 @@ they logged in they are presented with a screen to approve your application.
 
 </ImageFrame>
 
-When the user accepts this requests and clicks the button, the browser will
-redirect to your application's redirect URL as configured in the developer console.
+When the user accepts this requests and clicks the button, the browser will redirect to your application's redirect URL as configured in the developer console.
 
 ## 4. Exchange code
 
-The user is redirected to your application's redirect URL with a query parameter
-containing a short-lived authorization code.
+The user is redirected to your application's redirect URL with a query parameter containing a short-lived authorization code.
 
 ```curl
 https://your.domain.com/path?code=1234567
 ```
 
-This code is not an [Access Token][tokens] and is only valid for a few seconds.
-The SDKs can be used to exchange the code for an actual Access Token.
+This code is not an [Access Token][tokens] and is only valid for a few seconds. The SDKs can be used to exchange the code for an actual Access Token.
 
 <Tabs>
 
@@ -267,7 +249,6 @@ sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
 
 </Tabs>
 
-At the end of this flow, the application has an Access Token that can be used to
-make API calls on behalf of this user.
+At the end of this flow, the application has an Access Token that can be used to make API calls on behalf of this user.
 
 [tokens]: guide://authentication/access-tokens

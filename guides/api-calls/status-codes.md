@@ -13,8 +13,7 @@ isIndex: false
 ---
 # Status Codes
 
-In general, the following rules can be applied to interpret the HTTP status
-codes received when using the Box API.
+In general, the following rules can be applied to interpret the HTTP status codes received when using the Box API.
 
 <!-- markdownlint-disable line-length -->
 

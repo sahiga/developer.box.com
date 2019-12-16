@@ -16,9 +16,7 @@ isIndex: false
 ---
 # Get Enterprise Events
 
-To get a enterprise's events, authenticate a user with admin permission and make
-a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
-`admin_logs`.
+To get a enterprise's events, authenticate a user with admin permission and make a call to the [`GET /events`](e://get_events) API with the `stream_type` set to `admin_logs`.
 
 <Samples id="get_events">
 
@@ -26,8 +24,7 @@ a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
 
 <Message>
 
-This API requires the user to be an enterprise admin or co-admin with the
-permission to **Run new reports and access existing reports**.
+This API requires the user to be an enterprise admin or co-admin with the permission to **Run new reports and access existing reports**.
 
 </Message>
 
@@ -44,19 +41,13 @@ A full list of event types can be found below.
 
 ## Limitations
 
-The admin event feed does not support long polling. To long poll for events, use
-the user event feed.
+The admin event feed does not support long polling. To long poll for events, use the user event feed.
 
 Box does not store events indefinitely.
 
-User events are stored for between two weeks and two months, after which the
-user events are removed. Enterprise events are accessible for one year via the
-API and seven years via exported reports in the Box Admin Console.
+User events are stored for between two weeks and two months, after which the user events are removed. Enterprise events are accessible for one year via the API and seven years via exported reports in the Box Admin Console.
 
-The emphasis for this feed is on completeness over latency, which means that Box
-may deliver admin events with higher latency than the user feed. Unlike the user
-events stream, the admin events stream supports filtering for specific events
-but does not support long polling.
+The emphasis for this feed is on completeness over latency, which means that Box may deliver admin events with higher latency than the user feed. Unlike the user events stream, the admin events stream supports filtering for specific events but does not support long polling.
 
 ## Event Types
 
@@ -107,6 +98,7 @@ The following events can be triggered for an enterprise.
 | `COLLABORATION_REMOVE`                         | Removed collaborators                                                                           |
 | `COLLABORATION_INVITE`                         | Invited                                                                                         |
 | `COLLABORATION_EXPIRATION`                     | Set collaborator expiration                                                                     |
+| `EXTERNAL_COLLAB_SECURITY_SETTINGS`            | Changes in external collaboration security settings                                             |
 | `ITEM_SYNC`                                    | Synced folder                                                                                   |
 | `ITEM_UNSYNC`                                  | Unmarked folder for synced                                                                      |
 | `ADD_LOGIN_ACTIVITY_DEVICE`                    | A user is logging in from a device we haven’t seen before                                       |
@@ -161,9 +153,6 @@ The following events can be triggered for an enterprise.
 
 ## Anonymous Users
 
-In some cases, the event feed might list a user with an ID of `2`. This is Box's
-internal identifier for anonymous users.
+In some cases, the event feed might list a user with an ID of `2`. This is Box's internal identifier for anonymous users.
 
-An anonymous user is a user that is not logged in. This can happen any time a
-user interacts with content and they aren't asked to log in first. An example
-would be when a user downloads a file through an open shared link.
+An anonymous user is a user that is not logged in. This can happen any time a user interacts with content and they aren't asked to log in first. An example would be when a user downloads a file through an open shared link.

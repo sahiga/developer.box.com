@@ -18,15 +18,9 @@ isIndex: false
 ---
 # OAuth 2.0 without SDKs
 
-If you are not ready to use any of the official Box SDKs, or an SDK is not
-available in your language of choice, it is totally possible to use the Box APIs
-without them.
+If you are not ready to use any of the official Box SDKs, or an SDK is not available in your language of choice, it is totally possible to use the Box APIs without them.
 
-To authenticate a user using OAuth 2.0. the user is redirected to the Box web
-app in a browser where they log in and grant the application access to their
-data before they are redirected back to the applications `redirect_url`. This
-last step requires the application to be running on a web server somewhere
-accessible to the user.
+To authenticate a user using OAuth 2.0. the user is redirected to the Box web app in a browser where they log in and grant the application access to their data before they are redirected back to the applications `redirect_url`. This last step requires the application to be running on a web server somewhere accessible to the user.
 
 ## Overview
 
@@ -37,18 +31,13 @@ To complete an OAuth 2.0 flow the following steps need to be completed.
 3. [The user grants the application access](#3-user-grants-application-access)
 4. [Exchange the authorization code for an access token](#4-exchange-code)
 
-At the end of this flow, the application has an Access Token that can be used to
-make API calls on behalf of this user.
+At the end of this flow, the application has an Access Token that can be used to make API calls on behalf of this user.
 
 <Message notice>
 
-The action token acquired through OAuth 2.0 is inherently tied to the user who
-authorized the application. Any API call made with this token will seem to
-come from this application, and the user needs to have access to any file or
-folder the application tries to access with this token.
+The action token acquired through OAuth 2.0 is inherently tied to the user who authorized the application. Any API call made with this token will seem to come from this application, and the user needs to have access to any file or folder the application tries to access with this token.
 
-It is possible to [act as another user](g://authentication/oauth2/as-user)
-using the `As-User` header.
+It is possible to [act as another user](g://authentication/oauth2/as-user) using the `As-User` header.
 
 </Message>
 
@@ -56,8 +45,7 @@ using the `As-User` header.
 
 Before continuing you will need to have completed the following steps.
 
-* Create a Box Application within the developer console with the OAuth 2.0
-  authentication method.
+* Create a Box Application within the developer console with the OAuth 2.0 authentication method.
 * Copy the `client_id` and `client_secret` values and keep them handy.
 
 ## Parameters
@@ -132,9 +120,7 @@ Learn more about the authorization URL
 
 ## 2. Redirect user
 
-Next, redirect the user to the authorization URL. The way in which a user is
-redirected to a URL depends on the application framework used. Most framework
-documentation provides extensive guidance on this topic.
+Next, redirect the user to the authorization URL. The way in which a user is redirected to a URL depends on the application framework used. Most framework documentation provides extensive guidance on this topic.
 
 <Tabs>
 
@@ -182,16 +168,13 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 <Message>
 
-Additional query parameters can be passed along when redirecting the user to
-limit down the scope, or pass along some extra state. See the [reference
-documentation](endpoint://get-authorize) for more information.
+Additional query parameters can be passed along when redirecting the user to limit down the scope, or pass along some extra state. See the [reference documentation](endpoint://get-authorize) for more information.
 
 </Message>
 
 ## 3. User grants application access
 
-Once the user is redirected to the Box web app they will have to log in. After
-they logged in they are presented with a screen to approve your application.
+Once the user is redirected to the Box web app they will have to log in. After they logged in they are presented with a screen to approve your application.
 
 <ImageFrame border center shadow width="400">
 
@@ -199,20 +182,17 @@ they logged in they are presented with a screen to approve your application.
 
 </ImageFrame>
 
-When the user accepts this requests and clicks the button, the browser will
-redirect to your application's redirect URL as configured in the developer console.
+When the user accepts this requests and clicks the button, the browser will redirect to your application's redirect URL as configured in the developer console.
 
 ## 4. Exchange code
 
-The user is redirected to your application's redirect URL with a query parameter
-containing a short-lived authorization code.
+The user is redirected to your application's redirect URL with a query parameter containing a short-lived authorization code.
 
 ```curl
 https://your.domain.com/path?code=1234567
 ```
 
-This code is not an [Access Token][tokens] and is only valid for a few seconds.
-The SDKs can be used to exchange the code for an actual Access Token.
+This code is not an [Access Token][tokens] and is only valid for a few seconds. The SDKs can be used to exchange the code for an actual Access Token.
 
 <Tabs>
 
@@ -318,15 +298,13 @@ let accessToken = await axios.post(
 
 ## Summary
 
-By now the application should be able to authorize a user using OAuth 2.0 without
-using any of the SDKs, by using the following steps.
+By now the application should be able to authorize a user using OAuth 2.0 without using any of the SDKs, by using the following steps.
 
 1. [Configure the authorization URL](#1-configure-authorization-url)
 2. [Redirect the user to the Box website](#2-redirect-user)
 3. [The user grants the application access](#3-user-grants-application-access)
 4. [Exchange the authorization code for an access token](#4-exchange-code)
 
-To learn how to use this token head over to the guide on [Making API
-calls](g://api-calls).
+To learn how to use this token head over to the guide on [Making API calls](g://api-calls).
 
 [tokens]: guide://authentication/access-tokens

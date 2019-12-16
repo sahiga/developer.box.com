@@ -16,11 +16,9 @@ isIndex: false
 ---
 # Download Shared Link
 
-To download the file for a [Shared Link][shared-link], first [determine the
-file][get-file] for the link.
+To download the file for a [Shared Link][shared-link], first [determine the file][get-file] for the link.
 
-Once the file ID has been determined, the file can be downloaded by passing the
-`BoxAPI` header to the API.
+Once the file ID has been determined, the file can be downloaded by passing the `BoxAPI` header to the API.
 
 <Samples id="get_files_id_content" variant="for_shared_file">
 
@@ -28,8 +26,7 @@ Once the file ID has been determined, the file can be downloaded by passing the
 
 <Message warning>
 
-To get the Shared Link for an item the user must have at least viewer-level
-access to the item.
+To get the Shared Link for an item the user must have at least viewer-level access to the item.
 
 </Message>
 

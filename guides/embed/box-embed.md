@@ -13,17 +13,13 @@ isIndex: false
 ---
 # Box Embed
 
-Box Embed is a HTML-based framework that makes it easy to embed the entire Box
-experience anywhere people work. Box Embed provides the ability to upload,
-search, comment, share, tag, and most importantly edit files using Box Edit.
+Box Embed is a HTML-based framework that makes it possible to embed the entire Box experience anywhere people work. Box Embed provides the ability to upload, search, comment, share, tag, and most importantly edit files using Box Edit.
 
 ## Configure
 
 ### From the web
 
-To grab your Box Embed code from the Box web app, navigate to the folder of
-choice, click on the ellipsis beside the folder, go to More Actions, and click
-Embed Widget.
+To grab your Box Embed code from the Box web app, navigate to the folder of choice, click on the ellipsis beside the folder, go to More Actions, and click Embed Widget.
 
 <ImageFrame border>
 
@@ -39,13 +35,11 @@ You are presented with options to adjust the size, view, and sorting.
 
 </ImageFrame>
 
-Once you are done customizing the embed widget, all you will need to do is copy
-and paste the embed code into your site or web application.
+Once you are done customizing the embed widget, all you will need to do is copy and paste the embed code into your site or web application.
 
 ## Programmatically
 
-If you want to add more customization to Box Embed, you have the ability to
-build it programmatically. The format for an embed snippet is as follows.
+If you want to add more customization to Box Embed, you have the ability to build it programmatically. The format for an embed snippet is as follows.
 
 <!-- markdownlint-disable line-length -->
 
@@ -65,9 +59,7 @@ build it programmatically. The format for an embed snippet is as follows.
 
 ### Finding your shared link value
 
-The first step to building an embed `iframe` programmatically is to generate or
-find the value for the shared link. One way to find this value is by using the Box
-web app.
+The first step to building an embed `iframe` programmatically is to generate or find the value for the shared link. One way to find this value is by using the Box web app.
 
 <ImageFrame border>
 
@@ -75,9 +67,7 @@ web app.
 
 </ImageFrame>
 
-Additionally, you can also find this shared link value through the API using the
-[`GET /files/:id`](e://get-files-id) or [`GET /folders/:id`](e://get-folders-id)
-endpoint and passing in the query parameter `fields=shared_link`.
+Additionally, you can also find this shared link value through the API using the [`GET /files/:id`](e://get-files-id) or [`GET /folders/:id`](e://get-folders-id) endpoint and passing in the query parameter `fields=shared_link`.
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
@@ -95,8 +85,7 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 
 ### Parameters
 
-Next, you will want to choose your view customization options. The following is
-a list of optional parameters you can configure.
+Next, you will want to choose your view customization options. The following is a list of optional parameters you can configure.
 
 <!-- markdownlint-disable line-length -->
 
@@ -112,9 +101,7 @@ a list of optional parameters you can configure.
 
 ### Full Screen Capabilities
 
-To enable full screen capabilities for the Box Embed snippet, include one or more
-of the following parameters if you want the object to be viewable in full screen
-within an `<iframe>`:
+To enable full screen capabilities for the Box Embed snippet, include one or more of the following parameters if you want the object to be viewable in full screen within an `<iframe>`:
 
 * `allowfullscreen`
 * `webkitallowfullscreen`
@@ -124,8 +111,7 @@ within an `<iframe>`:
 
 ## Expiring Embed Links
 
-For files, another option is to call the [`GET /files/:id`](e://get-files-id)
-and request an `expiring_embed_link` using the `fields` query parameter.
+For files, another option is to call the [`GET /files/:id`](e://get-files-id) and request an `expiring_embed_link` using the `fields` query parameter.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
@@ -167,8 +153,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
 }
 ```
 
-The `url` attribute can be used in an `<iframe>` to embed an auto expiring Box
-Embed interface.
+The `url` attribute can be used in an `<iframe>` to embed an auto expiring Box Embed interface.
 
 ```html
 <iframe
@@ -184,9 +169,7 @@ Embed interface.
 
 ### Parameters
 
-Extra parameters can be added to this URL as well to customize the UI. To do so,
-add the following parameters to the `url` as query parameters. The eventual URL
-would look something like this.
+Extra parameters can be added to this URL as well to customize the UI. To do so, add the following parameters to the `url` as query parameters. The eventual URL would look something like this.
 
 ```sh
 https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
@@ -203,14 +186,10 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 ## Custom Logo
 
-Paid Box customers have the option to change the Box logo in the file Preview to
-their own custom logo. The logo is inherited from your Enterprise Settings and
-can be set by following [these admin instructions][logo].
+Paid Box customers have the option to change the Box logo in the file Preview to their own custom logo. The logo is inherited from your Enterprise Settings and can be set by following [these admin instructions][logo].
 
 ## Limitations
 
-Box Embed is not optimized for mobile browsers and should not be used in web
-experiences designed for mobile devices. Many UI elements, like the **download**
-and **print** options might not show in mobile browsers.
+Box Embed is not optimized for mobile browsers and should not be used in web experiences designed for mobile devices. Many UI elements, like the **download** and **print** options might not show in mobile browsers.
 
 [logo]: https://community.box.com/t5/Get-Started-Guide-for-New-Admins/Customize-Your-Account-s-Branding/ta-p/301

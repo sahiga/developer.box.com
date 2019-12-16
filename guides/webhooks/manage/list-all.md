@@ -23,12 +23,10 @@ To fetch all for the authenticated user, use the [List Webhooks][1] API.
 
 <Message type="warning">
 
-This API requires the application to have the "Manage
-webhooks" scope enabled.
+This API requires the application to have the "Manage webhooks" scope enabled.
 
 </Message>
 
-This API call will only list the webhooks for the authenticated user, not
-for any other users in the enterprise.
+This API call will only list the webhooks for the authenticated user, not for any other users in the enterprise.
 
 [1]: endpoint://get_webhooks

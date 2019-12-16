@@ -18,23 +18,17 @@ isIndex: false
 ---
 # User Access Token
 
-It is possible to for a JWT application to act on behalf of another user
-by creating an access token for a specific user instead of the Service Account
-for the application.
+It is possible to for a JWT application to act on behalf of another user by creating an access token for a specific user instead of the Service Account for the application.
 
 <Message>
 
-In this situation the user ID is the Box identifier for a user. User IDs can
-found for any user via the `GET /users` endpoint, which is only available to
-admins, or by calling the `GET /users/me` endpoint with an authenticated user session.
+In this situation the user ID is the Box identifier for a user. User IDs can found for any user via the `GET /users` endpoint, which is only available to admins, or by calling the `GET /users/me` endpoint with an authenticated user session.
 
 </Message>
 
 ## Preconditions
 
-Creating a user access token has a few requirements. Firstly, the application
-needs to be configured to  be allowed to create user access tokens in the [developer
-console][devconsole].
+Creating a user access token has a few requirements. Firstly, the application needs to be configured to be allowed to create user access tokens in the [developer console][devconsole].
 
 <ImageFrame border center>
 
@@ -42,16 +36,11 @@ console][devconsole].
 
 </ImageFrame>
 
-Additionally, the authenticated user needs to be a user with admin permissions,
-meaning either an admin, co-admin, or service account. See our guide on [User
-Types](g://authentication/user-types) for more details.
+Additionally, the authenticated user needs to be a user with admin permissions, meaning either an admin, co-admin, or service account. See our guide on [User Types](g://authentication/user-types) for more details.
 
 ## User Access Tokens with SDKs
 
-To create a Box SDK client that authenticates as a specific user instead of the
-JWT app's Service Account, follow the same steps as described in the [JWT with
-SDK guide](g://authentication/jwt/with-sdk) but instead of creating an
-"Enterprise" client we instead create a user client.
+To create a Box SDK client that authenticates as a specific user instead of the JWT app's Service Account, follow the same steps as described in the [JWT with SDK guide](g://authentication/jwt/with-sdk) but instead of creating an "Enterprise" client we instead create a user client.
 
 <Tabs>
 
@@ -116,10 +105,7 @@ Learn more about using the Box SDKs for JWT
 
 ## User Access Tokens without SDKs
 
-To create a User Access Token that authenticates as a specific user instead of
-the JWT app's Service Account follow the same steps as described in the [JWT
-without SDK guide](g://authentication/jwt/without-sdk) but instead of creating
-a claim for the enterprise, create one for a specific user ID.
+To create a User Access Token that authenticates as a specific user instead of the JWT app's Service Account follow the same steps as described in the [JWT without SDK guide](g://authentication/jwt/without-sdk) but instead of creating a claim for the enterprise, create one for a specific user ID.
 
 <Tabs>
 

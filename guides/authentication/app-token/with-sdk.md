@@ -18,16 +18,11 @@ isIndex: false
 
 The official Box SDKs have build-in support for App Token authentication.
 
-App Token authentication is designed for working directly with the
-Box API without requiring a user to redirect through Box to authorize your
-application, yet is restricted to the application's own data.
+App Token authentication is designed for working directly with the Box API without requiring a user to redirect through Box to authorize your application, yet is restricted to the application's own data.
 
 <Message notice>
 
-The method of authentication through JWT is inherently tied to the Service
-Account for the application. Any API call made with this token will seem to
-come from this application and will not have access to files and folders from
-other users without explicitly getting access them.
+The method of authentication through JWT is inherently tied to the Service Account for the application. Any API call made with this token will seem to come from this application and will not have access to files and folders from other users without explicitly getting access them.
 
 </Message>
 
@@ -37,13 +32,11 @@ Before we can get started, you will need to have completed the following steps.
 
 * Create a Box Application within the developer console
 * Ensure the application is configured to use App Token authentication
-* Generate a primary and secondary App Token for the application and store the
-  tokens somewhere in your code.
+* Generate a primary and secondary App Token for the application and store the tokens somewhere in your code.
 
 ## Initializing an SDK client
 
-To initialize an SDK client for app token auth, ensure the SDK is installed and
-then configure the SDK as follows.
+To initialize an SDK client for app token auth, ensure the SDK is installed and then configure the SDK as follows.
 
 <Tabs>
 
@@ -92,5 +85,4 @@ var client = sdk.getBasicClient('[APP_TOKEN]');
 
 </Tabs>
 
-With this the application should be able to make API calls to any of the
-[endpoints](g://authentication/app-token/endpoints) enabled for App Token auth.
+With this the application should be able to make API calls to any of the [endpoints](g://authentication/app-token/endpoints) enabled for App Token auth.

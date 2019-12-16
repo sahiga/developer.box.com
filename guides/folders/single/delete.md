@@ -16,38 +16,28 @@ isIndex: false
 ---
 # Delete Folder
 
-To remove a folder in Box you will need to provide our API with the ID of the
-folder.
+Box上でフォルダを削除するには、削除するフォルダのIDをAPIに渡す必要があります。
 
 <Samples id="delete_folders_id">
 
 </Samples>
 
-## Deleting non-empty folders
+## 空でないフォルダの削除
 
-When deleting a folder, you can pass in the `recursive` parameter to
-force a folder to be deleted even if it is not empty. This will delete all
-items within this folder, including any of their descendants.
+フォルダを削除するときに`recursive`パラメータを渡すと、空でないフォルダも強制的に削除できます。その場合は、サブフォルダを含め、フォルダ内のすべての項目が削除されます。
 
 ## Recursive deletion
 
-This API returns an error if the folder is not empty. You
-can use the `recursive` query parameter to force this
-operation to recursively delete the folder and all of its
-contents.
+This API returns an error if the folder is not empty. You can use the `recursive` query parameter to force this operation to recursively delete the folder and all of its contents.
 
-## Folder locking
+## フォルダのロック
 
-The enterprise settings determine whether the folder will
-be permanently deleted from Box or moved to the trash.
+The enterprise settings determine whether the folder will be permanently deleted from Box or moved to the trash.
 
-During this operation, part of the file tree will be locked, mainly
-the source folder and all of its descendants.
+During this operation, part of the file tree will be locked, mainly the source folder and all of its descendants.
 
-For the duration of the operation, no other move, copy, delete, or restore
-operation can performed on any of the locked folders.
+For the duration of the operation, no other move, copy, delete, or restore operation can performed on any of the locked folders.
 
 ## Timeout
 
-Timeout for this operation is 60 seconds. The operation will include
-after a `HTTP 503` has been returned.
+Timeout for this operation is 60 seconds. The operation will include after a `HTTP 503` has been returned.

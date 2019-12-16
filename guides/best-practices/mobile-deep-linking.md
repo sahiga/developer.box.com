@@ -14,9 +14,7 @@ isIndex: false
 ---
 # Mobile Deep Linking
 
-Box’s mobile applications support deep linking into folder and file objects.
-From a web page or native app it is possible to deep link to open an object
-directly in Box.
+Box’s mobile applications support deep linking into folder and file objects. From a web page or native app it is possible to deep link to open an object directly in Box.
 
 The following URLs are supported in Box’s mobile applications:
 

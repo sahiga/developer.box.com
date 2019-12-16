@@ -14,8 +14,7 @@ isIndex: true
 ---
 # Applications
 
-Box Platform supports two distinctly different application types. The type of
-service you are trying to create determine the type of Box App you will want to configure.
+Box Platform supports two distinctly different application types. The type of service you are trying to create determine the type of Box App you will want to configure.
 
 ## Overview
 
@@ -32,7 +31,7 @@ The following is quick overview of the different Box Application types.
 | App Type                      | Auth Method             | Features & Limitations                             |
 | ----------------------------- | ----------------------- | -------------------------------------------------- |
 | [Custom App][custom-apps]     | [OAuth 2.0][oauth2]     | Web App Integrations, App Gallery, Webhooks        |
-| [Custom App][custom-apps]     | [JWT][jwt]              | Webhooks                                           |
+| [Custom App][custom-apps]     | [JWT][jwt]              | Webhook                                            |
 | [Custom App][custom-apps]     | [App token][apptoken]   | Web App Integrations, Webhooks, Limited API access |
 | [Custom Skill][custom-skills] | No authorization needed | Limited API access                                 |
 
@@ -45,8 +44,7 @@ Learn how to select an application type
 
 ## Additional App Types
 
-A few addition App Types exist for legacy purposes. Please use the alternatives
-as specified below.
+A few addition App Types exist for legacy purposes. Please use the alternatives as specified below.
 
 <!-- markdownlint-disable line-length -->
 

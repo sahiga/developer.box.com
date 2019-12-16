@@ -17,9 +17,7 @@ isIndex: false
 ---
 # Download All Files in Folder
 
-Sometimes an application might want to download all files for a folder. To do so
-with the SDKs and the CLI requires traversing the folder tree, finding every
-file and downloading it accordingly.
+Sometimes an application might want to download all files for a folder. To do so with the SDKs and the CLI requires traversing the folder tree, finding every file and downloading it accordingly.
 
 <!-- markdownlint-disable line-length -->
 
@@ -251,12 +249,8 @@ function autoPage(iterator) {
 
 <Message warning>
 
-It is important to remember that an application needs to have the
-permissions to access and download the files and folders in question. When the
-authenticated user does not have access to any of the files or folders, a
-`HTTP 404 Not Found` error will occur.
+It is important to remember that an application needs to have the permissions to access and download the files and folders in question. When the authenticated user does not have access to any of the files or folders, a `HTTP 404 Not Found` error will occur.
 
-Lear more about [User Types](g://authentication/user-types) in our guides on
-authentication.
+Lear more about [User Types](g://authentication/user-types) in our guides on authentication.
 
 </Message>
